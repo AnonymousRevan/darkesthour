@@ -1,0 +1,467 @@
+
+category =
+{
+ name = "Voices"
+ soundeffects = {
+	RAJ_infantry_idle
+	RAJ_infantry_neutral_combat
+	RAJ_infantry_positive_combat
+	RAJ_infantry_retreat
+	RAJ_infantry_move_out
+ }
+  compressor =
+ {
+	enabled = yes
+	pregain = 0.0
+	postgain = 2.0
+	ratio = 10.0
+	threshold = -10.0
+	attacktime = 0.030
+	releasetime = 1.2
+ }
+}
+
+###### India
+
+soundeffect =
+{
+		name = "RAJ_infantry_idle"
+		sounds = {
+				sound = indian_idle_001
+				sound = indian_idle_002
+				sound = indian_idle_003
+				sound = indian_idle_004
+				sound = indian_idle_005
+				sound = indian_idle_006
+				sound = indian_idle_007
+				sound = indian_idle_008
+		}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.65
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect =
+{
+		name = "RAJ_infantry_neutral_combat"
+		sounds = {
+				sound = indian_neutral_001
+				sound = indian_neutral_002
+				sound = indian_neutral_003
+				sound = indian_neutral_004
+				sound = indian_neutral_005
+				sound = indian_neutral_006
+				sound = indian_neutral_007
+				sound = indian_neutral_008
+				sound = indian_neutral_009
+				sound = indian_neutral_010
+				sound = indian_neutral_011
+				sound = indian_neutral_012
+				sound = indian_neutral_013
+				sound = indian_neutral_014
+				sound = indian_neutral_015
+				sound = indian_neutral_016
+				sound = indian_neutral_017
+				sound = indian_neutral_018
+				sound = indian_neutral_019
+				sound = indian_neutral_020
+				sound = indian_neutral_021
+				sound = indian_neutral_022
+				sound = indian_neutral_023
+				sound = indian_neutral_024
+		}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.65
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect =
+{
+		name = "RAJ_infantry_positive_combat"
+		sounds = {
+				sound = indian_positive_001
+				sound = indian_positive_002
+				sound = indian_positive_003
+				sound = indian_positive_004
+				sound = indian_positive_005
+		}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.65
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect =
+{
+		name = "RAJ_infantry_retreat"
+		sounds = {
+				sound = indian_negative_001
+				sound = indian_negative_002
+				sound = indian_negative_003
+				sound = indian_negative_004
+				sound = indian_negative_005
+				sound = indian_negative_006
+				sound = indian_negative_007
+				sound = indian_negative_008
+				sound = indian_negative_009
+				sound = indian_negative_010
+				sound = indian_negative_011
+				sound = indian_negative_012
+				sound = indian_negative_013
+				sound = indian_negative_014
+				sound = indian_negative_015
+				sound = indian_negative_016
+				sound = indian_negative_017
+				sound = indian_negative_018
+				sound = indian_negative_019
+				sound = indian_negative_020
+				sound = indian_negative_021
+				sound = indian_negative_022
+				sound = indian_negative_023
+				sound = indian_negative_024
+		}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect =
+{
+		name = "RAJ_infantry_move_out"
+		sounds = {
+				sound = indian_positive_002
+				sound = indian_neutral_019
+				sound = indian_neutral_018
+				sound = indian_neutral_020
+				sound = indian_neutral_025
+		}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.65
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+############## AUDIO ASSETS
+
+####### India
+sound =
+{
+	name = "indian_idle_001"
+	file = "ind/indian_idle_1.wav"
+}
+sound =
+{
+	name = "indian_idle_002"
+	file = "ind/indian_idle_2.wav"
+}
+sound =
+{
+	name = "indian_idle_003"
+	file = "ind/indian_idle_3.wav"
+}
+sound =
+{
+	name = "indian_idle_004"
+	file = "ind/indian_idle_4.wav"
+}
+sound =
+{
+	name = "indian_idle_005"
+	file = "ind/indian_idle_5.wav"
+}
+sound =
+{
+	name = "indian_idle_006"
+	file = "ind/indian_idle_6.wav"
+}
+sound =
+{
+	name = "indian_idle_007"
+	file = "ind/indian_idle_7.wav"
+}
+sound =
+{
+	name = "indian_idle_008"
+	file = "ind/indian_idle_8.wav"
+}
+sound =
+{
+	name = "indian_neutral_001"
+	file = "ind/indian_neutral_1.wav"
+}
+sound =
+{
+	name = "indian_neutral_002"
+	file = "ind/indian_neutral_2.wav"
+}
+sound =
+{
+	name = "indian_neutral_003"
+	file = "ind/indian_neutral_3.wav"
+}
+sound =
+{
+	name = "indian_neutral_004"
+	file = "ind/indian_neutral_4.wav"
+}
+sound =
+{
+	name = "indian_neutral_005"
+	file = "ind/indian_neutral_5.wav"
+}
+sound =
+{
+	name = "indian_neutral_006"
+	file = "ind/indian_neutral_6.wav"
+}
+sound =
+{
+	name = "indian_neutral_007"
+	file = "ind/indian_neutral_7.wav"
+}
+sound =
+{
+	name = "indian_neutral_008"
+	file = "ind/indian_neutral_8.wav"
+}
+sound =
+{
+	name = "indian_neutral_009"
+	file = "ind/indian_neutral_9.wav"
+}
+sound =
+{
+	name = "indian_neutral_010"
+	file = "ind/indian_neutral_10.wav"
+}
+sound =
+{
+	name = "indian_neutral_011"
+	file = "ind/indian_neutral_11.wav"
+}
+sound =
+{
+	name = "indian_neutral_012"
+	file = "ind/indian_neutral_12.wav"
+}
+sound =
+{
+	name = "indian_neutral_013"
+	file = "ind/indian_neutral_13.wav"
+}
+sound =
+{
+	name = "indian_neutral_014"
+	file = "ind/indian_neutral_14.wav"
+}
+sound =
+{
+	name = "indian_neutral_015"
+	file = "ind/indian_neutral_15.wav"
+}
+sound =
+{
+	name = "indian_neutral_016"
+	file = "ind/indian_neutral_16.wav"
+}
+sound =
+{
+	name = "indian_neutral_017"
+	file = "ind/indian_neutral_17.wav"
+}
+sound =
+{
+	name = "indian_neutral_018"
+	file = "ind/indian_neutral_18.wav"
+}
+sound =
+{
+	name = "indian_neutral_019"
+	file = "ind/indian_neutral_19.wav"
+}
+sound =
+{
+	name = "indian_neutral_020"
+	file = "ind/indian_neutral_20.wav"
+}
+sound =
+{
+	name = "indian_neutral_021"
+	file = "ind/indian_neutral_21.wav"
+}
+sound =
+{
+	name = "indian_neutral_022"
+	file = "ind/indian_neutral_22.wav"
+}
+sound =
+{
+	name = "indian_neutral_023"
+	file = "ind/indian_neutral_23.wav"
+}
+sound =
+{
+	name = "indian_neutral_024"
+	file = "ind/indian_neutral_24.wav"
+}
+sound =
+{
+	name = "indian_neutral_025"
+	file = "ind/indian_neutral_25.wav"
+}
+sound =
+{
+	name = "indian_positive_001"
+	file = "ind/indian_positive_1.wav"
+}
+sound =
+{
+	name = "indian_positive_002"
+	file = "ind/indian_positive_2.wav"
+}
+sound =
+{
+	name = "indian_positive_003"
+	file = "ind/indian_positive_3.wav"
+}
+sound =
+{
+	name = "indian_positive_004"
+	file = "ind/indian_positive_4.wav"
+}
+sound =
+{
+	name = "indian_positive_005"
+	file = "ind/indian_positive_5.wav"
+}
+sound =
+{
+	name = "indian_negative_001"
+	file = "ind/indian_negative_1.wav"
+}
+sound =
+{
+	name = "indian_negative_002"
+	file = "ind/indian_negative_2.wav"
+}
+sound =
+{
+	name = "indian_negative_003"
+	file = "ind/indian_negative_3.wav"
+}
+sound =
+{
+	name = "indian_negative_004"
+	file = "ind/indian_negative_4.wav"
+}
+sound =
+{
+	name = "indian_negative_005"
+	file = "ind/indian_negative_5.wav"
+}
+sound =
+{
+	name = "indian_negative_006"
+	file = "ind/indian_negative_6.wav"
+}
+sound =
+{
+	name = "indian_negative_007"
+	file = "ind/indian_negative_7.wav"
+}
+sound =
+{
+	name = "indian_negative_008"
+	file = "ind/indian_negative_8.wav"
+}
+sound =
+{
+	name = "indian_negative_009"
+	file = "ind/indian_negative_9.wav"
+}
+sound =
+{
+	name = "indian_negative_010"
+	file = "ind/indian_negative_10.wav"
+}
+sound =
+{
+	name = "indian_negative_011"
+	file = "ind/indian_negative_11.wav"
+}
+sound =
+{
+	name = "indian_negative_012"
+	file = "ind/indian_negative_12.wav"
+}
+sound =
+{
+	name = "indian_negative_013"
+	file = "ind/indian_negative_13.wav"
+}
+sound =
+{
+	name = "indian_negative_014"
+	file = "ind/indian_negative_14.wav"
+}
+sound =
+{
+	name = "indian_negative_015"
+	file = "ind/indian_negative_15.wav"
+}
+sound =
+{
+	name = "indian_negative_016"
+	file = "ind/indian_negative_16.wav"
+}
+sound =
+{
+	name = "indian_negative_017"
+	file = "ind/indian_negative_17.wav"
+}
+sound =
+{
+	name = "indian_negative_018"
+	file = "ind/indian_negative_18.wav"
+}
+sound =
+{
+	name = "indian_negative_019"
+	file = "ind/indian_negative_19.wav"
+}
+sound =
+{
+	name = "indian_negative_020"
+	file = "ind/indian_negative_20.wav"
+}
+sound =
+{
+	name = "indian_negative_021"
+	file = "ind/indian_negative_21.wav"
+}
+sound =
+{
+	name = "indian_negative_022"
+	file = "ind/indian_negative_22.wav"
+}
+sound =
+{
+	name = "indian_negative_023"
+	file = "ind/indian_negative_23.wav"
+}
+sound =
+{
+	name = "indian_negative_024"
+	file = "ind/indian_negative_24.wav"
+}
+sound =
+{
+	name = "indian_negative_025"
+	file = "ind/indian_negative_25.wav"
+}
+
+

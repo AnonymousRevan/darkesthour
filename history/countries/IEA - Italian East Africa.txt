@@ -1,0 +1,100 @@
+﻿capital = 271
+
+oob = "IEA_1936"
+
+set_research_slots = 2
+set_stability = 0.7
+set_war_support = 0.7
+add_ideas = {
+IEA_Recent_Conquest
+IEA_Black-Shirt_Enforcement
+IEA_Slave_Labor
+IEA_Uneducated_population
+IEA_Lack_of_Officers
+partial_economic_mobilisation
+IEA_week_industrial_base
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	trench_warfare = 1
+	tech_support = 1
+	tech_engineers = 1
+	interwar_antiair = 1	
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+		early_submarine = 1
+	}
+	set_naval_oob = "IEA_1936_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+	basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_torpedo = 1
+		early_engine = 1
+		improved_engine = 1
+		early_diesel = 1
+	}
+	set_naval_oob = "IEA_1936_naval_mtg"
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+}
+
+set_convoys = 50
+
+# A colony of Italy in 1939, however if independent it would have the same politics as in 1936
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 100
+}
+
+create_country_leader = {
+	name = "Italo Balbo"
+	desc = "POLITICS_HAILE_SELASSIE_DESC"
+	picture = "portrait_Italian_East_Africa_italo_balbo.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Fitawrari Yeebio Woldai"
+	desc = "POLITICS_YEEBIO_WOLDAI_DESC"
+	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Italo Balbo"
+	picture = "portrait_Italian_East_Africa_italo_balbo.dds"
+	traits = { career_officer politically_connected commando Hill_Fighter trait_mountaineer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}

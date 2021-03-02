@@ -1,0 +1,733 @@
+ideas = {
+	country = {
+		IEA_Recent_Conquest = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.50
+				stability_factor = -0.50
+				political_power_cost = 0.50
+
+			}
+		}
+		IEA_Black-Shirt_Enforcement = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = fascist_party_logo
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				conscription_factor = -0.65
+
+			}
+		}
+		IEA_Lack_of_Officers = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_incompetent_officers
+			removal_cost = -1
+
+			modifier = {
+				max_planning = -0.25
+				planning_speed = 0.25
+
+			}
+		}
+		IEA_Resource_Exploitation = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_refining_concern_1
+			removal_cost = -1
+
+			modifier = {
+            min_export = 0.15
+            }
+        }
+        IEA_Slave_Labor = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_exploit_mines
+			removal_cost = -1
+
+			modifier = {
+            local_resources_factor = 0.25
+            }
+        }
+        IEA_Slave_Labor2 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			removal_cost = -1
+
+			modifier = {
+            local_resources_factor = 0.30
+            production_factory_max_efficiency_factor = -0.05
+			industrial_capacity_factory = 0.10
+			production_speed_arms_factory_factor = 0.1
+            }
+        }
+        IEA_Uneducated_population = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+			removal_cost = -1
+
+			modifier = {
+            research_speed_factor = -0.45
+            }
+        }
+        IEA_Uneducated_population2 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+			removal_cost = -1
+
+			modifier = {
+            research_speed_factor = -0.20
+            }
+        }
+        IEA_Uneducated_population3 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+			removal_cost = -1
+
+			modifier = {
+            research_speed_factor = -0.15
+            }
+        }    
+        IEA_Uneducated_population4 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_duplicate_research
+			removal_cost = -1
+
+			modifier = {
+            research_speed_factor = -0.05
+            }
+        }        
+		IEA_Region_Stablization = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.30
+				stability_factor = -0.30
+				political_power_cost = 0.30
+			}
+		}
+		IEA_Region_Stablization2 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_victors_of_ww1
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = 0.15
+			}
+		}
+		IEA_Forced_Conscription = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_forced_conscription
+			removal_cost = -1
+
+			modifier = {
+            conscription = 0.025
+            }
+        }
+   		IEA_Police_State = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_secret_police
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = -0.25
+
+			}
+		}
+		IEA_Capture_of_British_Somaliland = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = cze_planning_bonus
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.10
+				stability_factor = 0.10
+				defence = 0.05
+
+			}
+		}
+		IEA_march_to_the_suez = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			removal_cost = -1
+
+			modifier = {
+			army_morale_factor = 0.10
+			recon_factor = 0.05
+			terrain_penalty_reduction = 0.05
+			max_planning = 0.05
+			special_forces_attack_factor = 0.1
+			special_forces_defence_factor = 0.1
+			dig_in_speed_factor = 0.10
+
+			}
+		}
+		IEA_Fortification_efforts = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fortify_the_borders
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				production_speed_anti_air_building_factor = 0.3
+            } 
+        }
+        IEA_Arms_Imports = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			removal_cost = -1
+
+			modifier = {  
+                consumer_goods_factor = 0.02
+            }    
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+		    }
+        }
+	    IEA_week_industrial_base = {
+			
+			
+			allowed = {
+				original_tag = "IEA"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = IEA
+						has_government = fascism
+					}
+				}
+			}
+			picture = generic_armor
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    heavy_tank_equipment = {
+			        instant = yes
+					build_cost_ic = 0.80
+				}
+				medium_tank_equipment = {
+				    instant = yes
+					build_cost_ic = 0.80
+				}
+				light_tank_equipment = {
+				    instant = yes
+					build_cost_ic = 0.80
+				}				
+			}
+		}                      
+    }
+
+political_advisor = {
+		IEA_giovanni_marinelli = {
+						
+			allowed = {
+				original_tag = "IEA"
+			}
+
+			picture = generic_political_advisor_arab_3
+						
+			traits = { great_architect }
+	
+			on_add = {				
+			}
+				
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_We_Waz_Kangs = {
+						
+			allowed = {
+				original_tag = "IEA"
+			}
+
+			picture = generic_political_advisor_africa_1
+						
+			traits = { railroad_enthusiast }
+	
+			on_add = {				
+			}
+				
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_Italo_Balbo = {
+						
+			allowed = {
+				original_tag = "IEA"
+			}
+
+			picture = italo_balbo
+						
+			traits = { fascist_militia_leader }
+	
+			on_add = {				
+			}
+				
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_Julius_Triari = {
+						
+			allowed = {
+				original_tag = "IEA"
+			}
+
+			picture = generic_political_advisor_europe_4
+						
+			traits = { editor }
+	
+			on_add = {				
+			}
+				
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_Cambian_Whilliams = {
+						
+			allowed = {
+				original_tag = "IEA"
+			}
+
+			picture = generic_political_advisor_europe_5
+						
+			traits = { lieutenant_of_industry }
+	
+			on_add = {				
+			}
+				
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_Dianna_Whilliams = {
+						
+			allowed = {
+				original_tag = "IEA"
+			}
+
+			picture = generic_political_advisor_female_africa
+						
+			traits = { princess_of_terror }
+	
+			on_add = {				
+			}
+				
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+army_chief = {
+		IEA_Jose_Badoglio = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { army_chief_reform_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_Tony_Beluci = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { army_chief_morale_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_Antonio_Medichi = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { army_commando_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+navy_chief = {
+		IEA_Jesse_Bart = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { navy_chief_commerce_raiding_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    }
+air_chief = {
+		IEA_Klathmu_Zulu = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_Sandia_Juggosa = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { air_chief_ground_support_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+    }
+high_command = {
+		IEA_Seth_Aaron = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { army_cavalry_3  }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_Antonio_Garcia = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { navy_submarine_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_Scary_Terry_is_big_gay = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		IEA_My_internet_is_out_send_help = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { army_entrenchment_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}				
+    }
+tank_manufacturer = {
+
+    } 
+materiel_manufacturer = {
+			
+		designer = yes
+		
+		beretta_2 = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+			available = {
+			    has_completed_focus = IEA_Army_2
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15				
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+		
+		breda_2 = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+			available = {
+			    has_completed_focus = IEA_Army_3
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer AT_manufacturer }
+		}
+    }
+aircraft_manufacturer = {
+
+    }
+industrial_concern = {
+		danieli = {
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			
+			traits = { industrial_concern }
+		}
+    }
+naval_manufacturer = {
+		odero_terni_orlando = {
+						
+			allowed = {
+				original_tag = IEA
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		
+		}
+    }
+theorist = {
+		IEA_Im_running_out_of_fucking_names = {
+			
+			
+			allowed = {
+				original_tag = IEA
+			}
+			
+            picture = generic_political_advisor_europe_6
+			
+			traits = { army_chief_reform_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    }
+}    

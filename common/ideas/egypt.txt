@@ -1,0 +1,598 @@
+ideas = {
+	country = {
+        EGY_Low_Corruption = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = cash_picture
+            removal_cost = -1
+
+            modifier = {
+                min_export = 0.10
+            }
+        }
+        EGY_Freedom_promised = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = hol_caved_to_the_british
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.10
+                war_support_factor = 0.15
+                political_power_cost = -0.1
+                surrender_limit = 0.4
+                conscription = 0.025
+            }
+        }
+        EGY_Army_of_Egypt = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = generic_manpower_bonus
+            removal_cost = -1
+
+            modifier = {
+                war_support_factor = 0.05
+                army_core_defence_factor = 0.05
+                army_speed_factor = 0.05
+                max_dig_in = 1
+                dig_in_speed_factor = 0.10
+            }
+        }
+        EGY_High_Corruption = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = cash_picture
+            removal_cost = -1
+
+            modifier = {
+                min_export = 0.20
+                political_power_cost = 0.05
+            }
+        }
+        EGY_Electrical_Grid_Expansion = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = electric
+            removal_cost = -1
+
+            modifier = {
+                production_factory_max_efficiency_factor = 0.05
+                industrial_capacity_factory = 0.05
+                stability_factor = 0.25
+            }
+        }
+        EGY_Unstable_State = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = chi_army_corruption3
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.50
+                political_power_cost = 0.50
+                research_speed_factor = -0.10
+            }
+        }
+        EGY_Stability_thru_arms = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = chi_army_corruption3
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.25
+                political_power_cost = 0.25
+                research_speed_factor = -0.05
+            }
+        }
+        EGY_Reformed_Nation = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = generic_agrarian_reform
+            removal_cost = -1
+
+            modifier = {
+                conscription_factor = -0.25
+            }
+        }
+        EGY_Rural_Nation = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = generic_agrarian_society
+            removal_cost = -1
+
+            modifier = {
+                conscription_factor = -0.50
+                political_power_cost = 0.10
+            }
+        }
+        EGY_The_Suez_Cannal_Company = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = generic_goods_red_bonus
+            removal_cost = -1
+
+            modifier = {
+            production_speed_industrial_complex_factor = 0.1
+            consumer_goods_factor = -0.05
+            }
+
+        }
+        EGY_week_industrial_base = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = generic_armor
+            removal_cost = -1
+
+            equipment_bonus = {
+                heavy_tank_equipment = {
+                    instant = yes
+                    build_cost_ic = 0.80
+                }
+                medium_tank_equipment = {
+                    instant = yes
+                    build_cost_ic = 0.80
+                }
+                light_tank_equipment = {
+                    instant = yes
+                    build_cost_ic = 0.80
+                }               
+            }
+        }
+        EGY_KILL_ITALIANS = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = generic_acquire_tanks
+            targeted_modifier = {
+                tag = ITA
+                # counter war support
+                attack_bonus_against = 0.05
+            }
+
+            modifier = {   
+            }
+        }
+        EGY_KILL_NAZIS = {
+            removal_cost = -1
+            allowed = {
+                always = no # Unlocked via focus
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            picture = generic_acquire_tanks
+            targeted_modifier = {
+                tag = GER
+                # counter war support
+                attack_bonus_against = 0.05
+            }
+
+            modifier = {   
+            }
+        }                                                                        
+    }
+
+political_advisor = {
+        EGY_giovanni_marinelli1 = {
+                        
+            allowed = {
+                original_tag = "EGY"
+            }
+
+            picture = generic_political_advisor_arab_3
+                        
+            traits = { lieutenant_of_industry }
+    
+            on_add = {              
+            }
+                
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_giovanni_marinelli2 = {
+                        
+            allowed = {
+                original_tag = "EGY"
+            }
+
+            picture = generic_political_advisor_arab_3
+                        
+            traits = { great_architect }
+    
+            on_add = {              
+            }
+                
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_giovanni_marinelli3 = {
+                        
+            allowed = {
+                original_tag = "EGY"
+            }
+
+            picture = generic_political_advisor_arab_3
+                        
+            traits = { silent_workhorse }
+    
+            on_add = {              
+            }
+                
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_giovanni_marinelli4 = {
+                        
+            allowed = {
+                original_tag = "EGY"
+            }
+
+            picture = generic_political_advisor_arab_3
+                        
+            traits = { quartermaster_trainee }
+    
+            on_add = {              
+            }
+                
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_giovanni_marinelli5 = {
+                        
+            allowed = {
+                original_tag = "EGY"
+            }
+
+            picture = generic_political_advisor_arab_3
+                        
+            traits = { staunch_monarchist }
+    
+            on_add = {              
+            }
+                
+            ai_will_do = {
+                factor = 1
+            }
+        }                                
+	}
+army_chief = {
+        EGY_Tony_Beluci1 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { army_logistics_3}
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_Tony_Beluci2 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { army_chief_planning_1 }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_Tony_Beluci3 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { army_chief_maneuver_3 }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }                
+	}
+navy_chief = {
+
+    }
+air_chief = {
+        IEA_Klathmu_Zulu = {
+            
+            
+            allowed = {
+                original_tag = IEA
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { air_chief_ground_support_1 }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }
+    }
+high_command = {
+        EGY_Seth_Aaron1 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { army_chief_reform_3 }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_Seth_Aaron2 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { army_chief_planning_3 }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_Seth_Aaron3 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { army_entrenchment_1  }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_Seth_Aaron4 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { army_artillery_1 }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_Seth_Aaron5 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { army_concealment_1 }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }                                                         
+        EGY_Seth_Aaron6 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { cornered_fox }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }        		
+    }
+tank_manufacturer = {
+
+    } 
+materiel_manufacturer = {
+        designer = yes
+        
+        rsaf_enfield = {
+            
+            allowed = {
+                original_TAG = EGY
+            }
+            
+            research_bonus = {
+                infantry_weapons = 0.15
+            }
+            
+            traits = { infantry_equipment_manufacturer infantry_equipment_manufacturer }
+            
+            modifier = {
+            }
+        } 
+    }
+aircraft_manufacturer = {
+
+    }
+industrial_concern = {
+        aioc = {
+            
+            allowed = {
+                original_TAG = EGY
+            }
+            
+
+            
+            research_bonus = {
+                industry = 0.15
+            }
+            
+            traits = { industrial_concern }
+            
+            modifier = {
+            }
+        }
+    }
+theorist = {
+        EGY_Im_running_out_of_fucking_names1 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { army_chief_reform_2 }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_Im_running_out_of_fucking_names2 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { army_chief_drill_3 }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }
+        EGY_Im_running_out_of_fucking_names3 = {
+            
+            
+            allowed = {
+                original_tag = EGY
+            }
+            
+            picture = generic_political_advisor_europe_6
+            
+            traits = { military_theorist }
+            
+            ai_will_do = {
+                factor = 1
+            }
+        }                
+    }
+}    

@@ -1,0 +1,162 @@
+﻿capital = 446
+
+set_stability = 0.50
+set_war_support = 0.35
+add_ideas = {
+	disarmed_nation
+	limited_exports
+	EGY_Unstable_State
+	EGY_High_Corruption
+	EGY_Rural_Nation
+	EGY_week_industrial_base
+	COM_Rubber
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	gw_artillery = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1	
+	decimetric_radar = 1
+}
+
+set_convoys = 20
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = large_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
+		tech_support = 1
+		tech_recon = 1
+		support_weapons = 1
+		gw_artillery = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_silos = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 20
+	communism = 5
+	neutrality = 50
+}
+
+add_ideas = {
+	free_trade
+}
+
+create_country_leader = {
+	name = "Muhammad Naguib"
+	desc = ""
+	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_democratic1.dds"
+	ideology = liberalism
+	traits = { inexperienced_monarch humble
+	}
+}
+
+create_country_leader = {
+	name = "Ahmed Husayn"
+	desc = ""
+	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+	ideology = fascism_ideology
+	traits = { inexperienced_monarch humble
+	}
+}
+
+create_country_leader = {
+	name = "Farouk Muhammad Ali"
+	desc = ""
+	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_land_1.dds"
+	ideology = despotism
+	traits = { inexperienced_monarch humble
+	}
+}
+
+create_country_leader = {
+	name = "Hosni al-Arabi"
+	desc = ""
+	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_navy_3.dds"
+	ideology = leninism
+	traits = { inexperienced_monarch humble
+	}
+}
+
+create_field_marshal = {
+	name = "William Slim"
+	picture = "Portrait_Britain_William_Slim.dds"
+	traits = { trickster Organizer Logistics_Wizard war_hero Defensive_Doctrine }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Richard O'Connor"
+	picture = "Portrait_Britain_Richard_OConnor.dds"
+	traits = { infantry_officer Infantry_Leader infantry_expert trait_engineer scavenger Desert_Fox }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Alan Cunningham"
+	picture = "Portrait_Britain_Alan_Cunningham.dds"
+	traits = { infantry_officer Infantry_Leader Urban_Assault_Specialist }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+

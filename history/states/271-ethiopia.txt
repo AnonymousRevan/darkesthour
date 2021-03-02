@@ -1,0 +1,41 @@
+state=
+{
+	id=271
+	name="STATE_271"
+	manpower = 10000000
+	resources={
+		rubber=2 # was: 2
+	}
+	
+	state_category = town
+
+	history=
+	{
+		owner = IEA
+		buildings = {
+			infrastructure = 5
+			arms_factory = 4
+			industrial_complex = 8
+			air_base = 1
+		}
+		victory_points = { 
+			5010 20 
+		}
+		victory_points = { 
+			1984 10.0 
+		}
+		victory_points = { 
+			7980 10.0 
+		}
+		add_core_of = IEA
+
+		1936.6.1 = {
+			owner = IEA
+			controller = IEA
+		}
+	}
+
+	provinces=
+	{
+1984 2009 2040 2072 4954 4995 5010 5041 5097 7912 7944 7980 8019 8036 8062 10734 10775 12714 12757 12812 12856 13137 	}
+}

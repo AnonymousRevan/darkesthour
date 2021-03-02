@@ -1,0 +1,14 @@
+state=
+{
+	id=649
+	name="STATE_649"
+	state_category = tiny_island
+	manpower=1
+	history=
+	{
+		owner = ARG
+
+		add_core_of = ARG
+	}
+	provinces= { 5023 }
+}

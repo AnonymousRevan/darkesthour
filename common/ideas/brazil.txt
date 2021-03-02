@@ -1,0 +1,697 @@
+ideas = {
+    country = {
+        BRA_Arms_Imports = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			removal_cost = -1
+
+			modifier = {  
+                consumer_goods_factor = 0.02
+            }    
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+		    }
+        }
+
+	   BRA_week_industrial_base = {
+			
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+            picture = generic_armor
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    heavy_tank_equipment = {
+					build_cost_ic = 0.8 instant = yes
+				}
+				medium_tank_equipment = {
+					build_cost_ic = 0.8 instant = yes
+				}
+				light_tank_equipment = {
+					build_cost_ic = 0.8 instant = yes
+				}
+			}
+		}
+
+	   BRA_week_industrial_base2 = {
+			
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+            picture = generic_armor
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    heavy_tank_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				medium_tank_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				light_tank_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+
+		BRA_Defend_our_coast = {
+			
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+            picture = generic_coastal_navy
+			removal_cost = -1
+			
+			modifier = {  
+                industrial_capacity_dockyard = 0.50
+                production_speed_arms_factory_factor = -0.50
+                production_speed_dockyard_factor = 0.50
+                production_speed_naval_base_factor = 0.2
+                production_speed_industrial_complex_factor = 0.15
+            } 			
+
+		}
+
+		BRA_Defend_our_coast2 = {
+			
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+            picture = generic_coastal_navy
+			removal_cost = -1
+
+			modifier = {  
+                industrial_capacity_dockyard = 0.30
+                production_speed_arms_factory_factor = -0.25
+                production_speed_dockyard_factor = 0.25
+                production_speed_naval_base_factor = 0.15
+                production_speed_industrial_complex_factor = 0.1
+            } 			
+
+		}
+
+		BRA_Defend_our_coast3 = {
+			
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+            picture = generic_coastal_navy
+			removal_cost = -1
+			modifier = {  
+                industrial_capacity_dockyard = 0.15
+                production_speed_arms_factory_factor = -0.15
+                production_speed_dockyard_factor = 0.15
+                production_speed_naval_base_factor = 0.10
+                production_speed_industrial_complex_factor = 0.05
+            } 			
+		}
+
+		inexperienced_army1 = {
+
+			removal_cost = -1
+
+			picture = spr_disbanded_army
+			
+			modifier = {
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				army_defence_factor = -0.15
+				army_attack_factor = -0.15
+			}
+		}								
+    }
+
+	political_advisor = {
+
+		BRA_washington_luis_pereira = {
+
+			picture = generic_political_advisor_south_america_1
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { armaments_organizer }
+		}
+
+		BRA_osvaldo_aranha = {
+
+			picture = generic_political_advisor_south_america_2
+				
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { railroad_enthusiast }
+		}
+
+		BRA_afranio_de_mello_franco = {
+
+			picture = generic_political_advisor_south_america_3
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { popular_figurehead }
+		}
+		BRA_Carlos_Pedro = {
+
+			picture = generic_political_advisor_south_america_4
+			
+			allowed = {
+				original_tag = BRA
+			}
+
+            available = {	
+             has_completed_focus = BRA_7
+            }		
+			
+			traits = { financial_expert economist }
+		}
+		BRA_Pedro_Carlos = {
+
+			picture = generic_political_advisor_south_america_5
+			
+			allowed = {
+				original_tag = BRA
+			}
+
+			available = {	
+             has_completed_focus = BRA_8
+            }
+			
+			traits = { great_architect captain_of_industry }
+		}				
+	}
+
+	theorist = {
+
+		BRA_newton_cavalcanti = {
+			ledger = army
+					
+			picture = generic_army_south_america_1
+
+			allowed = {
+				original_tag = BRA
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+
+		BRA_eduardo_gomes = {
+			ledger = air
+					
+			picture = generic_political_advisor_south_america_1
+				
+			allowed = {
+				original_tag = BRA
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	high_command = {
+
+		BRA_epaminondas_dos_santos = {
+			ledger = air
+
+			picture = generic_air_south_america_1
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_agliberto_vieira = {
+			ledger = navy
+
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { navy_naval_air_defense_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_artur_da_costa_e_silva = {
+			ledger = army
+
+			picture = generic_army_south_america_4
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_moreira_lima = {
+			ledger = air
+
+			picture = generic_air_south_america_2
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	# MILITARY
+	army_chief = {
+
+		BRA_joao_neves_da_fontoura = {
+			
+			picture = generic_army_south_america_5
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_nero_fiuza_de_castro = {
+			
+			picture = generic_army_south_america_3
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+
+		BRA_salgado_filho = {
+			
+			picture = generic_air_south_america_1
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_ismael_motta_paes = {
+			
+			picture = generic_air_south_america_2
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { air_chief_night_operations_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		BRA_aristides_guilhem = {
+			
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_jorge_martins = {
+			
+			picture = generic_navy_south_america_1
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_floriano_peixoto = {
+			
+			picture = generic_navy_south_america_3
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+    tank_manufacturer = {
+
+    designer = yes
+
+    Light_Tank = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { COM_fast_tank_manufacturer }
+		}
+    Heavy_Tank = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { COM_heavy_tank_manufacturer }
+		}
+	Medium_Tank = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { COM_medium_tank_manufacturer }
+		}		
+    }
+
+    materiel_manufacturer = {
+
+    designer = yes
+
+    	Small_Arms = {
+			
+			
+			allowed = {
+				original_tag = BRA
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15				
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		Arty_Designer = {
+			
+			
+			allowed = {
+				original_tag = BRA
+			}
+						
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+
+		Anti_Tank_Designer = {
+			
+			
+			allowed = {
+				original_tag = BRA
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { AT_manufacturer }
+		}			
+
+    }
+
+    aircraft_manufacturer = {
+
+    designer = yes
+
+    	light_aircraft_manufacturer = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		CAS_manufacturer = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer } 
+			
+			modifier = {
+			}
+		}		
+		medium_aircraft_manufacturer = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		heavy_aircraft_manufacturer = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		naval_aircraft_manufacturer = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}		
+    }
+
+    naval_manufacturer = {
+
+    designer = yes
+
+		Coastal_Fleet_Designer = {
+						
+			allowed = {
+				original_tag = BRA
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		
+		}
+		Convoy_Escort = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer }
+
+		}
+		Pacific_Fleet_Manufacturer = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+		Atlantic_Fleet_Manufacturer = {
+			
+			allowed = {
+				original_TAG = BRA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}						
+    }
+    industrial_concern = {
+
+		Industry_Concern = {
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			
+			traits = { industrial_concern }
+		}
+    }     	
+}

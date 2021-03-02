@@ -1,0 +1,23 @@
+ideas = {
+	country = {
+		COM_Rubber = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = strategic_resource_oil_refinery
+			targeted_modifier = {
+			}
+
+			modifier = {
+                production_speed_synthetic_refinery_factor = -1.0
+			}
+
+		}
+	}
+}		

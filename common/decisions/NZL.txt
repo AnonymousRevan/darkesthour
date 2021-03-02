@@ -1,0 +1,33 @@
+political_actions = {	
+	NZL_annex_Australia = {
+		ai_will_do = { factor = 0 }
+		cost = 50
+		available = {
+			Date > 1938.12.1
+		}
+		visible = {
+			tag = NZL
+			AST = { is_ai = yes }
+			country_exists = AST
+		}
+		fire_only_once = yes
+		complete_effect = {
+			NZL = {
+				add_state_core = 521
+				add_state_core = 520
+				add_state_core = 674
+				add_state_core = 522
+				add_state_core = 519
+				add_state_core = 518
+				add_state_core = 517
+				add_state_core = 634
+				add_state_core = 737
+				add_state_core = 523
+				add_state_core = 669
+				add_state_core = 738								
+				annex_country = { target = AST transfer_troops = yes }
+
+			}
+		}
+	}
+}    

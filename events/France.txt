@@ -1,0 +1,1152 @@
+﻿###########################
+# French Events
+###########################
+
+add_namespace = france
+
+# Japan demands Indochina
+country_event = {
+	id = france.1
+	title = france.1.t
+	desc = france.1.d
+	picture = GFX_report_event_japan_army_mountainside
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = france.1.a
+		ai_chance = {
+			factor = 25 
+			modifier = {
+				factor = 50
+				has_war = yes
+				any_enemy_country = {
+					strength_ratio = { 
+						tag = ROOT 
+						ratio < 0.4
+					}
+				}
+			}
+			modifier = {
+				factor = 75
+				16 = { NOT = { is_controlled_by = FRA } } #Paris	
+			}
+		} 
+		JAP = {
+			country_event = { days = 5 id = japan.6 }
+		}
+	}
+}
+
+# Maginot Line Extension
+country_event = {
+	id = france.2
+	title = france.2.t
+	desc = france.2.d
+	picture = GFX_report_event_bunker_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = france.2.a
+		18 = {
+			add_building_construction = {
+				type = bunker
+				province = 5291
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3560
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9472
+				level = 2
+				instant_build = yes
+			}
+		}
+		29 = {
+			add_building_construction = {
+				type = bunker
+				province = 11606
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 11483
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 575
+				level = 2
+				instant_build = yes
+			}
+		}
+		785 = {
+			add_building_construction = {
+				type = bunker
+				province = 3447
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+# Alpine Line Extension
+country_event = {
+	id = france.3
+	title = france.3.t
+	desc = france.3.d
+	picture = GFX_report_event_bunker_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = france.3.a
+		735 = {
+			add_building_construction = {
+				type = bunker
+				province = 764
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9909
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3959
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6975
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3764
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9745
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 778
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+### The Fall of France
+
+# The Battle is Lost
+country_event = {
+	id = france.10
+	title = france.10.t
+	desc = france.10.d
+	picture = GFX_report_event_german_parade_paris
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		has_war_with = GER
+		16 = { is_controlled_by = GER }
+		is_in_faction_with = ENG
+		ENG = { has_war_with = GER }
+		surrender_progress > 0.7
+		GER = { is_faction_leader = yes }
+		has_civil_war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = {
+		set_global_flag = achievement_france_surrender
+	}
+
+	option = { # Become Free French
+		name = france.10.b
+		ai_chance = {
+			factor = 100
+		}
+		set_global_flag = fall_of_france
+		GER = { country_event = france.14 }
+		custom_effect_tooltip = france.10.b_tt
+	}
+}
+
+# France wants Armistice (Germany)
+country_event = {
+	id = france.14
+	title = france.14.t
+	desc = france.14.d
+	picture = GFX_report_event_german_parade_paris
+	
+	is_triggered_only = yes
+	
+	option = { # Agree - Neutrality
+		name = france.14.a
+		
+		ai_chance = {
+			factor = 100}
+				
+		FRA = {	
+			add_stability = -0.30
+			set_cosmetic_tag = FRA_FREE
+			set_country_flag = free_france
+		
+			country_event = { hours = 6 id = france.20 }
+			transfer_navy = { target = EFR }
+		}
+			
+		EFR = {
+			create_country_leader = {
+				name = "Philippe Pétain"
+				desc = "POLITICS_PHILIPPE_PÉTAIN_DESC"
+				picture = "Portrait_France_Philippe_Petain.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					anti_communist
+					popular_figurehead
+					Dislikes_Germany
+				}
+			}			
+			set_politics = {
+				parties = {
+					democratic = { 
+						popularity = 10 }
+					fascism = {
+						popularity = 80 }
+					communism = {
+						popularity = 10 }
+					neutrality = { 
+						popularity = 0 }
+				}
+				ruling_party = fascism }
+			
+			transfer_state = 20  # Franche-comté
+			add_state_core = 20
+			transfer_state = 22  # Roussillon
+			add_state_core = 22
+			transfer_state = 25  # Limousin
+			add_state_core = 25
+			transfer_state = 26  # Auvergne
+			add_state_core = 26
+			set_capital = 26
+			add_state_core = 31
+			transfer_state = 31
+			
+			add_state_core = 1
+			add_state_core = 21
+			add_state_core = 735
+			add_state_core = 798
+			add_state_core = 33
+			
+			if = {
+						limit = {
+						AND = {
+							21 = { #Provence
+								NOT = { is_controlled_by = ITA } 
+							}
+						}
+					}
+					EFR = { transfer_state = 21 }
+				}
+				if = {
+					limit = {
+						AND = {
+							1 = { #Corsica
+								NOT = { is_controlled_by = ITA } 
+							}
+						}
+					}
+					EFR = { transfer_state = 1 }
+				}
+				if = {
+					limit = {
+						AND = {
+							665 = { #Gabes
+								NOT = { is_controlled_by = ITA } 
+							}
+						}
+					}
+					EFR = { transfer_state = 665 }
+				}
+				if = {
+					limit = {
+						AND = {
+							805 = { #Sfax
+								NOT = { is_controlled_by = ITA } 
+							}
+						}
+					}
+					EFR = { transfer_state = 805 }
+				}				
+				if = {
+					limit = {
+						AND = {
+							458 = { #Tunisia
+								NOT = { is_controlled_by = ITA } 
+							}
+						}
+					}
+					EFR = { transfer_state = 458 }
+				}
+				if = {
+					limit = {
+						AND = { 
+							32 = { #Alpes
+								NOT = { is_controlled_by = ITA } 
+							}
+						}
+					}
+					EFR = { transfer_state = 32 }
+				}
+				if = {
+					limit = {
+						AND = { 
+							735 = { #Savoy
+								NOT = { is_controlled_by = ITA } 
+							}
+						}
+					}
+					EFR = { transfer_state = 735 }
+				}
+				###
+				if = {
+						limit = {
+						AND = {
+							21 = { #Provence
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 21 }
+					21 = { add_claim_by = ITA }										
+				}
+				if = {
+					limit = {
+						AND = {
+							1 = { #Corsica
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 1 }
+					1 = { add_claim_by = ITA }										
+				}
+				if = {
+					limit = {
+						AND = {
+							665 = { #Gabes
+								is_controlled_by = ITA 
+							}
+						}
+					}
+					ITA = { transfer_state = 665 }
+					665 = { add_claim_by = ITA }										
+				}
+				if = {
+					limit = {
+						AND = {
+							805 = { #Sfax
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 805 }
+					805 = { add_claim_by = ITA }										
+				}				
+				if = {
+					limit = {
+						AND = {
+							458 = { #Tunisia
+								is_controlled_by = ITA
+							}
+						}
+					}
+					ITA = { transfer_state = 458 }
+					458 = { add_claim_by = ITA }					
+				}
+				if = {
+					limit = {
+						AND = { 
+							32 = { #Alpes
+								is_controlled_by = ITA 
+							}
+						}
+					}
+					ITA = { transfer_state = 32 }
+					32 = { add_claim_by = ITA }					
+				}
+				if = {
+					limit = {
+						AND = { 
+							735 = { #Savoy
+								is_controlled_by = ITA 
+							}
+						}
+					}
+					ITA = { transfer_state = 735 }
+					735 = { add_claim_by = ITA }
+				}		
+				
+			transfer_state = 677
+			transfer_state = 799
+			transfer_state = 680
+			transfer_state = 554
+			transfer_state = 553
+			transfer_state = 728
+			transfer_state = 741
+			transfer_state = 310 # New Guinea 
+			transfer_state = 706 # Reunion Island
+			transfer_state = 708 # Comoro Islands
+			transfer_state = 713 # Kerguelen
+			transfer_state = 33  # Centre Sud
+			transfer_state = 272 # French Africa
+			transfer_state = 286 # Indochina
+			transfer_state = 320 # French India
+			transfer_state = 458 # Tunisia
+			transfer_state = 459 # western Algeria
+			transfer_state = 460 # eastern Algeria
+			transfer_state = 461 # Northern Morocco
+			transfer_state = 462 # Southern Morocco
+			transfer_state = 513 # Southern Algeria
+			transfer_state = 514 # North Africa
+			transfer_state = 515 # Central Africa
+			transfer_state = 543 # Madagascar				
+			transfer_state = 556 # Ivory Coast
+			transfer_state = 557 # Dakar
+			transfer_state = 665 # Gabes
+			transfer_state = 670 # Laos
+			transfer_state = 671 # Annam
+			transfer_state = 694 # French Caribbean
+			transfer_state = 728 # Guangzhouwan
+			transfer_state = 730 # St Pierre et Miquelon
+			transfer_state = 734 # Nendo
+			transfer_state = 786
+			transfer_state = 641 #tahiti
+			transfer_state = 268 #Somaliland
+			transfer_state = 782
+			transfer_state = 775 # desert
+			transfer_state = 780
+			transfer_state = 779
+			transfer_state = 778
+			transfer_state = 781
+			transfer_state = 776
+			transfer_state = 777
+			
+			diplomatic_relation = { country = ENG relation = non_aggression_pact }
+			diplomatic_relation = { country = ITA relation = non_aggression_pact }
+			diplomatic_relation = { country = FRA relation = non_aggression_pact }
+			diplomatic_relation = { country = SAF relation = non_aggression_pact }
+			diplomatic_relation = { country = CAN relation = non_aggression_pact }
+			diplomatic_relation = { country = RAJ relation = non_aggression_pact }
+			diplomatic_relation = { country = AST relation = non_aggression_pact }
+			diplomatic_relation = { country = NZL relation = non_aggression_pact }
+			diplomatic_relation = { country = GER relation = non_aggression_pact }
+		}
+		EFR = {
+			add_ideas = EFR_neutrality_idea 
+			add_ideas = undisturbed_isolation 
+		}
+	}
+	#option = { # Conquer everything!
+	#	name = france.14.b
+	#	ai_chance = { 
+	#		factor = 0 } 
+	#	FRA = {
+	#		set_capital = 539
+	#		country_event = { hours = 6 id = france.15 }
+	#		country_event = { hours = 48 id = france.20 }
+	#	}
+	#}
+}
+
+# Germany refuses armistice! (France)
+country_event = {
+	id = france.15
+	title = france.15.t
+	desc = france.15.d
+	picture = GFX_report_event_french_resistance_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = france.15.a
+	}
+}
+
+#Capital captured by non french faction
+country_event = {
+	id = france.16
+	title = france.16.t
+	desc = france.16.d
+	picture = GFX_report_event_french_resistance_02
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = FRA
+		16 = { controller = { NOT = { original_tag = FRA } } }
+		has_capitulated = yes
+		#16 = { is_owned_by = FRA }
+	}
+	
+	mean_time_to_happen = {
+		days = 4
+	}
+
+	option = {
+		name = france.16.a
+		remove_ideas = FRA_victors_of_wwi
+		remove_ideas = FRA_disjointed_government
+		remove_ideas = FRA_protected_by_the_maginot_line
+	}
+}
+
+# De Gaulle becomes leader
+country_event = {
+	id = france.20
+	title = france.20.t
+	desc = france.20.d
+	picture = GFX_report_event_degaulle_churchill
+	
+	is_triggered_only = yes
+	
+	option = { name = france.20.a
+		custom_effect_tooltip = france.20.a_tt
+		set_country_flag = france_de_gaulle
+		hidden_effect =  {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Charles de Gaulle"
+				desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
+				picture = "Portrait_France_Charles_De_Gaulle.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = { rearmer dislikes_germany
+					little_churchill = {
+						random = no
+						war_support_factor = 0.05
+						partisan_effect = 0.15
+					}
+				}
+			}
+			remove_unit_leader = 801 # Jean de Lattre de Tassigny
+			remove_unit_leader = 802 # Alphonse Juin
+			remove_unit_leader = 803 # Maurice Gamelin
+			remove_unit_leader = 804 # Maxime Weygand
+			remove_unit_leader = 805 # Alphonse Georges 
+			remove_unit_leader = 808 # Henri Giraud (Captured)
+			remove_unit_leader = 809 # Charles Huntziger
+			remove_unit_leader = 810 # François Darlan
+			remove_unit_leader = 811 # Jean-Marie Charles Abrial
+			remove_unit_leader = 812 # Jean-Pierre Esteva
+			remove_unit_leader = 813 # René-Émile Godfroy
+			remove_unit_leader = 814 # Jean de Laborde
+			
+			create_corps_commander = {
+				name = "Marie-Pierre Koenig"
+				picture = "Portrait_France_Marie_Pierre_Koenig.dds"
+				traits = { trickster infantry_leader infantry_officer harsh_leader }
+				skill = 5
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 5
+				logistics_skill = 5
+			}
+			create_corps_commander = {
+				name = "Edgard de Larminat"
+				picture = "Portrait_France_Generic_land_4.dds"
+				traits = { war_hero politically_connected trait_reckless cavalry_leader }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 5
+			}
+			create_navy_leader = {
+				name = "Émile Muselier"
+				picture = "Portrait_France_Emile_Muselier.dds"
+				traits = { spotter }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				maneuvering_skill = 3
+				coordination_skill = 3
+			}
+		}
+	}
+}
+
+
+# French strikes
+
+
+# French ban on communism
+#country_event = {
+#	id = france.24
+#	title = france.24.t
+#	desc = france.24.d
+#	picture = GFX_report_event_molotov_ribentrop_handshake
+#
+#
+#	trigger = {
+#		tag = FRA
+#		SOV = { has_government = communism }
+#		has_government = democratic
+#		communism < 0.5
+#		has_global_flag = sov_yes_pact
+#	}
+#
+#	fire_only_once = yes
+#	
+#	mean_time_to_happen = {	days = 2	}
+#
+#	option = {
+#		ai_chance = {	factor = 10 }
+#		add_political_power = -20
+#		name = france.24.a
+#		add_popularity = {
+#			ideology = communism
+#			popularity = -0.3
+#		}
+#		add_ideas = FRA_communism_banned
+#
+#		add_opinion_modifier = {
+#			target = SOV
+#			modifier = FRA_ban_communism
+#		}
+#		
+#		every_other_country = {
+#			limit = { 
+#				has_government = communism
+#			}
+#			add_opinion_modifier = {
+#				target = FRA
+#				modifier = FRA_ban_communism
+#			}
+#		}
+#		hidden_effect = {
+#			news_event = { id = news.161 hours = 6 }
+#		}
+#
+#	}
+#	option = {
+#		ai_chance = {	factor = 0 }
+#		name = france.24.b
+#	}
+#}
+
+# Vichy France: Germany is handing over some of our land
+country_event = {
+	id = france.27
+	title = france.27.t
+	desc = { 
+		text = france.27.d_1_state 
+		trigger = {
+			OR = {
+				NOT = { has_global_flag = ITA_claims_on_france_735 }
+				has_global_flag = ITA_claims_on_france_1
+			}
+			OR = {
+				has_global_flag = ITA_claims_on_france_735
+				NOT = { has_global_flag = ITA_claims_on_france_1 }
+			}
+		} 
+	}
+	desc = { 
+		text = france.27.d_both
+		trigger = { 
+			has_global_flag = ITA_claims_on_france_735 
+			has_global_flag = ITA_claims_on_france_1
+		} 
+	}
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only	= yes
+
+	option = {
+		name = france.27.a
+		
+		effect_tooltip = {
+			if = {
+				limit = { has_global_flag = ITA_claims_on_france_735 }
+				ITA = { transfer_state = 735 }
+			}
+			if = {
+				limit = { has_global_flag = ITA_claims_on_france_1 }
+				ITA = { transfer_state = 1 }
+			}
+		}
+
+		if = {
+			limit = {
+				has_global_flag = ITA_claims_on_france_735
+				has_global_flag = ITA_claims_on_france_1
+				OR = {
+					owns_state = 554
+					owns_state = 677
+					owns_state = 680
+				}
+
+			}
+			random_other_country = {
+				limit = {
+					original_tag = FRA
+					has_government = democratic
+				}
+				if = {
+					limit = { ROOT = { owns_state = 554 } }
+					transfer_state = 554
+				}
+				if = {
+					limit = { ROOT = { owns_state = 677 } }
+					transfer_state = 677
+				}
+				if = {
+					limit = { ROOT = { owns_state = 680 } }
+					transfer_state = 680
+				}
+				country_event = france.28
+			}
+		}
+	}
+}
+
+# France - Syria defects to us
+country_event = {
+	id = france.28
+	title = france.28.t
+	desc = france.28.d
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only	= yes
+
+	option = {
+		name = france.28.a
+	}
+
+}
+
+# France - Britain accepts Ally request
+country_event = {
+	id = france.29
+	title = france.29.t
+	desc = france.29.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = france.29.a
+	}
+}
+
+### Resigning Ministers Resigns ###
+country_event = {
+    id = france.100
+    title = france.100.t
+    desc = france.100.d
+    picture = GFX_report_event_german_parade_paris
+    fire_only_once = yes
+    is_triggered_only = yes 
+    mean_time_to_happen = {
+        days = 7
+    }
+    option = {
+        name = france.100.a
+        retire_country_leader = yes
+        create_country_leader = {
+			name = "Léon Blum"
+			desc = "POLITICS_LÉON_BLUM_DESC"
+			picture = "Portrait_France_Leon_Blum.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+				humble_appeaser
+				quartermaster_trainee
+			}
+		}
+        set_country_flag = laval_resigned
+    }
+}
+
+country_event = {
+    id = france.101
+    title = france.101.t
+    desc = france.101.d
+    picture = GFX_report_event_german_parade_paris
+ 
+    fire_only_once = yes
+ 
+    is_triggered_only = yes 
+
+    mean_time_to_happen = {
+        days = 7
+    }
+
+    option = {
+        name = france.101.a
+        retire_country_leader = yes
+        create_country_leader = {
+			name = "Édouard Daladier"
+			desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+			picture = "Portrait_France_Edouard_Daladier.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+				stout_defender
+			}
+		}
+        set_country_flag = blum_resigned
+    }
+}
+
+country_event = {
+    id = france.31
+    title = france.31.t
+    desc = france.31.d
+    picture = GFX_report_event_german_parade_paris
+ 
+    fire_only_once = yes
+ 
+    trigger = {
+        original_tag = FRA
+        has_government = democratic
+        date > 1939.11.1
+        NOT = { has_country_flag = france_de_gaulle }
+    } 
+
+    mean_time_to_happen = {
+        days = 14
+    }
+
+    option = {
+        name = france.31.a
+        retire_country_leader = yes
+        create_country_leader = {
+        	name = "Paul Reynaud"
+        	desc = "POLITICS_PAUL_REYNAUD_DESC"
+        	picture = "Portrait_France_Paul_Reynaud.dds"
+        	expire = "1965.1.1"
+        	ideology = liberalism
+        	traits = {
+        	      }
+            }
+        set_country_flag = daladier_resigned
+    }
+}
+
+# Britain is at peace after annexing France in the Franco-British Union
+# AI will tend to release France if historic mode is on or they are democratic
+
+country_event = {
+	id = france.33
+	title = france.33.title
+	desc = france.33.desc
+	
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		has_war = no
+		is_subject = no
+		has_global_flag = flag_franco_british_union
+		any_owned_state = {
+			is_core_of = FRA
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = { # Release
+		name = france.33.a
+		
+		if = {
+			limit = {
+				has_cosmetic_tag = FRA_UK
+			}
+			drop_cosmetic_tag = yes
+		}
+		
+		if = {
+			limit = {
+				NOT = { country_exists = FRA }
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				FRA = {
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = yes
+						parties = {
+							democratic = { 
+								popularity = 60
+							}
+							neutrality = {
+								popularity = 0
+							}
+							fascism = {
+								popularity = 20
+							}
+							communism = {
+								popularity = 20
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				FRA = {
+					set_politics = {
+						ruling_party = fascism
+						elections_allowed = no
+						parties = {
+							democratic = { 
+								popularity = 20
+							}
+							neutrality = {
+								popularity = 0
+							}
+							fascism = {
+								popularity = 60
+							}
+							communism = {
+								popularity = 20
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				FRA = {
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no
+						parties = {
+							democratic = { 
+								popularity = 20
+							}
+							neutrality = {
+								popularity = 0
+							}
+							fascism = {
+								popularity = 20
+							}
+							communism = {
+								popularity = 60
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				FRA = {
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+						parties = {
+							democratic = { 
+								popularity = 15
+							}
+							neutrality = {
+								popularity = 55
+							}
+							fascism = {
+								popularity = 15
+							}
+							communism = {
+								popularity = 15
+							}
+						}
+					}
+				}
+			}
+			release = FRA
+			
+			set_autonomy = { target = FRA autonomy_state = autonomy_free }
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = ENG
+				is_core_of = FRA
+			}
+			remove_core_of = ENG
+		}
+		
+		hidden_effect = { # This looks odd in the tooltip
+			every_other_country = {
+				limit = {
+					is_subject_of = ENG
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = FRA
+					}
+					FRA = {
+						transfer_state = PREV
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				is_faction_leader = yes
+				FRA = {
+					is_subject = no
+					is_in_faction = no
+				}
+			}
+			add_to_faction = FRA
+		}
+		
+		every_unit_leader = {
+			limit = {
+				has_unit_leader_flag = {
+					flag = flag_former_french_general
+				}
+			}
+			set_nationality = FRA
+		}
+		
+		hidden_effect =  {
+			news_event = { id = france.34 days = 1 }
+		}
+		
+		ai_chance = {
+			factor = 60
+			
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+	}
+	
+	option = { # Don't release
+		name = france.33.b
+		
+		add_war_support = -0.1
+		add_stability = -0.2
+		
+		every_state = {
+			limit = {
+				is_core_of = ENG
+				is_core_of = FRA
+			}
+			remove_core_of = ENG
+		}
+		
+		every_unit_leader = {
+			limit = {
+				has_unit_leader_flag = {
+					flag = flag_former_french_general
+				}
+			}
+			set_nationality = FRA
+		}
+		
+		ai_chance = {
+			factor = 40
+			
+			modifier = {
+				factor = 0.5
+				has_stability < 0.5
+			}
+			modifier = {
+				factor = 0.5
+				has_war_support < 0.5
+			}
+			modifier = {
+				factor = 2
+				has_government = fascism
+			}
+			modifier = {
+				factor = 0.5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+# News event for the release of France
+
+news_event = {
+	id = france.34
+	title = france.34.title
+	desc = france.34.desc
+	
+	picture = GFX_news_event_degaulle_churchill
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = france.34.a
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = FRA
+				is_in_faction_with = ENG
+				is_subject_of = ENG
+			}
+		}
+	}
+	
+	option = {
+		name = france.34.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = ENG
+					tag = FRA
+					is_in_faction_with = ENG
+					is_subject_of = ENG
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+
+state={
+	id=349
+	name="STATE_349"
+	manpower = 1
+	
+	state_category = rural
+
+	history={
+		owner = PER
+		victory_points = {
+			9777 3 
+		}
+
+		add_core_of = PER
+	}
+
+	provinces={
+		3890 3903 3950 6919 6950 6965 9761 9777 
+	}
+}

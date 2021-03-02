@@ -1,0 +1,2191 @@
+focus_tree = {
+	id = soviet_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	
+	default = no
+
+	############################
+	##Great_Purge_and_Recovery##
+	############################
+
+		focus = {
+		id = SOV_great_purge
+		icon = GFX_great_purge
+		available = {
+			NOT = { has_country_flag = counter_purge }
+			has_government = communism
+			Date > 1936.1.1
+		}
+		x = 4
+		y = 0
+		cost = 40
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		select_effect = {
+			country_event = { id = soviet.24 days = 1 }
+			set_country_flag = SOV_purge_started
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_great_purge_tt
+			custom_effect_tooltip = SOV_great_purge_tt2
+			
+			#Full military purge. Hardest penalty
+
+		    add_ideas = officers_purged
+		
+				hidden_effect = {
+					news_event = { hours = 6 id = news.219 }
+				}
+			}
+
+			remove_ideas = trotskyite_plot
+			add_ideas = trotskyite_plot_purged
+
+			hidden_effect = {
+				if = {
+					limit = { 
+						any_other_country = {
+							is_major = yes
+							has_offensive_war_with = SOV
+						}
+					}
+					country_event = { id = soviet.46 days = 3 }
+				}				 
+			}
+		}
+
+	focus = {
+		id = SOV_lessons_of_war
+		icon = GFX_lessons_of_war
+		prerequisite = { focus = SOV_great_purge }
+		available = {
+			date > 1940.11.1
+			}
+		x = 0
+		y = 2
+		relative_position_id = SOV_great_purge
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+			remove_ideas = officers_purged
+			add_ideas = officers_purged_2	
+		}
+	}
+
+focus = {
+		id = SOV_heros_of_the_union
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SOV_lessons_of_war }
+		available = {
+			date > 1941.9.1
+		}
+		x = 0
+		y = 2
+		relative_position_id = SOV_lessons_of_war
+		cost = 5.1
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		remove_ideas = officers_purged_2
+		add_ideas = officers_purged_3
+		create_field_marshal = {
+	name = "Georgy Zhukov"
+	id = 410
+	picture = "Portrait_Soviet_Gregory_Zhukov.dds"
+	traits = { winter_specialist armor_officer media_personality war_hero brilliant_strategist panzer_leader trickster swamp_fox logistics_wizard offensive_doctrine charismatic expert_delegator }
+	skill = 8
+
+	
+	attack_skill = 8
+	defense_skill = 6
+	planning_skill = 5
+	logistics_skill = 5
+	}
+	create_corps_commander = {
+	name = "Ivan Konev"
+	id = 408
+		picture = "Portrait_Soviet_Ivan_Konev.dds"
+	traits = { armor_officer harsh_leader politically_connected engineer ranger panzer_expert skilled_staffer panzer_leader }
+	skill = 7
+
+
+	
+	attack_skill = 6
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 5
+	}
+	create_corps_commander = {
+	name = "Konstantin Rokossovsky"
+	id = 402
+		picture = "Portrait_Soviet_Konstantin_Rokossovsky.dds"
+	traits = {  armor_officer war_hero trait_cautious brilliant_strategist trickster organizer panzer_leader panzer_expert }
+	skill = 7
+	
+	attack_skill = 7
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_heros_of_stalingrad
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SOV_heros_of_the_union }
+		available = {
+			date > 1942.6.1
+		}
+		x = 0
+		y = 2
+		relative_position_id = SOV_heros_of_the_union
+		cost = 5.1
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		remove_ideas = officers_purged_3
+	create_corps_commander = {
+	name = "Vasily Chuikov"
+		picture = "Portrait_Soviet_Vasily_Chuikov.dds"
+	traits = { brilliant_strategist career_officer urban_assault_specialist inflexible_strategist infantry_leader ambusher scavenger }
+	skill = 8
+
+	attack_skill = 3
+	defense_skill = 10
+	planning_skill = 4
+	logistics_skill = 4
+
+			}
+    create_corps_commander = {
+	name = "Semyon Timoshenko"
+	id = 404
+		picture = "Portrait_Soviet_Semyon_Timoshenko.dds"
+	traits = { Infantry_Leader Swamp_Fox Fast_Planner politically_connected career_officer }
+	skill = 5
+
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 5
+            }
+    create_corps_commander = {
+	name = "Nikolai Berzarin"
+		picture = "Portrait_Soviet_Nikolai_Berzarin.dds"
+	traits = { infantry_officer Infantry_Leader Hill_Fighter Brilliant_Strategist }
+	skill = 5
+
+	attack_skill = 7
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+            }    
+
+		}
+	}
+
+	############
+	##Industry##
+	############
+
+focus = {
+		id = SOV_finish_second_five_year_plan
+		icon = GFX_r56_goal_SOV_5year_plan_continue
+		prerequisite = { focus = SOV_great_purge }
+		x = -4
+		y = 1
+		relative_position_id = SOV_great_purge
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SOV_finish_five_year_plan_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			219 = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+				set_state_flag = SOV_finish_five_year_plan_2IC
+			}
+			217 = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+				set_state_flag = SOV_finish_five_year_plan_2IC
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_production_effort
+		text = production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SOV_finish_second_five_year_plan }
+		x = 0
+		y = 1
+		relative_position_id = SOV_finish_second_five_year_plan
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SOV_production_effort_2AF }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			army_experience = 50
+			if = {
+				limit = {
+					653 = {
+						OR = {
+							NOT = { is_controlled_by = SOV }
+							AND = {
+								is_controlled_by = SOV
+								free_building_slots = {
+									building = arms_factory
+									size < 2
+									include_locked = yes
+								}
+							}
+						}
+					}
+				}
+				219 = {
+					limit = { 
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}	
+					set_state_flag = SOV_production_effort_2AF
+				}
+			}
+			219 = {
+				if = {
+					limit = { 
+						is_controlled_by = SOV
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = SOV_production_effort_2AF
+				}
+			}
+			if = {
+				limit = {
+					572 = {
+						OR = {
+							NOT = { is_controlled_by = SOV }
+							AND = {
+								is_controlled_by = SOV
+								free_building_slots = {
+									building = arms_factory
+									size < 2
+									include_locked = yes
+								}
+							}
+						}
+					}
+				}
+				217 = {
+					limit = { 
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}							
+					set_state_flag = SOV_production_effort_2AF
+				}
+			}
+			217 = {
+				if = {
+					limit = { 
+						is_controlled_by = SOV
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = SOV_production_effort_2AF
+				}
+			}
+		}
+	}
+
+		focus = {
+		id = SOV_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SOV_production_effort }
+		x = 0
+		y = 1
+		relative_position_id = SOV_production_effort
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 3
+					}
+				}
+			}
+		}
+		completion_reward = {
+			
+			251 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			249 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			250 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+	    }
+	}    
+
+	focus = {
+		id = SOV_tranformation_of_nature
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = SOV_infrastructure_effort }
+		x = 0
+		y = 1
+		relative_position_id = SOV_infrastructure_effort
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			controls_state = 404
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_resource = {
+				type = rubber
+				amount = 50
+				state = 404
+			}
+		}
+	}
+
+
+	focus = {
+		id = SOV_infrastructure_effort2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SOV_tranformation_of_nature}
+		x = 0
+		y = 1
+		relative_position_id = SOV_tranformation_of_nature
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 3
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SOV_infrastructure_effort_3Inf }
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			582 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			402 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			583 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			404 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_collectivist_propaganda
+		icon = GFX_collectivist_propaganda
+		prerequisite = { focus = SOV_production_effort }
+		#mutually_exclusive = { focus = SOV_positive_heroism }
+		x = 2
+		y = 1
+		relative_position_id = SOV_production_effort
+		cost = 10
+		ai_will_do = {
+			factor = 0.25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+			add_ideas = SOV_collectivist_propaganda
+			remove_ideas = trotskyite_plot
+		}
+	}
+
+	focus = {
+		id = SOV_workers_culture
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = SOV_collectivist_propaganda }
+		x = 0
+		y = 1
+		relative_position_id = SOV_collectivist_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = workers_culture
+			add_tech_bonus = {
+					name = industry_bonus
+					bonus = 1.0
+				uses = 2
+				category = industry
+				}
+			}
+		}
+
+	focus = {
+		id = SOV_extra_tech_slot_early
+		icon = GFX_focus_generic_socialist_science
+		text = extra_tech_slot
+		prerequisite = { focus = SOV_workers_culture }
+		x = 0
+		y = 1
+		relative_position_id = SOV_workers_culture
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+
+	focus = {
+		id = SOV_move_industry_to_urals
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SOV_finish_second_five_year_plan }
+		x = -3
+		y = 1
+		relative_position_id = SOV_finish_second_five_year_plan
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { has_war_with = GER }
+			}
+		}
+
+		available = {
+			has_war = yes
+			573 = {
+				is_owned_and_controlled_by = SOV
+			}
+			582 = {
+				is_owned_and_controlled_by = SOV
+			} 
+		}
+
+		bypass = {
+			NOT = { 219 = { is_owned_and_controlled_by = ROOT } }
+			NOT = { 195 = { is_owned_and_controlled_by = ROOT } }
+			NOT = { 242 = { is_owned_and_controlled_by = ROOT } }
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = SOV_relocate_industry_from_moscow
+			unlock_decision_tooltip = SOV_relocate_industry_from_leningrad
+			unlock_decision_tooltip = SOV_relocate_industry_from_smolensk
+			
+			235 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			232 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			229 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+	    }
+	}    
+
+	focus = {
+		id = SOV_defense_of_moscow
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = SOV_move_industry_to_urals }
+		available = {
+			#any_owned_state = {
+			#	any_neighbor_state = { state = 219 } # Moscow
+			#	NOT = { is_controlled_by = ROOT }
+			#}
+			219 = {
+				is_controlled_by = ROOT
+				
+				OR = {
+					any_neighbor_state = {
+						NOT = { is_controlled_by = ROOT }
+					}
+
+					SOV = { surrender_progress > 0.1 }
+				}
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = SOV_move_industry_to_urals
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			army_experience = 5
+			219 = {
+				custom_effect_tooltip = SOV_defense_of_moscow_forts
+				hidden_effect = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3391
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6414
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9348
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 301
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9378
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6283
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3259
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11282
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 6380
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+    
+    #############
+    ##Army_Shit##
+    #############
+
+    focus = {
+		id = SOV_militarized_schools
+		icon = GFX_new_soviet_man
+		prerequisite = { focus = SOV_great_purge }
+		x = 6
+		y = 1
+		relative_position_id = SOV_great_purge
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = militarized_schools
+		}
+	}
+
+	focus = {
+		id = SOV_positive_heroism
+		icon = GFX_r56_goal_SOV_postive_heroism
+		prerequisite = { focus = SOV_militarized_schools }
+		#mutually_exclusive = { focus = SOV_collectivist_propaganda }
+		x = 0
+		y = 2
+		relative_position_id = SOV_militarized_schools
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = konstantin_rokossovsky 
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = georgy_zhukov
+			# REVISIT Might want to add more
+		}
+	}
+
+focus = {
+		id = SOV_peoples_commissariat
+		icon = GFX_focus_eng_crush_the_dream
+		prerequisite = { focus = SOV_positive_heroism }
+		x = 0
+		y = 1
+		relative_position_id = SOV_positive_heroism
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = peoples_commissariat_focus
+		}
+	}	
+
+	focus = {
+		id = SOV_improve_railway
+		icon = GFX_r56_goal_SOV_forced_urbanization
+		prerequisite = { focus = SOV_peoples_commissariat }
+		x = 0
+		y = 1
+		relative_position_id = SOV_peoples_commissariat
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SOV_improve_railway_3Inf }
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { 
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+					state_population > 1000000
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SOV_improve_railway_3Inf
+			}
+			random_owned_controlled_state = {
+				limit = { 
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+					state_population > 1000000
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SOV_improve_railway_3Inf
+			}
+			random_owned_controlled_state = {
+				limit = { 
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+					state_population > 1000000
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SOV_improve_railway_3Inf
+			}
+		}
+	}
+
+		focus = {
+		id = SOV_rehabilitated_military
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_military_reorganization }
+		x = 0
+		y = 1
+		relative_position_id = SOV_military_reorganization
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = rehabilitated_military_focus
+		}
+	}
+
+	focus = {
+		id = SOV_military_reorganization
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SOV_improve_railway }
+		x = 0
+		y = 1
+		relative_position_id = SOV_improve_railway
+		cost = 10
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 1000
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = SOV_ocean_going_navy
+		icon = GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
+		prerequisite = { focus = SOV_militarized_schools }
+		x = 3
+		y = 1
+		relative_position_id = SOV_militarized_schools		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+				complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SOV_expand_red_fleet_2dockyards }
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}				
+			}
+			add_tech_bonus = {
+				name = ships_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_equipment
+			}			
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+				set_state_flag = SOV_expand_red_fleet_2dockyards
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+				set_state_flag = SOV_expand_red_fleet_2dockyards
+			}
+			add_tech_bonus = {
+				name = ships_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_equipment
+			}
+
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_progress_cult
+		icon = GFX_r56_goal_SOV_socialist_science
+		prerequisite = { focus = SOV_ocean_going_navy }
+		x = 0
+		y = 2
+		relative_position_id = SOV_ocean_going_navy
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = progress_cult_focus
+		}
+	}
+
+	focus = {
+		id = SOV_socialist_science
+		icon = GFX_focus_YUG_pan_slavic_congress
+		prerequisite = { focus = SOV_progress_cult }
+		x = 0
+		y = 2
+		relative_position_id = SOV_progress_cult
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = socialist_science_focus
+		}
+	}
+
+	focus = {
+		id = SOV_extra_tech_slot
+		icon = GFX_focus_generic_socialist_science
+		text = extra_tech_slot
+		prerequisite = { focus = SOV_socialist_science }
+		x = 0
+		y = 2
+		relative_position_id = SOV_socialist_science
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+
+############
+##Air_shit##
+############
+
+	focus = {
+		id = SOV_transpolar_flights
+		icon = GFX_goal_generic_air_fighter2
+	    prerequisite = { focus = SOV_militarized_schools }
+		x = -3
+		y = 1
+		relative_position_id = SOV_militarized_schools		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+			air_experience = 100
+
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_aviation_cult
+		icon = GFX_r56_goal_SOV_aviation_cult
+		prerequisite = { focus = SOV_transpolar_flights}
+		x = 0
+		y = 2
+		relative_position_id = SOV_transpolar_flights
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			air_experience = 25
+
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 1.5
+				uses = 1
+				category = light_air
+				category = medium_air
+				category = heavy_air
+				category = naval_air
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_women_pilots
+		icon = GFX_r56_goal_SOV_women_in_aviation
+		prerequisite = { focus = SOV_aviation_cult }
+		x = 0
+		y = 2
+		relative_position_id = SOV_aviation_cult
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 25
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			if = {
+				limit = {
+					SOV = { has_full_control_of_state = 219 }
+				}
+				custom_effect_tooltip = SOV_night_witches_tt
+				hidden_effect = {
+					load_oob = "SOV_night_witches"
+				}
+			}
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.5
+				category = cas_bomber
+			}
+		}
+	}
+
+    ##############
+    ##Operations##
+    ##############
+
+    focus = {
+		id = SOV_Eastern_renforcements
+		icon = GFX_Human_tsunami
+		prerequisite = { focus = SOV_lessons_of_war }
+	    available = {
+			Date > 1941.11.1
+		}
+		x = 1
+		y = 1
+		relative_position_id = SOV_lessons_of_war
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = SOV_Eastern_Renforcements_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = tech_recon
+					}
+					division_template = {
+						name = "Siberian Ski Division"
+						priority = 0
+
+						regiments = {
+							jaeger = { x = 0 y = 0 }
+							jaeger = { x = 0 y = 1 }
+							jaeger = { x = 0 y = 2 }
+							jaeger = { x = 0 y = 3 }
+							jaeger = { x = 0 y = 4 }
+
+			    	   		jaeger = { x = 1 y = 0 }
+						    jaeger = { x = 1 y = 1 }
+							jaeger = { x = 1 y = 2 }
+							jaeger = { x = 1 y = 3 }
+							jaeger = { x = 1 y = 4 }
+
+		    	   		 	jaeger = { x = 2 y = 0 }
+							artillery_brigade = { x = 2 y = 1 }
+							artillery_brigade = { x = 2 y = 2 }
+							artillery_brigade = { x = 2 y = 3 }
+							artillery_brigade = { x = 2 y = 4 }
+
+		    	   		 	jaeger = { x = 3 y = 0 }
+		    	   		    jaeger = { x = 3 y = 1 }
+		    	   		    jaeger = { x = 3 y = 2 }							
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+							anti_air = { x = 0 y = 2 }
+						}
+					}
+					else = {
+						division_template = {
+							name = "Siberian Ski Division"
+							priority = 2
+
+							regiments = {
+							jaeger = { x = 0 y = 0 }
+							jaeger = { x = 0 y = 1 }
+							jaeger = { x = 0 y = 2 }
+							jaeger = { x = 0 y = 3 }
+							jaeger = { x = 0 y = 4 }
+
+			    	   		jaeger = { x = 1 y = 0 }
+						    jaeger = { x = 1 y = 1 }
+							jaeger = { x = 1 y = 2 }
+							jaeger = { x = 1 y = 3 }
+							jaeger = { x = 1 y = 4 }								
+
+		    	   		 	jaeger = { x = 2 y = 0 }
+							artillery_brigade = { x = 2 y = 1 }
+							artillery_brigade = { x = 2 y = 2 }
+							artillery_brigade = { x = 2 y = 3 }
+							artillery_brigade = { x = 2 y = 4 }
+
+		    	   		 	jaeger = { x = 3 y = 0 }
+		    	   		    jaeger = { x = 3 y = 1 }
+		    	   		    jaeger = { x = 3 y = 2 }							
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+								recon = { x = 0 y = 1 }
+							    anti_air = { x = 0 y = 2 }
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 252 }
+					create_unit = {
+						division = "name = \"Siberian Ski Division\" division_template = \"Siberian Ski Division\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}								
+			}
+		}
+	}
+
+    focus = {
+		id = SOV_The_Winter_Counter_Offensive
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = SOV_Eastern_renforcements }
+		x = 0
+		y = 2
+		relative_position_id = SOV_Eastern_renforcements
+		cost = 2
+
+		completion_reward = {
+			add_timed_idea = { idea = SOV_The_Winter_Counter_Offensive Days = 45 }
+		}
+	}
+	
+
+    ##############
+    ##Lend_lease##
+    ##############
+
+    focus = {
+		id = SOV_lend1
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SOV_move_industry_to_urals }
+	    available = {
+			Date > 1942.1.1
+		}
+		x = -1
+		y = 1
+		relative_position_id = SOV_move_industry_to_urals
+		cost = 10
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 60 }
+		}
+	}
+
+    focus = {
+		id = SOV_lend2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SOV_lend1 }
+	    available = {
+			Date > 1942.1.1
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_lend1
+		cost = 10
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 40 }
+		}
+	}
+
+    focus = {
+		id = SOV_lend3
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = SOV_lend2 }
+	    available = {
+			Date > 1942.1.1
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_lend2
+		cost = 10
+
+		completion_reward = {
+			add_offsite_building = { type = synthetic_refinery level = 20 }
+		}
+	}
+
+##################
+##Fortress_Urals##
+##################
+
+    focus = {
+		id = SOV_Con_1
+		available = {
+     		GER = { controls_state = 217 }
+     		GER = { controls_state = 219 }
+     		GER = { controls_state = 195 }
+   		}
+
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
+		prerequisite = { focus = SOV_defense_of_moscow }
+		x = 0
+		y = 2
+		relative_position_id = SOV_defense_of_moscow
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			581 = {
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 13076
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 12502
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 5
+						province = 10677
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 10551
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 7824
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 5
+						province = 12659
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 4874
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 5
+						province = 10216
+						instant_build = yes
+					}											
+		        }
+			573 = {
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 278
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 11307
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 5
+						province = 237
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 4758
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 361
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 5
+						province = 3280
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 7320
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 5
+						province = 11223
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 10136
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 5
+						province = 12117
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 10142
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 5
+						province = 10329
+						instant_build = yes
+					}													
+		        }
+			582 = {
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 10185 
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 4265
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 5
+						province = 4311
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 7300
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 7373
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = bunker
+						level = 5
+						province = 12200
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 4383
+						instant_build = yes
+					}											
+		        }		        		        
+	        }        
+        }
+    focus = {
+		id = SOV_Con_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = { focus = SOV_Con_1 }
+		x = -2
+		y = 1
+		relative_position_id = SOV_Con_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		    408 = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 20
+				add_building_construction = {
+					type = industrial_complex
+					level = 20
+					instant_build = yes
+				}
+			}
+		}
+    }
+    focus = {
+		id = SOV_Con_3
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = { focus = SOV_Con_1 }
+		x = 2
+		y = 1
+		relative_position_id = SOV_Con_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		    408 = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 20
+				add_building_construction = {
+					type = arms_factory
+					level = 20
+					instant_build = yes
+				}
+			}
+		}
+    }
+    focus = {
+		id = SOV_Ski_Reserves
+		icon = GFX_Human_tsunami
+		prerequisite = { focus = SOV_Con_1 }
+		x = 0
+		y = 1
+		relative_position_id = SOV_Con_1
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = SOV_Eastern_Renforcements_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = tech_recon
+					}
+					division_template = {
+						name = "Siberian Ski Reservists"
+						priority = 0
+
+						regiments = {
+							jaeger = { x = 0 y = 0 }
+							jaeger = { x = 0 y = 1 }
+							jaeger = { x = 0 y = 2 }
+							jaeger = { x = 0 y = 3 }
+							jaeger = { x = 0 y = 4 }
+
+			    	   		jaeger = { x = 1 y = 0 }
+						    jaeger = { x = 1 y = 1 }
+							jaeger = { x = 1 y = 2 }
+							jaeger = { x = 1 y = 3 }
+							jaeger = { x = 1 y = 4 }
+
+		    	   		 	jaeger = { x = 2 y = 0 }
+							artillery_brigade = { x = 2 y = 1 }
+							artillery_brigade = { x = 2 y = 2 }
+							artillery_brigade = { x = 2 y = 3 }
+							artillery_brigade = { x = 2 y = 4 }
+
+		    	   		 	jaeger = { x = 3 y = 0 }
+		    	   		    jaeger = { x = 3 y = 1 }
+		    	   		    jaeger = { x = 3 y = 2 }							
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+							anti_air = { x = 0 y = 2 }
+						}
+					}
+					else = {
+						division_template = {
+							name = "Siberian Ski Reservists"
+							priority = 2
+
+							regiments = {
+							jaeger = { x = 0 y = 0 }
+							jaeger = { x = 0 y = 1 }
+							jaeger = { x = 0 y = 2 }
+							jaeger = { x = 0 y = 3 }
+							jaeger = { x = 0 y = 4 }
+
+			    	   		jaeger = { x = 1 y = 0 }
+						    jaeger = { x = 1 y = 1 }
+							jaeger = { x = 1 y = 2 }
+							jaeger = { x = 1 y = 3 }
+							jaeger = { x = 1 y = 4 }								
+
+		    	   		 	jaeger = { x = 2 y = 0 }
+							artillery_brigade = { x = 2 y = 1 }
+							artillery_brigade = { x = 2 y = 2 }
+							artillery_brigade = { x = 2 y = 3 }
+							artillery_brigade = { x = 2 y = 4 }
+
+		    	   		 	jaeger = { x = 3 y = 0 }
+		    	   		    jaeger = { x = 3 y = 1 }
+		    	   		    jaeger = { x = 3 y = 2 }							
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+								recon = { x = 0 y = 1 }
+							    anti_air = { x = 0 y = 2 }
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski ReservistsSiberian Ski Reservists\" division_template = \"Siberian Ski ReservistsSiberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski ReservistsSiberian Ski Reservists\" division_template = \"Siberian Ski ReservistsSiberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski ReservistsSiberian Ski Reservists\" division_template = \"Siberian Ski ReservistsSiberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski ReservistsSiberian Ski Reservists\" division_template = \"Siberian Ski ReservistsSiberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski ReservistsSiberian Ski Reservists\" division_template = \"Siberian Ski ReservistsSiberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653}
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 653 }
+					create_unit = {
+						division = "name = \"Siberian Ski Reservists\" division_template = \"Siberian Ski Reservists\" start_experience_factor = 0.5"
+						owner = SOV
+					}
+				}								
+			}
+		}
+	}            				
+}

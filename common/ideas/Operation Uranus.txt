@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+				SOV_OPERATION_URANUS= {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = GER
+				# counter war support
+				attack_bonus_against = 0.25
+			}
+
+			modifier = {
+				army_org_Factor = 0.10
+				army_morale_factor = 0.10
+				army_speed_factor = 0.10
+				supply_consumption_factor = -0.10
+				winter_attrition_factor = -0.5
+				terrain_penalty_reduction = 0.20
+				no_supply_grace = 72
+				minimum_training_level = -0.20
+			}
+
+		}
+

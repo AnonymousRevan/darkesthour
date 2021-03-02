@@ -1,0 +1,807 @@
+focus_tree = {
+	id = egypt
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EGY
+		}
+	}
+	default = no
+	
+	focus = {
+		id = EGY_1
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		x = 10
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = 425
+		}
+	}
+   
+    focus = {
+		id = EGY_2
+		icon = GFX_goal_power_plant
+		cost = 10
+		prerequisite = { focus = EGY_1 }
+		prerequisite = { focus = EGY_fort_1 }
+		x = 0
+		y = 2
+		relative_position_id = EGY_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		remove_ideas = EGY_Rural_Nation
+
+		add_ideas = EGY_Reformed_Nation 
+
+		add_ideas = EGY_Electrical_Grid_Expansion
+		}
+	}
+
+    focus = {
+		id = EGY_3
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = { focus = EGY_2 }
+		prerequisite = { focus = EGY_fort_3 }
+		x = 0
+		y = 2
+		relative_position_id = EGY_2
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = EGY_4
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = { focus = EGY_6 }
+	    prerequisite = { focus = EGY_Ind_6 }
+		x = 0
+		y = 2
+		relative_position_id = EGY_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = EGY_5
+		icon = GFX_goal_continuous_boost_freedom
+		cost = 20
+		prerequisite = { focus = EGY_4 }
+		prerequisite = { focus = EGY_Debuff_2 }
+		x = 0
+		y = 2
+		relative_position_id = EGY_4
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		remove_ideas = EGY_Stability_thru_arms
+
+		add_ideas = EGY_Freedom_promised
+		}
+	}
+
+	focus = {
+		id = EGY_6
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10
+		prerequisite = { focus = EGY_3 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_to_tech_sharing_group = commonwealth_research
+		}
+	}
+
+	############
+	##Industry##
+	############
+
+	focus = {
+		id = EGY_Ind_1
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10
+		prerequisite = { focus = EGY_1 }
+		x = -6
+		y = 2
+		relative_position_id = EGY_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.75
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = EGY_Ind_2
+		icon = GFX_focus_generic_steel
+		cost = 10
+		prerequisite = { focus = EGY_Ind_1 }
+		x = -2
+		y = 2
+		relative_position_id = EGY_Ind_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 150
+				state = 446
+			}
+		}
+	}
+
+	focus = {
+		id = EGY_Ind_3
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = { focus = EGY_Ind_1 }
+		x = 2
+		y = 2
+		relative_position_id = EGY_Ind_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		    446 = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EGY_Ind_4
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = { focus = EGY_Ind_1 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_Ind_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			447 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			446 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			456 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}		
+	}
+
+	focus = {
+		id = EGY_Ind_5
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = { focus = EGY_Ind_4 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_Ind_4
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		    446 = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = EGY_Ind_6
+		icon = GFX_focus_hol_prepare_the_inundation_lines
+		cost = 10
+		prerequisite = { focus = EGY_Ind_2 focus = EGY_Ind_3 focus = EGY_Ind_5 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_Ind_5
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		    add_ideas = EGY_The_Suez_Cannal_Company
+		}
+	}
+
+    ########
+    ##Army##
+    ########
+   
+    focus = {
+		id = EGY_Army_1
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10
+		prerequisite = { focus = EGY_1}
+		x = 6
+		y = 2
+		relative_position_id = EGY_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+    focus = {
+		id = EGY_Army_2
+		icon = GFX_focus_generic_army_tanks2
+		cost = 10
+		prerequisite = { focus = EGY_Army_1 }
+		x = -2
+		y = 2
+		relative_position_id = EGY_Army_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = cat_anti_tank
+			}
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = EGY_Army_3
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10
+		prerequisite = { focus = EGY_Army_1 }
+		x = 2
+		y = 2
+		relative_position_id = EGY_Army_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+            add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.2
+				uses = 2
+				technology = desertinfantry_at
+				technology = desertinfantry_at2
+				technology = desertinfantry_at3
+			}
+			army_experience = 10
+		}
+	}
+    focus = {
+		id = EGY_Army_4
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = { focus = EGY_Army_1 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_Army_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = EGY_Army_5
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10
+		prerequisite = { focus = EGY_Army_4 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_Army_4
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = EGY_Army_6
+		icon = GFX_Desert_Warfare
+		cost = 10
+		prerequisite = { focus = EGY_Army_2 focus = EGY_Army_3 focus = EGY_Army_5 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_Army_5
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		add_ideas = EGY_Army_of_Egypt
+		}
+	}
+    #####################
+    ##Support_Equipment##
+    #####################
+	focus = {
+		id = EGY_sup_1
+		icon = GFX_focus_generic_destroyer
+		cost = 10
+		prerequisite = { focus = EGY_1 }
+		x = 3
+		y = 1
+		relative_position_id = EGY_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				technology = tech_logistics_company
+				technology = tech_logistics_company2
+				technology = tech_logistics_company3
+				technology = tech_logistics_company4
+			}
+			army_experience = 15
+		}
+	}
+    focus = {
+		id = EGY_sup_2
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = { focus = EGY_sup_1 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_sup_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				technology = tech_engineers
+				technology = tech_engineers2
+				technology = tech_engineers3
+				technology = tech_engineers4
+		    }
+		    army_experience = 15
+	    }
+	}
+	focus = {
+		id = EGY_sup_3
+		icon = GFX_goal_medicine
+		cost = 10
+		prerequisite = { focus = EGY_sup_2 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_sup_2
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				technology = tech_field_hospital
+				technology = tech_field_hospital2
+				technology = tech_field_hospital3
+				technology = tech_field_hospital4
+		}
+		army_experience = 15
+	}
+}	
+    #########################
+    ##Fortification_Efforts##
+    #########################
+    focus = {
+		id = EGY_fort_1
+		icon = GFX_focus_generic_coastal_fort
+		cost = 6.5
+		prerequisite = { focus = EGY_1 }
+		x = -3
+		y = 1
+		relative_position_id = EGY_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			453 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 1155
+						instant_build = yes
+					}
+		        }
+		    446 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 12049
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 10005
+						instant_build = yes
+					}
+		        }
+		    447 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 4076
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = 4145
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = 7091
+						instant_build = yes
+					}			
+		        }
+	        }
+        }	
+	focus = {
+		id = EGY_fort_2
+		icon = GFX_goal_generic_fortify_city
+		cost = 6.5
+		prerequisite = { focus = EGY_fort_1 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_fort_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			447 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 1071
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 4145
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 992
+						instant_build = yes
+					}
+	            }
+	        }
+	    }            
+    focus = {
+		id = EGY_fort_3
+		icon = GFX_goal_generic_build_airforce
+		cost = 6.5
+		prerequisite = { focus = EGY_fort_2 }
+		x = 0
+		y = 1
+		relative_position_id = EGY_fort_2
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			452 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+	        }			
+			447 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+	        }
+	        446 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+	        }
+	        456 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+	        }
+	        453 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+	        }			
+        }
+    }    
+##################
+##Debuff_removal##
+##################
+	focus = {
+		id = EGY_Debuff_1
+		icon = GFX_focus_RAJ_clamp_down_on_corruption
+		cost = 10
+		prerequisite = { focus = EGY_3 }
+		x = -2
+		y = 2
+		relative_position_id = EGY_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		remove_ideas = EGY_High_Corruption
+
+		add_ideas = EGY_Low_Corruption 
+		}
+	}
+	focus = {
+		id = EGY_Debuff_2
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		available = { Date > 1938.1.1 }
+		cost = 10
+		prerequisite = { focus = EGY_3 }
+		x = 2
+		y = 2
+		relative_position_id = EGY_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		remove_ideas = EGY_Unstable_State
+
+		add_ideas = EGY_Stability_thru_arms
+		}
+	}
+    #################################
+    ##Retake_our_land_and_expansion##
+    #################################
+
+	focus = {
+		id = EGY_land_1
+		icon = GFX_unknown
+		cost = 10
+		prerequisite = { focus = EGY_5 }
+   	    available = {
+     		ITA = { controls_state = 446 }
+   		}				
+		x = 0
+		y = 2
+		relative_position_id = EGY_5		
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+        add_ideas = EGY_KILL_ITALIANS
+        add_ideas = EGY_KILL_NAZIS       
+		}
+	}
+	focus = {
+		id = EGY_land_2
+		icon = GFX_unknown
+		cost = 10
+		prerequisite = { focus = EGY_land_1 }				
+		x = 0
+		y = 2
+		relative_position_id = EGY_land_1		
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+	        add_state_core = 448
+			add_state_core = 661
+			add_state_core = 449
+			add_state_core = 662
+			add_state_core = 450
+			add_state_core = 451
+			add_state_core = 663
+		}
+	}
+	focus = {
+		id = EGY_land_3
+		icon = GFX_unknown
+		cost = 10
+		prerequisite = { focus = EGY_land_2 }
+   	    available = {
+     		ENG = { controls_state = 454 }
+     		ENG = { controls_state = 455 }
+            ENG = { controls_state = 183 }
+   		}				
+		x = 0
+		y = 2
+		relative_position_id = EGY_land_2		
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			transfer_state = 454
+			transfer_state = 455
+			transfer_state = 183			
+		}
+	}
+	focus = {
+		id = EGY_land_4
+		icon = GFX_unknown
+		cost = 10
+		prerequisite = { focus = EGY_land_2 }
+   	    available = {
+     		ENG = { controls_state = 676 }
+     		ENG = { controls_state = 675 }
+            ENG = { controls_state = 291 }
+            ENG = { controls_state = 656 }
+   		}				
+		x = 1
+		y = 1
+		relative_position_id = EGY_land_2		
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			transfer_state = 676
+			transfer_state = 675
+			transfer_state = 291
+			transfer_state = 656			
+		}
+	}
+	focus = {
+		id = EGY_land_5
+		icon = GFX_unknown
+		cost = 10
+		prerequisite = { focus = EGY_land_2 }
+   	    available = {
+     		ENG = { controls_state = 765 }
+     		ENG = { controls_state = 658 }
+            ENG = { controls_state = 294 }
+            ENG = { controls_state = 659 }
+            ENG = { controls_state = 293 }
+   		}				
+		x = -1
+		y = 1
+		relative_position_id = EGY_land_2		
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			transfer_state = 765
+			transfer_state = 658
+			transfer_state = 294
+			transfer_state = 659
+			transfer_state = 293			
+		}
+	}		  
+}    

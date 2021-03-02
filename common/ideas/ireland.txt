@@ -1,0 +1,525 @@
+ideas = {
+    country = {
+		IRE_TheIRA = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IRE_irish_republican_army
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.50
+			}
+		}
+        IRE_TheIRA2 = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IRE_irish_republican_army
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = +0.1
+				army_leader_start_attack_level= 4
+				army_leader_start_logistics_level= 2
+				military_leader_cost_factor = -0.75
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+			}
+		}		
+		IRE_Farming_Subs = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+
+			modifier = {
+                consumer_goods_factor = -0.05
+			}
+		}
+		IRE_legend_of_Lugh = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = IRE_irish_republican_army
+			removal_cost = -1
+
+			modifier = {
+                army_attack_factor = 0.15
+			}
+		}				
+		IRE_facist_sympathies = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = hol_caved_to_the_germans
+			removal_cost = -1
+
+            targeted_modifier = {
+                tag = GER
+                # counter war support
+                attack_bonus_against = -0.10
+            }
+
+			modifier = {
+			}
+		}		                                                                       
+    }				
+
+	political_advisor = {
+
+		IRE_sean_lemass = {
+
+			picture = generic_political_advisor_europe_5
+
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		IRE_douglas_hyde = {
+
+			picture = generic_political_advisor_europe_3
+				
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+		IRE_sean_ceallaigh = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+	}
+	
+
+	army_chief = {
+		
+		IRE_liam_archer = {
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IRE_richard_james_mulcahy = {
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+
+	}
+
+	air_chief = {
+		
+		IRE_h_t_green = {
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IRE_p_a_mulcahy = {
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = IRE
+			}
+		
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+		
+		IRE_john_byrne = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IRE_s_muiris = {
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = IRE
+			}
+		
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+	}
+
+	high_command = {
+
+		IRE_dan_mckenna = {
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = IRE
+			}
+					
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IRE_frank_fahy = {
+
+			picture = generic_army_europe_6
+			
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IRE_michael_brennan = {
+
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { air_bomber_interception_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		IRE_a_t_lawlor = {
+
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = IRE
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+		IRE_michael_joe_costello = {
+			
+			picture = generic_army_europe_2
+
+			allowed = {
+				original_tag = IRE
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		IRE_oscar_traynor = {
+			
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = IRE
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+	}
+
+
+	# TECHNOLOGY
+      	tank_manufacturer = {
+		vickers_armstrong_ire = {
+			
+			allowed = {
+				original_TAG = IRE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { COM_fast_tank_manufacturer }
+		}
+	}
+
+	tank_manufacturer = {
+		vauxhall_motors_ire = {
+			
+			allowed = {
+				original_TAG = IRE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { COM_heavy_tank_manufacturer }
+		}
+	}
+
+	tank_manufacturer = {
+		nuffield = {
+			
+			allowed = {
+				original_TAG = IRE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { COM_medium_tank_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		rsaf_enfield = {
+			
+			allowed = {
+				original_TAG = IRE
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		vauxhall = {
+			
+			allowed = {
+				original_TAG = IRE
+			}
+			
+
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		royal_arsenal = {
+			
+			allowed = {
+				original_TAG = IRE
+			}
+			
+
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer AT_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	industrial_concern = {
+				
+		aioc = {
+			
+			allowed = {
+				original_TAG = IRE
+			}
+			
+
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			}
+
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					has_idea_with_trait = silent_workhorse
+					factor = 10
+				}
+			}
+		}
+		
+		english_electric = {
+			
+			allowed = {
+				original_TAG = IRE
+			}
+			
+
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+			
+			modifier = {
+			}
+		}
+		
+	}   
+
+    	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		avro = {
+			
+			allowed = {
+				original_TAG = IRE
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	naval_manufacturer = {
+		
+		designer = yes
+		
+		john_brown_company = {
+			
+			allowed = {
+				original_TAG = IRE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		}	
+	}
+}	

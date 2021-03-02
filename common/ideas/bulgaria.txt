@@ -1,0 +1,546 @@
+ideas = {
+
+	country = {
+		BUL_Ace_Generation = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_air_research
+			removal_cost = -1
+
+			modifier = {
+            air_ace_generation_chance_factor = 0.15
+            	air_accidents_factor = -0.15
+			}
+		}
+	}	
+
+	
+	political_advisor = {
+
+		BUL_konstantin_muraviev = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			traits = { fascist_demagogue }
+		}
+
+		BUL_dobri_bozhilov = {
+
+			picture = generic_political_advisor_europe_2
+				
+			allowed = {
+				original_tag = BUL
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		BUL_georgi_ivanov_kyoseivanov = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			traits = { ambitious_union_boss }
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+
+
+	army_chief = {
+
+		BUL_nikola_hadzipetkov = {
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BUL_hristo_lukov = {
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+		BUL_vasil_boydev = {
+			picture = generic_air_europe_3
+
+			allowed = {
+				original_tag = BUL
+			}
+						
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BUL_asen_dobrev_nikolov = {
+			picture = generic_air_europe_2
+
+			allowed = {
+				original_tag = BUL
+			}
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+
+		BUL_nikola_totev_markov = {
+			picture = generic_navy_europe_1
+
+			allowed = {
+				original_tag = BUL
+			}
+						
+			traits = { navy_chief_decisive_battle_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BUL_bonyu_stoev_pironkov = {
+			picture = generic_navy_europe_2
+
+			allowed = {
+				original_tag = BUL
+			}
+						
+			traits = { navy_naval_air_defense_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+	high_command = {
+
+		BUL_stoyan_stoyanov = {
+			
+			picture = generic_air_europe_2
+
+			allowed = {
+				original_tag = BUL
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BUL_blagoi_ivanov = {
+
+			picture = generic_army_europe_4
+			
+			allowed = {
+				original_tag = BUL
+			}
+					
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BUL_kiril_dimitrov_yanchule = {
+
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = BUL
+			}
+					
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BUL_atanas_pavlov_zhilkov = {
+
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = BUL
+			}
+					
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+		
+		# TECHNOLOGY
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		porsche = {
+
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { AXI_heavy_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 10
+			}
+
+		}
+		
+		henschel = {
+
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { AXI_fast_tank_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		GER_MAN = {
+
+			picture = GER_MAN
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { AXI_medium_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		messerschmitt = {
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		junkers = { 
+			allowed = {
+				original_tag = BUL
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			equipment_bonus = {
+				
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+
+		focke_wulf = { 
+
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		heinkel = {
+
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		dornier = {
+
+			allowed = {
+				original_tag = BUL
+			}
+			
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+
+	}
+	
+	industrial_concern = {
+		
+		ig_faben = {
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		krupp = {
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		siemens = {
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+		}		
+	}
+	
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		rheinmetall = {
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+				# +10% arty/at/aa research speed
+			}
+		}
+		
+		mauser = {
+
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		
+		opel = {
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+	
+
+
+	theorist = {
+		BUL_kiril_stanchev = {
+			
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		BUL_ivan_gaidimitriv = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		BUL_georgi_petsov = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}
+}

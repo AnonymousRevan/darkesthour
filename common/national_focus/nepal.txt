@@ -1,0 +1,17 @@
+focus_tree = {
+	id = Nepal_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NEP
+		}
+	}
+	default = no
+	
+	##################
+	##political_shit##
+	##################
+
+
+}    

@@ -1,0 +1,61 @@
+﻿capital = 109
+
+oob = "CRO_1936"
+
+set_research_slots = 3
+set_stability = 0.90
+set_war_support = 0.60
+add_ideas = {
+
+CRO_religious_minorities
+
+}
+
+# Starting tech
+set_technology = {
+	interwar_artillery = 1
+	interwar_antitank = 1
+    interwar_antiair = 1	
+	jaegers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	gwtank = 1
+    infantry_weapons = 1
+    tech_support = 1			
+}
+
+set_convoys = 50
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 60
+	democratic = 20
+	communism = 20
+}
+
+create_country_leader = {
+	name = "Ante Pavelic"
+	desc = "ANTE_PAVELIC_DESC"
+	picture = "Portrait_Croatia_Ante_Pavelic.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Italo Balbo"
+	picture = "portrait_Italian_East_Africa_italo_balbo.dds"
+	traits = { career_officer politically_connected commando Hill_Fighter trait_mountaineer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}

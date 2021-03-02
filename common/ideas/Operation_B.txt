@@ -1,0 +1,54 @@
+ideas = {
+	country = {
+		JAP_Operation_B = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = RAJ
+				# counter war support
+				attack_bonus_against = 0.15
+			}
+
+			modifier = {
+				army_org_Factor = 0.1
+				army_morale_factor = 0.05
+				army_speed_factor = 0.05
+				supply_consumption_factor = -0.20
+				attrition = -0.05
+				terrain_penalty_reduction = 0.20
+			}
+
+		}
+
+		SIA_Operation_B = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = RAJ
+				# counter war support
+				attack_bonus_against = 0.30
+			}
+
+			modifier = {
+				army_org_Factor = 0.1
+				army_morale_factor = 0.05
+				army_speed_factor = 0.05
+				supply_consumption_factor = -0.20
+				attrition = -0.05
+				terrain_penalty_reduction = 0.20

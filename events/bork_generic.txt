@@ -1,0 +1,684 @@
+﻿###################
+##Bork_Mod_Events##
+###################
+
+add_namespace = bork_generic
+
+#Russian_winter_German_1941   
+country_event = {
+	id = bork_generic.1
+	title = bork_generic.1.t
+	desc = bork_generic.1.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = GER
+        date > 1941.12.5
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.1.a
+		add_ideas = Winter_1941
+	}	
+}
+
+#Russian_winter_Italy_1941   
+country_event = {
+	id = bork_generic.2
+	title = bork_generic.2.t
+	desc = bork_generic.2.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = ITA
+        date > 1941.12.5
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.2.a
+		add_ideas = Winter_1941
+	}	
+}
+
+#Russian_winter_Romania_1941   
+country_event = {
+	id = bork_generic.3
+	title = bork_generic.3.t
+	desc = bork_generic.3.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = ROM
+        date > 1941.12.5
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.3.a
+		add_ideas = Winter_1941
+	}	
+}
+
+#Russian_winter_Bulgaria_1941   
+country_event = {
+	id = bork_generic.4
+	title = bork_generic.4.t
+	desc = bork_generic.4.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = BUL
+        date > 1941.12.5
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.4.a
+		add_ideas = Winter_1941
+	}	
+}
+
+#Russian_winter_Hungary_1941   
+country_event = {
+	id = bork_generic.5
+	title = bork_generic.5.t
+	desc = bork_generic.5.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = HUN
+        date > 1941.12.5
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.5.a
+		add_ideas = Winter_1941
+	}	
+}
+
+#Russian_winter_USSR_1941   
+country_event = {
+	id = bork_generic.7
+	title = bork_generic.7.t
+	desc = bork_generic.7.d
+	picture = report_event_soviet_tanks_snow
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = SOV
+        date > 1941.12.5
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.7.a
+		add_ideas = Winter_1941_sov
+	}	
+}
+
+#Russian_winter_German_1941_remove   
+country_event = {
+	id = bork_generic.8
+	title = bork_generic.8.t
+	desc = bork_generic.8.d
+	picture = GFX_report_event_fall_blau
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = GER
+        date > 1942.5.30
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.8.a
+		remove_ideas = Winter_1941
+	}	
+}
+
+#Russian_winter_Italy_1941_remove   
+country_event = {
+	id = bork_generic.9
+	title = bork_generic.9.t
+	desc = bork_generic.9.d
+	picture = GFX_report_event_fall_blau
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = ITA
+        date > 1942.5.30
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.9.a
+		remove_ideas = Winter_1941
+	}	
+}
+
+#Russian_winter_Romanian_1941_remove   
+country_event = {
+	id = bork_generic.10
+	title = bork_generic.10.t
+	desc = bork_generic.10.d
+	picture = GFX_report_event_fall_blau
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = ROM
+        date > 1942.5.30
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.10.a
+		remove_ideas = Winter_1941
+	}	
+}
+
+#Russian_winter_Bulgaria_1941_remove   
+country_event = {
+	id = bork_generic.11
+	title = bork_generic.11.t
+	desc = bork_generic.11.d
+	picture = GFX_report_event_fall_blau
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = BUL
+        date > 1942.5.30
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.11.a
+		remove_ideas = Winter_1941
+	}	
+}
+
+#Russian_winter_Hungary_1941_remove   
+country_event = {
+	id = bork_generic.12
+	title = bork_generic.12.t
+	desc = bork_generic.12.d
+	picture = GFX_report_event_fall_blau
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = HUN
+        date > 1942.5.30
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.12.a
+		remove_ideas = Winter_1941
+	}	
+}
+
+#Russian_winter_USSR_1941_remove   
+country_event = {
+	id = bork_generic.14
+	title = bork_generic.14.t
+	desc = bork_generic.14.d
+	picture = GFX_report_event_tank_factory
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = SOV
+        date > 1942.5.30
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_generic.14.a
+		remove_ideas = Winter_1941_sov
+	}	
+}
+
+#Russian_Capitulation_event_UK   
+country_event = {
+	id = bork_generic.15
+	title = bork_generic.15.t
+	desc = bork_generic.15.d
+	picture = GFX_report_event_tank_factory
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = ENG
+        has_war_with = GER
+		SOV = { surrender_progress > 0.85 }
+	}
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = bork_generic.15.a
+		add_offsite_building = { type = industrial_complex level = 200 }
+		add_offsite_building = { type = arms_factory level = 200 }
+		add_ideas = Sov_Capitulation_Major
+	}	
+}
+
+#Russian_Capitulation_event_USA  
+country_event = {
+	id = bork_generic.16
+	title = bork_generic.16.t
+	desc = bork_generic.16.d
+	picture = GFX_report_event_tank_factory
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = USA
+        has_war_with = GER
+		SOV = { surrender_progress > 0.85 }
+	}
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = bork_generic.16.a
+		add_offsite_building = { type = industrial_complex level = 200 }
+		add_offsite_building = { type = arms_factory level = 200 }
+		add_ideas = Sov_Capitulation_Major
+	}	
+}
+
+#Russian_Capitulation_event_france  
+country_event = {
+	id = bork_generic.17
+	title = bork_generic.17.t
+	desc = bork_generic.17.d
+	picture = GFX_report_event_tank_factory
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = FRA
+        has_war_with = GER
+		SOV = { surrender_progress > 0.85 }
+	}
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = bork_generic.17.a
+		add_offsite_building = { type = industrial_complex level = 75 }
+		add_offsite_building = { type = arms_factory level = 75 }
+		add_ideas = Sov_Capitulation_Major
+	}	
+}
+
+#The_IRA_Question  
+country_event = {
+	id = bork_generic.18
+	title = bork_generic.18.t
+	desc = bork_generic.18.d
+	picture = GFX_report_event_tank_factory
+
+	fire_only_once = yes	
+
+    is_triggered_only = yes
+
+	mean_time_to_happen = { days = 7 }
+
+	option = { #Destroy_the_IRA
+		name = bork_generic.18.a
+		remove_ideas = IRE_TheIRA
+	}
+	option = { #recruit_the_IRA
+		name = bork_generic.18.b
+		remove_ideas = IRE_TheIRA
+		add_ideas = IRE_TheIRA2
+	}			
+}
+
+#watch on the rhine  
+country_event = {
+	id = bork_generic.19
+	title = bork_generic.19.t
+	desc = bork_generic.19.d
+	picture = GFX_report_event_tank_factory
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+        has_war_with = FRA
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = { #fuck france
+		name = bork_generic.19.a
+		add_ideas = GER_watch_on_the_rhine
+	}
+}
+
+#watch on the rhine  
+country_event = {
+	id = bork_generic.20
+	title = bork_generic.20.t
+	desc = bork_generic.20.d
+	picture = GFX_report_event_tank_factory
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+        has_war_with = ENG
+        GER = { controls_state = 16 }
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = { #fuck france
+		name = bork_generic.20.a
+		remove_ideas = GER_watch_on_the_rhine
+	}
+}
+
+#Barb
+country_event = {
+	id = bork_generic.21
+	title = bork_generic.21.t
+	desc = bork_generic.21.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+        has_war_with = SOV
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = { #fuck USSR
+		name = bork_generic.21.a
+		add_timed_idea = { idea = GER_OPERATION_Barbarossa days = 75 }
+		ROM = { add_timed_idea = { idea = ROM_OPERATION_Barbarossa days = 75 } }
+		HUN = { add_timed_idea = { idea = HUN_OPERATION_Barbarossa days = 75 } }
+		FIN = { add_timed_idea = { idea = HUN_OPERATION_Barbarossa days = 75 } }
+	}
+}
+
+
+country_event = {
+	id = bork_generic.23
+	title = bork_generic.23.t
+	desc = bork_generic.23.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = ENG
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.23.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.24
+	title = bork_generic.24.t
+	desc = bork_generic.24.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = FRA
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.24.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.25
+	title = bork_generic.25.t
+	desc = bork_generic.25.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = BRA
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.25.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.26
+	title = bork_generic.26.t
+	desc = bork_generic.26.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = CAN
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.26.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.27
+	title = bork_generic.27.t
+	desc = bork_generic.27.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = AST
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.27.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.28
+	title = bork_generic.28.t
+	desc = bork_generic.28.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = CAN
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.28.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.29
+	title = bork_generic.29.t
+	desc = bork_generic.29.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = RAJ
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.29.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.30
+	title = bork_generic.30.t
+	desc = bork_generic.30.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = NZL
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.30.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.31
+	title = bork_generic.31.t
+	desc = bork_generic.31.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = IRE
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.31.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.32
+	title = bork_generic.32.t
+	desc = bork_generic.32.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = EGY
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.32.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.33
+	title = bork_generic.33.t
+	desc = bork_generic.33.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = HOL
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.33.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.34
+	title = bork_generic.34.t
+	desc = bork_generic.34.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = PHI
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.34.a
+		remove_ideas = COM_Rubber
+	}	
+}
+
+country_event = {
+	id = bork_generic.35
+	title = bork_generic.25.t
+	desc = bork_generic.35.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = SAF
+        has_war_with = JAP
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = bork_generic.35.a
+		remove_ideas = COM_Rubber
+	}	
+}

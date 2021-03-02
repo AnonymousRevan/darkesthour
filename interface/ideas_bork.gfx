@@ -1,0 +1,78 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_fascist_party_logo"
+		texturefile = "gfx/interface/ideas/Idea_Fascist_Party_logo.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_electric"
+		texturefile = "gfx/interface/ideas/electric.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ansaldo"
+		texturefile = "gfx/interface/ideas/idea_ansaldo.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_odero_terni_orlando"
+		texturefile = "gfx/interface/ideas/idea_odero_terni_orlando.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_nuffield"
+		texturefile = "gfx/interface/ideas/idea_nuffield.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_italian_general_staff"
+		texturefile = "gfx/interface/ideas/italian_general_staff.dds"
+	}									
+	spriteType = {
+		name = "GFX_idea_cash_picture"
+		texturefile = "gfx/interface/ideas/cash_picture.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_strategic_resource_oil_refinery"
+		texturefile = "gfx/interface/ideas/strategic_resource_oil_refinery.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_building_landfort"
+		texturefile = "gfx/interface/ideas/building_landfort.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_building_coastfort"
+		texturefile = "gfx/interface/ideas/building_coastfort.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_strategic_resource_automotive_industry"
+		texturefile = "gfx/interface/ideas/strategic_resource_automotive_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pope"
+		texturefile = "gfx/interface/ideas/pope.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_r56_idea_fascist_army"
+		texturefile = "gfx/interface/ideas/r56_idea_fascist_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_italy_resolve_the_lack_of_ncos"
+		texturefile = "gfx/interface/ideas/idea_italy_resolve_the_lack_of_ncos.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_italy_excessive_regia_marina_budget"
+		texturefile = "gfx/interface/ideas/idea_italy_excessive_regia_marina_budget.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IRE_irish_republican_army"
+		texturefile = "gfx/interface/ideas/idea_IRE_irish_republican_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_italy_increase_aircraft_production"
+		texturefile = "gfx/interface/ideas/idea_italy_increase_aircraft_production.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_spr_disbanded_army"
+		texturefile = "gfx/interface/ideas/spr_disbanded_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_por_volunteers_in_the_war2"
+		texturefile = "gfx/interface/ideas/idea_por_volunteers_in_the_war2.dds"
+	}							    
+}    									

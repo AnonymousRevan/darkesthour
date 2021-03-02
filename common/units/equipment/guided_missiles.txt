@@ -1,0 +1,91 @@
+equipments = {
+	
+	guided_missile_equipment = {
+		year = 1936
+
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
+
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		type = missile
+		group_by = type
+		sprite = missile_default
+		air_map_icon_frame = 9
+		
+		interface_category = interface_category_air
+		
+		air_superiority = 0.1		
+		reliability = 0.8
+
+		# Air vs Navy - high damage / low hit chance / hard to hurt
+		naval_strike_attack = 7
+		naval_strike_targetting = 3.5
+
+		#Space taken in convoy
+		lend_lease_cost = 1.5
+		
+		build_cost_ic = 40
+		resources = {
+			aluminium = 3
+			tungsten = 3
+		}
+
+		fuel_consumption = 0
+	}
+
+	guided_missile_equipment_1 = {
+		year = 1944
+
+		archetype = guided_missile_equipment
+		is_buildable = no
+		one_use_only = yes
+		sprite = missile_default
+		
+		air_range = 700
+		maximum_speed = 820
+		air_agility = 15
+		air_bombing = 350
+		air_defence = 3
+		
+		build_cost_ic = 30
+	}
+
+	guided_missile_equipment_2 = {
+		year = 1945
+
+		archetype = guided_missile_equipment
+		parent = guided_missile_equipment_1
+		is_buildable = no
+		one_use_only = yes
+		sprite = missile_default
+		
+		air_range = 1100
+		maximum_speed = 5760
+		air_agility = 32
+		air_bombing = 675
+		air_defence = 9
+	}
+	
+	guided_missile_equipment_3 = {
+		year = 1946
+
+		archetype = guided_missile_equipment
+		parent = guided_missile_equipment_2
+		is_buildable = no
+		one_use_only = yes
+		sprite = missile_default
+		
+		air_range = 12250
+		maximum_speed = 7200
+		air_agility = 54
+		air_bombing = 1550
+		air_defence = 12
+		
+		build_cost_ic = 50
+	}
+}

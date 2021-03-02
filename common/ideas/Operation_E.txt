@@ -1,0 +1,61 @@
+ideas = {
+	country = {
+			JAP_Operation_E = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_Factor = 0.10
+				army_attack_factor = 0.40
+				army_morale_factor = 0.10
+				army_speed_factor = 0.10
+				supply_consumption_factor = -0.20
+				attrition = -0.15
+				terrain_penalty_reduction = 0.20
+				convoy_escort_efficiency = 0.30
+				naval_retreat_chance = 0.30
+				naval_retreat_speed = 0.30
+				spotting_chance = 0.30
+				navy_anti_air_attack_factor = 0.30
+				sortie_efficiency = 0.30
+				naval_hit_chance = 0.30
+				navy_carrier_air_attack_factor = 0.30
+				navy_carrier_air_targetting_factor 0.30
+				navy_carrier_air_agility_factor = 0.30
+				navy_capital_ship_attack_factor = 0.30
+				navy_capital_ship_defence_factor = 0.30
+				navy_screen_attack_factor = 0.30
+				navy_screen_defence_factor = 0.30
+				naval_torpedo_range_factor = 1
+				naval_strike_attack_factor = 0.30
+				naval_strike_targetting_factor = 0.30
+				}
+			}
+		
+		SIA_Operation_E = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_Factor = 0.05
+				army_attack_factor = 0.25
+				army_morale_factor = 0.10
+				army_speed_factor = 0.10
+				supply_consumption_factor = -0.20
+				attrition = -0.15
+				terrain_penalty_reduction = 0.20
+				
+				}
+			}	

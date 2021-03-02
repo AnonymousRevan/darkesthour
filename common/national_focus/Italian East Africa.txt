@@ -1,0 +1,807 @@
+focus_tree = {
+	id = Italian_East_Africa_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = IEA
+		}
+	}
+	default = no
+	
+	##################
+	##political_shit##
+	##################
+
+	focus = {
+		id = IEA_1
+		icon = GFX_focus_IEA_outline
+		available = { Date > 1937.1.1 }
+		cost = 2
+		x = 5
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+        remove_ideas = IEA_Recent_Conquest
+
+        add_ideas = IEA_Region_Stablization
+		}
+	}
+	focus = {
+		id = IEA_2
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = { focus = IEA_1 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		add_research_slot = 1
+		remove_ideas = IEA_Uneducated_population
+		add_ideas = IEA_Uneducated_population2
+		}
+	}
+	focus = {
+		id = IEA_3
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = { focus = IEA_2 }
+		x = 0
+		y = 1
+		relative_position_id = IEA_2
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = war_economy
+			add_ideas = free_trade
+		}
+	}
+	focus = {
+		id = IEA_4
+		icon = GFX_focus_research
+		available = { Date > 1938.1.1 }
+		cost = 10
+		prerequisite = { focus = IEA_3 }
+		x = -2
+		y = 2
+		relative_position_id = IEA_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		    add_research_slot = 1
+		    remove_ideas = IEA_Uneducated_population2
+			add_ideas = IEA_Uneducated_population3
+		}
+	}
+		focus = {
+		id = IEA_5
+		icon = GFX_goal_generic_propaganda
+		available = { Date > 1939.1.1 }
+		cost = 10
+		prerequisite = { focus = IEA_4 }
+		x = 0
+		y = 1
+		relative_position_id = IEA_4
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		    remove_ideas = IEA_Uneducated_population3
+			add_ideas = IEA_Uneducated_population4
+		}
+	}
+		focus = {
+		id = IEA_6
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = { focus = IEA_3 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		add_Ideas = IEA_Forced_Conscription
+		add_Ideas = limited_conscription
+		}
+	}
+	focus = {
+		id = IEA_7
+		icon = GFX_focus_generic_italy_first
+		available = { Date > 1938.1.1 }
+		cost = 10
+		prerequisite = { focus = IEA_6 }
+		x = 0
+		y = 1
+		relative_position_id = IEA_6
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = IEA_Region_Stablization2
+			remove_ideas  = IEA_Region_Stablization
+		}
+	}
+
+	################
+	##Army_reforms##
+	################
+
+	focus = {
+		id = IEA_Army_reform_1
+		icon = GFX_focus_ITA_facsist
+		cost = 10
+		x = 8
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = IEA_Police_State
+			remove_ideas = IEA_Black-Shirt_Enforcement
+		}
+	}
+	focus = {
+		id = IEA_Army_reform_2
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10
+		prerequisite = { focus = IEA_Army_reform_1 }
+		available = {
+     			IEA = { controls_state = 269 }
+   		}
+		x = 0
+		y = 2
+		relative_position_id = IEA_Army_reform_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = IEA_Capture_of_British_Somaliland
+			add_state_core = 269
+		}
+	}
+	focus = {
+		id = IEA_Army_reform_3
+		icon = GFX_propaganda
+		cost = 10
+		prerequisite = { focus = IEA_Army_reform_2 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_Army_reform_2
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_timed_idea = { idea = IEA_march_to_the_suez days = 150 }
+		}
+	}
+
+	#############
+	##Army_Shit##
+	#############
+	focus = {
+		id = IEA_Army_1
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		prerequisite = { focus = IEA_Army_reform_1 }
+		x = 2
+		y = 2
+		relative_position_id = IEA_Army_reform_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = IEA_Army_2
+		icon = GFX_focus_beretta
+		cost = 10
+		prerequisite = { focus = IEA_Army_1 }
+		x = 0
+		y = 1
+		relative_position_id = IEA_Army_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+			army_experience = 10
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = beretta_2				
+		}
+	}
+	focus = {
+		id = IEA_Army_3
+		icon = GFX_focus_breda
+		cost = 10
+		prerequisite = { focus = IEA_Army_2 }
+		x = 0
+		y = 1
+		relative_position_id = IEA_Army_2
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			army_experience = 10
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = breda_2			
+		}
+	}
+	focus = {
+		id = IEA_Army_4
+		icon = GFX_goal_generic_army_artillery
+		cost = 10
+		prerequisite = { focus = IEA_Army_3 }
+		x = 0
+		y = 1
+		relative_position_id = IEA_Army_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = IEA_Army_5
+		icon = GFX_goal_generic_construct_military
+		cost = 10
+		prerequisite = { focus = IEA_Army_3 }
+		x = -2
+		y = 1
+		relative_position_id = IEA_Army_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = IEA_Fortification_efforts
+		}
+	}
+	focus = {
+		id = IEA_Army_6
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		prerequisite = { focus = IEA_Army_5 }
+		x = 0
+		y = 1
+		relative_position_id = IEA_Army_5
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = IEA_Arms_Imports
+		}
+	}	
+	focus = {
+		id = IEA_Army_7
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		prerequisite = { focus = IEA_Army_4 }
+		x = 0
+		y = 1
+		relative_position_id = IEA_Army_4
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				ahead_reduction = 1.5
+				uses = 1
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+			}
+        }
+    }    
+
+	#################
+	##Industry_shit##
+	#################
+
+	focus = {
+		id = IEA_Ind_1
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		x = 12
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.75
+				uses = 2
+				category = industry
+			}
+		}
+    }
+    focus = {
+		id = IEA_Ind_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = { focus = IEA_Ind_1 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_Ind_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		    271 = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+    }
+    focus = {
+		id = IEA_Ind_3
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = { focus = IEA_Ind_2 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_Ind_2
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		    271 = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+    }
+    focus = {
+		id = IEA_Ind_4
+		icon = GFX_focus_generic_rubber
+		cost = 5
+		prerequisite = { focus = IEA_Ind_3 }
+		x = 2
+		y = 2
+		relative_position_id = IEA_Ind_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_resource = {
+				type = rubber
+				amount = 20
+				state = 271
+			}
+		}
+    } 
+
+    focus = {
+		id = IEA_Ind_5
+		icon = GFX_focus_generic_steel
+		cost = 5
+		prerequisite = { focus = IEA_Ind_4 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_Ind_4
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 50
+				state = 271
+			}
+		}
+    }
+
+    focus = {
+		id = IEA_Ind_6
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = { focus = IEA_Ind_3 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_Ind_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			271 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			550 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			559 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}	
+    }
+        focus = {
+		id = IEA_Ind_7
+		icon = GFX_goal_generic_production2
+		cost = 10
+		prerequisite = { focus = IEA_Ind_6 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_Ind_6
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = IEA_Slave_Labor2
+			remove_ideas  = IEA_Slave_Labor
+		}
+    }
+    #####################
+    ##Construction_shit##
+    #####################
+    focus = {
+		id = IEA_Con_1
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
+		prerequisite = { focus = IEA_Ind_1 }
+		x = 2
+		y = 2
+		relative_position_id = IEA_Ind_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			550 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 4
+						province = 12766
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 8043
+						instant_build = yes
+					}
+				    add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 5091
+						instant_build = yes
+					}
+		        }
+	        }        
+        }
+    focus = {
+		id = IEA_Con_2
+		icon = GFX_goal_generic_fortify_city
+		cost = 5
+		prerequisite = { focus = IEA_Con_1 }
+		x = 0
+		y = 1
+		relative_position_id = IEA_Con_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+	271 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 5010
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 8036
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 7980
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 4954
+						instant_build = yes
+					}
+	            }
+	550 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 5047
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 5017
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 12723
+						instant_build = yes
+					}
+	            }
+	559 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 11014
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 12941
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 12991
+						instant_build = yes
+					}
+	            }
+	        }        
+        }
+    focus = {
+		id = IEA_Con_3
+		icon = GFX_goal_generic_build_airforce
+		cost = 5
+		prerequisite = { focus = IEA_Con_2 }
+		x = 0
+		y = 1
+		relative_position_id = IEA_Con_2
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+	        271 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+	        }
+	        559 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+	        }
+	        550 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+	        }			
+        }         
+    }
+
+    ################
+    ##Navy_Autisum##
+    ################
+    focus = {
+		id = IEA_Nav_1
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		x = 16
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			550 = {
+			    add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = dockyard
+					level = 6
+					instant_build = yes
+				}
+			} 
+			550 = {
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					province = 12766
+					instant_build = yes
+				}
+			}         
+        }
+    }    
+    focus = {
+		id = IEA_Nav_2
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10
+		prerequisite = { focus = IEA_Nav_1 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_Nav_1
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		    add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		}         
+    }
+    focus = {
+		id = IEA_Nav_3
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10
+		prerequisite = { focus = IEA_Nav_2 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_Nav_2
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}        
+        }
+    }
+    focus = {
+		id = IEA_Nav_4
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10
+		prerequisite = { focus = IEA_Nav_3 }
+		x = 0
+		y = 2
+		relative_position_id = IEA_Nav_3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = IEA_transfer_ships_tt
+			ITA = {
+			    transfer_ship = {
+			        prefer_name = "RSmg Salpa"
+			        type = submarine
+			        target = IEA
+			    }
+			    transfer_ship = {
+			        prefer_name = "RSmg Serpente"
+			        type = submarine
+			        target = IEA
+			    }
+			    transfer_ship = {
+			        prefer_name = "RSmg Ruggiero Settimo"
+			        type = submarine
+			        target = IEA
+			    }
+			    transfer_ship = {
+			        prefer_name = "RSmg Luigi Settembrini"
+			        type = submarine
+			        target = IEA
+			    }
+			    transfer_ship = {
+			        prefer_name = "RSmg Delfino"
+			        type = submarine
+			        target = IEA
+			    }			    
+			}    
+		}         
+    }
+}    

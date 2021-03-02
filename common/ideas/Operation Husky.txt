@@ -1,0 +1,94 @@
+ideas = {
+	country = {
+		ENG_OPERATION_HUSKY = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = ITA
+				# counter war support
+				attack_bonus_against = 0.40
+			}
+
+			modifier = {
+				army_org_Factor = 0.15
+				army_morale_factor = 0.08
+				army_speed_factor = 0.08
+				amphibious_invasion = 0.45
+				invasion_preparation = -0.8
+				supply_consumption_factor = -0.25
+				attrition = -0.10
+				terrain_penalty_reduction = 0.20
+			}
+
+		}
+
+		USA_OPERATION_HUSKY = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = ITA
+				# counter war support
+				attack_bonus_against = 0.40
+			}
+
+			modifier = {
+				army_org_Factor = 0.15
+				army_morale_factor = 0.08
+				army_speed_factor = 0.08
+				amphibious_invasion = 0.45
+				invasion_preparation = -0.8
+				supply_consumption_factor = -0.25
+				attrition = -0.10
+				terrain_penalty_reduction = 0.20
+			}
+
+		}
+
+		COM_OPERATION_HUSKY = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = ITA
+				# counter war support
+				attack_bonus_against = 0.40
+			}
+
+			modifier = {
+				army_org_Factor = 0.15
+				army_morale_factor = 0.08
+				army_speed_factor = 0.08
+				amphibious_invasion = 0.45
+				invasion_preparation = -0.8
+				supply_consumption_factor = -0.25
+				attrition = -0.10
+				terrain_penalty_reduction = 0.20
+			}
+
+		}
+	}
+}	
+		

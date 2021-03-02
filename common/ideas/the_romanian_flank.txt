@@ -1,0 +1,23 @@
+ideas = {
+	country = {
+			ROM_the_romanian_flank = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				max_dig_in = 2
+				dig_in_speed_factor = 0.25
+				defence = 0.1
+			}
+
+		}
+
+	
+
+		

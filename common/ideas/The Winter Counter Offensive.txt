@@ -1,0 +1,31 @@
+ideas = {
+	country = {
+		SOV_The_Winter_Counter_Offensive= {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = GER
+				# counter war support
+				attack_bonus_against = 0.25
+			}
+
+			modifier = {
+				army_org_Factor = 0.10
+				army_morale_factor = 0.10
+				army_speed_factor = 0.15
+				supply_consumption_factor = -0.20
+				terrain_penalty_reduction = 0.20
+				winter_attrition_factor = -0.5
+				no_supply_grace = 84
+				minimum_training_level = -0.10
+			}
+
+		}

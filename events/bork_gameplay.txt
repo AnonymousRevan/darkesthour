@@ -1,0 +1,138 @@
+﻿###################
+##Bork_Mod_Events##
+###################
+
+add_namespace = bork_gameplay
+
+#How_to_play_Germany   
+country_event = {
+	id = bork_gameplay.1
+	title = bork_gameplay.1.t
+	desc = bork_gameplay.1.d
+	picture = GFX_report_event_totalwar
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = GER
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_gameplay.1.a
+	}	
+}
+
+#How_to_play_Italy   
+country_event = {
+	id = bork_gameplay.2
+	title = bork_gameplay.2.t
+	desc = bork_gameplay.2.d
+	picture = GFX_report_event_mussolini_hotel
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = ITA
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_gameplay.2.a
+	}	
+}
+
+#How_to_play_Japan   
+country_event = {
+	id = bork_gameplay.3
+	title = bork_gameplay.3.t
+	desc = bork_gameplay.3.d
+	picture = GFX_report_event_jap_imperial_family
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = JAP
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_gameplay.3.a
+	}	
+}
+
+#How_to_play_UK  
+country_event = {
+	id = bork_gameplay.4
+	title = bork_gameplay.4.t
+	desc = bork_gameplay.4.d
+	picture = GFX_report_event_chamberlain
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = ENG
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_gameplay.4.a
+	}
+}
+
+#How_to_play_USA 
+country_event = {
+	id = bork_gameplay.5
+	title = bork_gameplay.5.t
+	desc = bork_gameplay.5.d
+	picture = GFX_report_event_france_parade
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag = USA
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_gameplay.5.a
+	}
+}
+
+#How_to_play_France
+country_event = {
+	id = bork_gameplay.6
+	title = bork_gameplay.6.t
+	desc = bork_gameplay.6.d
+	picture = GFX_report_event_french_british_officers
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag =FRA
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_gameplay.6.a
+	}
+}
+
+#How_to_play_USSR
+country_event = {
+	id = bork_gameplay.7
+	title = bork_gameplay.7.t
+	desc = bork_gameplay.7.d
+	picture = GFX_report_event_stalin_01
+
+	fire_only_once = yes	
+
+	trigger = {
+		tag =SOV
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = bork_gameplay.7.a
+	}
+}		

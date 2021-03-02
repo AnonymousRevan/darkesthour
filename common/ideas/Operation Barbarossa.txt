@@ -1,0 +1,109 @@
+ideas = {
+	country = {
+		GER_OPERATION_Barbarossa = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = SOV
+				# counter war support
+				attack_bonus_against = 0.1
+			}
+
+			modifier = {
+			army_morale_factor = 0.05
+			army_armor_speed_factor = 0.025
+			army_armor_attack_factor = 0.05
+			army_armor_defence_factor = 0.05
+			max_planning = 0.05
+				
+			}
+
+		}
+
+		ROM_OPERATION_Barbarossa = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = SOV
+				# counter war support
+				attack_bonus_against = 0.1
+			}
+
+			modifier = {
+			army_morale_factor = 0.05
+			terrain_penalty_reduction = 0.02
+			max_planning = 0.02
+			special_forces_attack_factor = 0.02
+			special_forces_defence_factor = 0.02
+			}
+
+		}
+
+		HUN_OPERATION_Barbarossa = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = SOV
+				# counter war support
+				attack_bonus_against = 0.1
+			}
+
+			modifier = {
+			army_morale_factor = 0.05
+			terrain_penalty_reduction = 0.02
+			max_planning = 0.02
+				
+			}
+
+		}
+
+		FIN_OPERATION_Barbarossa = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = SOV
+				# counter war support
+				attack_bonus_against = 0.1
+			}
+
+			modifier = {
+			army_morale_factor = 0.10
+			recon_factor = 0.05
+			terrain_penalty_reduction = 0.05
+			max_planning = 0.05
+				
+			}
+
+		}
