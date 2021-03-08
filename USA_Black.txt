@@ -1,0 +1,39 @@
+ideas = {
+	country = {
+		USA_war_plan_black = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = GER
+				# counter war support
+				attack_bonus_against = 0.15
+			}
+			
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = ROM
+				# counter war support
+				attack_bonus_against = 0.10
+			}
+			
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = HUN
+				# counter war support
+				attack_bonus_against = 0.10
+			}
+			
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = SPR
+				# counter war support
+				attack_bonus_against = 0.10
+			}

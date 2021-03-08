@@ -1,0 +1,39 @@
+ideas = {
+	country = {
+			USA_war_plan_orange = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = JAP
+				# counter war support
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+
+			modifier = {
+				convoy_escort_efficiency = 0.15
+				naval_retreat_chance = 0.15
+				naval_retreat_speed = 0.15
+				spotting_chance = 0.15
+				navy_anti_air_attack_factor = 0.15
+				sortie_efficiency = 0.15
+				naval_hit_chance = 0.15
+				navy_carrier_air_attack_factor = 0.15
+				navy_carrier_air_targetting_factor 0.15
+				navy_carrier_air_agility_factor = 0.15
+				navy_capital_ship_attack_factor = 0.15
+				navy_capital_ship_defence_factor = 0.15
+				navy_screen_attack_factor = 0.15
+				navy_screen_defence_factor = 0.15
+				naval_torpedo_range_factor = 0.03
+				naval_strike_attack_factor = 0.15
+				naval_strike_targetting_factor = 0.15
+				}
+			}
