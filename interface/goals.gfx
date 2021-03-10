@@ -1920,4 +1920,50 @@ spriteTypes = {
 		name = "GFX_focus_por_recover_brazil"
 		texturefile = "gfx/interface/goals/focus_por_recover_brazil.dds"
 	}				
+	####NORAS CLEAN UP SERVICES####
+###SPAIN###
+	SpriteType = { 
+		name = "GFX_focus_spa_unify_the_nationalist_front"
+		texturefile = "gfx/interface/goals/focus_spa_unify_the_nationalist_front.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_focus_spa_caudillo_of_spain"
+		texturefile = "gfx/interface/goals/focus_spa_caudillo_of_spain.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_Noras_Primo_De_Rivera"
+		texturefile = "gfx/interface/goals/focus_spr_primo_de_rivera.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_focus_spa_fuse_the_parties"
+		texturefile = "gfx/interface/goals/focus_spa_fuse_the_parties.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_Noras_Dictator_For_life"
+		texturefile = "gfx/interface/goals/focus_spr_dictator_for_life.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_focus_spa_strengthen_the_supreme_reality_of_spain"
+		texturefile = "gfx/interface/goals/focus_spa_strengthen_the_supreme_reality_of_spain.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_Noras_spr_infra"
+		texturefile = "gfx/interface/goals/focus_spr_infra.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_Noras_Cross_Country_Infra"
+		texturefile = "gfx/interface/goals/focus_spr_cross_country_infra.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_Noras_spr_motorized"
+		texturefile = "gfx/interface/goals/focus_spr_motorized.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_focus_spa_unify_the_nationalist_front"
+		texturefile = "gfx/interface/goals/focus_spa_unify_the_nationalist_front.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_focus_spa_unify_the_nationalist_front"
+		texturefile = "gfx/interface/goals/focus_spa_unify_the_nationalist_front.dds"
+	}	
 }

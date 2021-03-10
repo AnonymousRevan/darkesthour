@@ -1,13 +1,5 @@
 Focuses that need to be added
 Spain:
-	A_unify_the_nationalist_front
-	SPA_caudillo_of_spain
-	SPA_martyrdom_for_primo_de_rivera
-	SPA_fuse_the_parties
-	SPA_dictator_for_life
-	SPA_la_division_azul
-	SPA_strengthen_the_supreme_reality_of_spain
-	PA_facilitate_pyrenees_freight_transports
 	SPA_improve_cross_country_railways
 	SPA_motorization
 	SPA_equipment_modernization
