@@ -784,11 +784,9 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 75
-
 			add_tech_bonus = {
-				name = aerei_d'attacco
 				bonus = 1.0
-				ahead_reduction = 2				
+				ahead_reduction = 2			
 				uses = 1
 				technology = naval_bomber1
 				technology = naval_bomber2

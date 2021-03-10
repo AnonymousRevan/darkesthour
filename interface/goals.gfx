@@ -1853,7 +1853,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/r56_goal_GER_luftwaffe.dds"
 	}
 	SpriteType = {
-		name = "GFX_r56_goal_ger_panzers"
+		name = "GFX_r56_ger_panzers"
 		texturefile = "gfx/interface/goals/r56_goal_ger_panzers.dds"
 	}
 	SpriteType = {
@@ -1958,9 +1958,10 @@ spriteTypes = {
 		name = "GFX_Noras_spr_motorized"
 		texturefile = "gfx/interface/goals/focus_spr_motorized.dds"
 	}	
+####FRANCE####
 	SpriteType = { 
-		name = "GFX_focus_spa_unify_the_nationalist_front"
-		texturefile = "gfx/interface/goals/focus_spa_unify_the_nationalist_front.dds"
+		name = "GFX_focus_fra_devalue_the_franc"
+		texturefile = "gfx/interface/goals/focus_fra_devalue_the_franc.dds"
 	}	
 	SpriteType = { 
 		name = "GFX_focus_spa_unify_the_nationalist_front"

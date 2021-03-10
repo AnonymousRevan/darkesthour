@@ -1,8 +1,8 @@
 Focuses that need to be added
-Spain:
-	SPA_improve_cross_country_railways
-	SPA_motorization
-	SPA_equipment_modernization
-	SPA_expand_the_air_branch
-France:
-HOLY SHIT I CAN'T EVEN CHECK IN VSCODE THE FOCUS TREE
+Croatia
+Egypt
+Italy 
+	line 789: 				name = aerei_d'attacco
+Fucking figure out new zealand
+Slovakia
+Uk look at looks funky

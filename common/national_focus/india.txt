@@ -3002,3 +3002,4 @@ focus = {
 			add_timed_idea = { idea = RAJ_a_line_in_the_sand days = 365 }
 		}
 	}	
+}

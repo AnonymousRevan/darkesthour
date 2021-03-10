@@ -3437,7 +3437,7 @@ focus = {
 	
 	focus = {
 		id = GER_army_innovation_2
-		icon = GFX_r56_goal_ger_panzers
+		icon = GFX_focus_generic_tank_production
 		prerequisite = { focus = GER_soviet_treaty }
 		x = 0
 		y = 2
