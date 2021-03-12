@@ -1093,7 +1093,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = NZL_wairarapa_sheep_farms }
 		prerequisite = { focus = NZL_bureau_of_industry }
-		x = 1
+		x = 2
 		y = 3
 		relative_position_id = NZL_national_roads_board
 
@@ -1152,8 +1152,7 @@ focus_tree = {
 				set_state_flag = NZL_industrial_conscription_AF
 			}
 		}
-	}
-
+	
 	focus = {
 		id = NZL_think_big
 		icon = GFX_goal_generic_construct_civ_factory
@@ -2241,3 +2240,4 @@ focus_tree = {
 			}
 		}
 	}
+}
