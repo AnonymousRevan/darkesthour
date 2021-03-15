@@ -1229,7 +1229,7 @@ focus_tree = {
 		focus = {
 		id = uk_waves_focus
 		icon = GFX_r56_goal_ENG_grand_british_fleet
-		x = 18
+		x = 15
 		y = 0
 		cost = 7
 		ai_will_do = {
@@ -1614,7 +1614,7 @@ focus = {
 			num_subjects > 0
 		} 
 		icon = GFX_goal_generic_national_unity
-		x = 30
+		x = 18
 		y = 0
 		offset = {
 			x = -1
@@ -2844,7 +2844,7 @@ focus = {
 
 		icon = GFX_goal_support_democracy
 
-		x = 32
+		x = 23
 		y = 0
 		offset = {
 			x = -7
