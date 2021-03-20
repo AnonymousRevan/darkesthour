@@ -1030,8 +1030,7 @@ focus_tree = {
 	focus = {
 		id = FRA_develop_our_resources
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = FRA_rebuild_military_production }
-		prerequisite = { focus = FRA_research_efforts }
+		prerequisite = { focus = FRA_rebuild_military_production focus = FRA_research_efforts }
 		relative_position_id = FRA_rebuild_military_production
 		x = -1
 		y = 1
@@ -1051,7 +1050,7 @@ focus_tree = {
 				}
 				add_resource = {
 					type = rubber
-					amount = 70
+					amount = 20
 				}
 			}
 		}
@@ -1065,7 +1064,8 @@ focus_tree = {
 		y = 1
 		cost = 2
 		
-		available = { date > 1940.3.1 }
+		available = {
+		}
 		available_if_capitulated = yes
 
 		completion_reward = {
