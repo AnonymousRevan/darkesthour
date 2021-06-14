@@ -916,7 +916,7 @@ war_measures = {
 		complete_effect = {
 			replace_civ_with_arms_factories = yes
 			add_war_support = -0.05
-			add_stability = -0.03
+			production_speed_buildings_factor = 0.10
 		}
 		ai_will_do = {
 			factor = 0

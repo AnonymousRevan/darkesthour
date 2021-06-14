@@ -224,7 +224,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = socialism
 	traits = {
-		#
+		captain_of_industry
 	}
 }
 
@@ -293,7 +293,7 @@ set_convoys = 100
 create_corps_commander = {
 	name = "Leslie Morshead"
 	gfx = "GFX_AST_leslie_morshead"
-	traits = { }
+	traits = { infantry_leader desert_fox jungle_rat }
 	skill = 4
     attack_skill = 1
     defense_skill = 6
@@ -306,17 +306,17 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Thomas Blamey"
 	gfx = "GFX_AST_thomas_blamey"
-	traits = { Brilliant_Strategist trickster}
-	skill = 4
-    attack_skill = 4
+	traits = { organizer mountaineer trickster}
+	skill = 6
+    attack_skill = 5
     defense_skill = 3
-    planning_skill = 3
+    planning_skill = 4
     logistics_skill = 3
 }
 create_corps_commander = {
 	name = "Henry Wynter"
 	gfx = "GFX_AST_henry_wynter"
-	traits = { }
+	traits = { infantry_leader infantry_expert }
 	skill = 4
     attack_skill = 3
     defense_skill = 4
@@ -356,8 +356,8 @@ create_corps_commander = {
 create_navy_leader = {
 	name = "Harold Farncomb"
 	gfx = "GFX_AST_harold_farncomb"
-	traits = { air_controller naval_lineage }
-	skill = 4
+	traits = { air_controller naval_lineage fly_swatter }
+	skill = 6
 	attack_skill = 3
 	defense_skill = 3
 	maneuvering_skill = 3

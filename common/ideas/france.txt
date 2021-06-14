@@ -46,11 +46,11 @@ ideas = {
 			
 			equipment_bonus = {
 				tac_bomber_equipment = {
-					air_ground_attack = 0.15
+					air_ground_attack = 0.10
 					instant = yes
 				}
 				CAS_equipment = {
-					air_ground_attack = 0.15
+					air_ground_attack = 0.10
 					instant = yes
 				}
 			}

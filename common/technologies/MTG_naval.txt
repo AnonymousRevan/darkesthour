@@ -384,6 +384,10 @@ technologies = {
 			leads_to_tech = improved_sonar
 			research_cost_coeff = 1
 		}
+		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1.50
 		research_cost = 1.5
 
 		start_year = 1915
@@ -420,6 +424,10 @@ technologies = {
 			leads_to_tech = improved_sonar_2
 			research_cost_coeff = 1
 		}
+		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1.50
 		research_cost = 1.5
 
 		start_year = 1920
@@ -456,6 +464,10 @@ technologies = {
 			leads_to_tech = improved_sonar_3
 			research_cost_coeff = 1
 		}
+		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1.50
 		research_cost = 1.5
 
 		start_year = 1934
@@ -492,6 +504,10 @@ technologies = {
 			leads_to_tech = improved_sonar_4
 			research_cost_coeff = 1
 		}
+		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1.50
 		research_cost = 2
 
 		start_year = 1940
@@ -524,6 +540,9 @@ technologies = {
 			nrm_submarine_sonar_5
 		}
 		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1.50
 		research_cost = 2
 
 		start_year = 1945
@@ -3595,7 +3614,7 @@ early_ship_hull_carrier = {
 			nrm_submarine_noise_3
 		}
 		
-		research_cost = 4
+		research_cost = 6
 
 		start_year = 1945
 		
@@ -3946,6 +3965,9 @@ early_ship_hull_carrier = {
 			research_cost_coeff = 1
 		}
 
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1
 		research_cost = 0.5
 		start_year = 1920
 		folder = {
@@ -3977,7 +3999,10 @@ early_ship_hull_carrier = {
 			leads_to_tech = nrm_improved_antiair
 			research_cost_coeff = 1
 		}
-
+		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1
 		research_cost = 0.75
 		start_year = 1935
 		folder = {
@@ -4009,9 +4034,12 @@ early_ship_hull_carrier = {
 			leads_to_tech = nrm_advanced_antiair
 			research_cost_coeff = 1
 		}
-
+		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1
 		research_cost = 0.75
-		start_year = 1940
+		start_year = 1938
 		folder = {
 			name = mtgnavalfolder
 			position = { x = -4 y = 20 }
@@ -4036,9 +4064,12 @@ early_ship_hull_carrier = {
 			nrm_support_destroyer_AA_4
 			nrm_submarine_AA_3
 		}
-
+		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1
 		research_cost = 1
-		start_year = 1942
+		start_year = 1940
 		folder = {
 			name = mtgnavalfolder
 			position = { x = -4 y = 24 }
@@ -4068,6 +4099,9 @@ early_ship_hull_carrier = {
 			research_cost_coeff = 1
 		}
 
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1
 		research_cost = 1.5
 		start_year = 1930
 		folder = {
@@ -4098,9 +4132,12 @@ early_ship_hull_carrier = {
 			leads_to_tech = nrm_advanced_heavy_antiair
 			research_cost_coeff = 1
 		}
-
+		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1
 		research_cost = 1.5
-		start_year = 1941
+		start_year = 1939
 		folder = {
 			name = mtgnavalfolder
 			position = { x = -3 y = 22 }
@@ -4129,9 +4166,12 @@ early_ship_hull_carrier = {
 			leads_to_tech = nrm_modern_heavy_antiair
 			research_cost_coeff = 1
 		}
-
+		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1
 		research_cost = 1.5
-		start_year = 1943
+		start_year = 1941
 		folder = {
 			name = mtgnavalfolder
 			position = { x = -3 y = 26 }
@@ -4155,9 +4195,12 @@ early_ship_hull_carrier = {
 			nrm_support_cruiser_HAA_4
 			nrm_support_destroyer_HAA_4
 		}
-
+		
+		xp_research_type = navy
+		xp_research_cost = 50
+		xp_research_bonus = 1
 		research_cost = 1.5
-		start_year = 1945
+		start_year = 1943
 		folder = {
 			name = mtgnavalfolder
 			position = { x = -3 y = 30 }
@@ -5011,7 +5054,7 @@ early_ship_hull_carrier = {
 		
 		research_cost = 1.25
 
-		start_year = 1940
+		start_year = 1939
 
 		path = {
 			leads_to_tech = modern_medium_battery
@@ -5085,7 +5128,7 @@ early_ship_hull_carrier = {
 		
 		research_cost = 2.25
 
-		start_year = 1944
+		start_year = 1943
 
 		path = {
 			leads_to_tech = modern_dp_medium_battery
@@ -5217,7 +5260,7 @@ early_ship_hull_carrier = {
 		
 		research_cost = 2.5
 
-		start_year = 1946
+		start_year = 1943
 
 		enable_equipment_modules = { 
 			nrm_capital_secondary_DP_6_4_x08
@@ -5389,7 +5432,7 @@ early_ship_hull_carrier = {
 		
 		research_cost = 2
 
-		start_year = 1945
+		start_year = 1943
 
 		enable_equipment_modules = { 
 			nrm_cruiser_battery_8_4_x04
@@ -6830,7 +6873,7 @@ early_ship_hull_carrier = {
 
 	mtg_transport = { #WHEN BALANCING - ALSO FIX REGULAR NAVAL TREE
 
-		naval_invasion_capacity = 6
+		naval_invasion_capacity = 10
 		
 		path = {
 			leads_to_tech = mtg_transport_2 
@@ -6883,7 +6926,7 @@ early_ship_hull_carrier = {
 
 		transport_capacity = -0.5
 		invasion_preparation = -0.1
-		naval_invasion_capacity = 12
+		naval_invasion_capacity = 18
 		
 		path = {
 			leads_to_tech = mtg_landing_craft 
@@ -6936,7 +6979,7 @@ early_ship_hull_carrier = {
 
 		invasion_preparation = -0.3
 		amphibious_invasion_defence = 0.15
-		naval_invasion_capacity = 24
+		naval_invasion_capacity = 30
 
 		path = {
 			leads_to_tech = mtg_tank_landing_craft 

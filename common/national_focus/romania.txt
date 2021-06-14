@@ -924,7 +924,7 @@ focus_tree = {
 				desc = "POLITICS_MICHAEL_I_DESC"
 				picture = GFX_Portrait_romania_michael_i
 				expire = "1965.1.1"
-				ideology = despotism
+				ideology = fascism
 				traits = {
 				}
 			}
@@ -1012,7 +1012,7 @@ focus_tree = {
 		completion_reward = {
 
 			set_politics = {
-				ruling_party = neutrality
+				ruling_party = fascism
 				elections_allowed = no
 			}
 			add_country_leader_trait = camarilla_leader
@@ -2744,5 +2744,4 @@ focus_tree = {
 			}
 		}
 	}
-}
 }

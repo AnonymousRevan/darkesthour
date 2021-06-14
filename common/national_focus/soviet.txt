@@ -110,7 +110,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 			remove_ideas = officers_purged
-			add_ideas = officers_purged_2	
+			add_ideas = officers_purged_2
 		}
 	}
 
@@ -134,6 +134,7 @@ focus = {
 		completion_reward = {
 		remove_ideas = officers_purged_2
 		add_ideas = officers_purged_3
+		add_ideas = tot_economic_mobilisation
 		create_field_marshal = {
 	name = "Georgy Zhukov"
 	id = 410

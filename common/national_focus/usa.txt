@@ -346,12 +346,11 @@ focus_tree = {
 				technology = improved_rubber_processing
 				technology = advanced_rubber_processing
 				technology = modern_rubber_processing
+				}
+				add_ideas = USA_Rubber_Shortage
 				remove_ideas = USA_refinery
-				add_ideas = USA_refinery2
 			}
 		}
-	}
-
 
 	focus = {
 		id = USA_scientist_haven
@@ -455,7 +454,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_neutrality_act }
 		relative_position_id = USA_neutrality_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1254,7 +1253,7 @@ focus_tree = {
 		}
 
 		available = {
-        FRA = { controls_state = 461 }
+        ENG = { controls_state = 461 }
 		}
 		
 		bypass = {
@@ -1328,7 +1327,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = { idea = USA_war_plan_silver }	
+			add_timed_idea = { idea = USA_war_plan_silver days = 180 }	
 		}
 	}
 	focus = {
@@ -1352,7 +1351,7 @@ focus_tree = {
 			GER = {
 				add_opinion_modifier = { target = USA modifier = war_plan_black }
 			}
-			add_ideas = { idea = USA_war_plan_black }
+			add_timed_idea = { idea = USA_war_plan_black days = 365 }
 		}
 	}
 	focus = {
@@ -1415,19 +1414,21 @@ focus_tree = {
 			
 		}
 		continue_if_invalid = yes
-		available_if_capitulated = yes
+		available = {
+			Date > 1941.8.1
+		}
 
 		x = 1
 		y = 1
 		relative_position_id = USA_Torch_Focus
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
 
 
 		completion_reward = {
-				add_ideas = { idea = USA_war_plan_orange }	
+				add_timed_idea = { idea = USA_war_plan_orange days = 120 }	
 		}
 	}
 
@@ -2357,7 +2358,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_two_ocean_navy_act }
 		relative_position_id = USA_two_ocean_navy_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2387,7 +2388,7 @@ focus_tree = {
 		x = -3
 		y = 2
 		relative_position_id = USA_two_ocean_navy_act
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}

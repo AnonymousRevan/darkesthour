@@ -15,8 +15,8 @@ equipment_modules = {
 			
 		}
 		multiply_stats = {
-			hg_attack = -0.4
-			lg_attack = -0.4
+			hg_attack = -0.2
+			lg_attack = -0.2
 			
 		}
 		build_cost_resources = {
@@ -41,8 +41,8 @@ equipment_modules = {
 		}
 		multiply_stats = {
 			build_cost_ic = 0.0009
-			hg_attack = -0.15
-			lg_attack = -0.15
+			hg_attack = -0.1
+			lg_attack = -0.1
 			
 		}
 		build_cost_resources = {

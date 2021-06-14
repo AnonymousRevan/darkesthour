@@ -1,1 +1,29 @@
-﻿
+﻿capital = 141
+
+oob = "PER_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "SPR_1936_naval_mtg"
+	else = {
+		set_naval_oob = "SPR_1936_naval_legacy"
+	}
+}
+
+set_research_slots = 3
+
+add_ideas = {
+	neutrality_idea
+	great_depression
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.10.27"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 96
+	fascism = 2
+	communism = 2
+}

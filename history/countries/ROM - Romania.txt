@@ -223,9 +223,9 @@ set_politics = {
 }
 set_popularities = {
 	democratic = 20
-	fascism = 18
+	fascism = 38
 	communism = 2
-	neutrality = 60
+	neutrality = 40
 }
 
 1939.1.1 = {

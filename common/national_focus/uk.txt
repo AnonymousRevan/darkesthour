@@ -248,7 +248,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = armor_bonus
-				bonus = 1.25
+				bonus = 1.0
 				uses = 2
 				category = armor
 			}
@@ -567,7 +567,7 @@ focus_tree = {
 				OR = {
 					threat > 0.05
 					has_war = yes
-					has_idea = ENG_no_further_appeasement_idea
+					has_idea = ENG_colonial_elite
 					NOT = { has_government = democratic }
 				}
 			}
@@ -3065,13 +3065,9 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = GER
-				expire = 0
+			add_timed_idea = { idea = ENG_every_man_will_do_his_duty days = 720 }
 			} 
 		}
-	}
 
 	focus = {
 		id = ENG_Operation_CUSADER
@@ -3080,8 +3076,7 @@ focus = {
 		bypass = { ENG = { controls_state = 451 } ENG = { controls_state = 450 } }
 		
 	    available = {
-			ITA = { controls_state = 451 }
-			ITA = { controls_state = 450 }
+			Date > 1939.11.1
 		}
 
 		x = 0
@@ -3096,6 +3091,8 @@ focus = {
 			FRA = { add_timed_idea = { idea = COM_Operation_CUSADER days = 45 } }
 			AST = { add_timed_idea = { idea = COM_Operation_CUSADER days = 45 } }
 			NZL = { add_timed_idea = { idea = COM_Operation_CUSADER days = 45 } }
+			IRE = { add_timed_idea = { idea = COM_Operation_CUSADER days = 45 } }
+			EGY = { add_timed_idea = { idea = COM_Operation_CUSADER days = 45 } }
 		}
 	}
 
@@ -3125,6 +3122,9 @@ focus = {
 			FRA = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 60 } }
 			AST = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 60 } }
 			NZL = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 60 } }
+			IRE = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 60 } }
+			EGY = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 60 } }
+			BRA = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 60 } }
 		}
 	}
 
@@ -3152,6 +3152,9 @@ focus = {
 			FRA = { add_timed_idea = { idea = COM_OPERATION_OVERLORD days = 60 } }
 			AST = { add_timed_idea = { idea = COM_OPERATION_OVERLORD days = 60 } }
 			NZL = { add_timed_idea = { idea = COM_OPERATION_OVERLORD days = 60 } }
+			EGY = { add_timed_idea = { idea = COM_OPERATION_OVERLORD days = 60 } }
+			IRE = { add_timed_idea = { idea = COM_OPERATION_OVERLORD days = 60 } }
+			BRA = { add_timed_idea = { idea = COM_OPERATION_OVERLORD days = 60 } }
 		}
 	}
 }	

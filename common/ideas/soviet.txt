@@ -260,7 +260,7 @@ ideas = {
 				send_volunteer_factor = -0.70			
 				army_org_factor = -0.3
 				industrial_capacity_factory = -0.15
-				training_time_factor = 0.25
+				training_time_factor = 0.30
 				army_defence_factor = -0.20
 				army_attack_factor = -0.20
 			}
@@ -286,9 +286,9 @@ ideas = {
 			}
 
 			modifier = {
-				army_org_factor = -0.30
+				army_org_factor = -0.20
 				industrial_capacity_factory = -0.1
-				training_time_factor = 0.30
+				training_time_factor = 0.25
 				army_defence_factor = -0.15
 				army_attack_factor = -0.15
 			}
@@ -313,10 +313,10 @@ ideas = {
 			}
 
 			modifier = {
-				army_org_factor = -0.15
+				army_org_factor = -0.1
 				training_time_factor = 0.05
-				army_defence_factor = -0.10
-				army_attack_factor = -0.10
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
 			}
 		}
 		officers_purged_4 = {
@@ -1448,7 +1448,7 @@ ideas = {
 				air_equipment = 0.15
 			}
 			
-			traits = { medium_aircraft_manufacturer }
+			traits = { CAS_manufacturer_3 }
 			
 			modifier = {
 			}

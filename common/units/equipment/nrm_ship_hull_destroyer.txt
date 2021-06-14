@@ -277,7 +277,7 @@ equipments = {
 
 		fuel_consumption = 0.01
 		
-		build_cost_ic = 200
+		build_cost_ic = 100
 		resources = {
 			steel = 4
 			
@@ -359,7 +359,7 @@ equipments = {
 
 		fuel_consumption = 0.01
 		
-		build_cost_ic = 200
+		build_cost_ic = 100
 		resources = {
 			steel = 4
 			
@@ -441,7 +441,7 @@ equipments = {
 
 		fuel_consumption = 0.01
 		
-		build_cost_ic = 200
+		build_cost_ic = 100
 		resources = {
 			steel = 4
 			
@@ -523,7 +523,7 @@ equipments = {
 
 		fuel_consumption = 0.01
 		
-		build_cost_ic = 200
+		build_cost_ic = 100
 		resources = {
 			steel = 4
 			
@@ -605,7 +605,7 @@ equipments = {
 
 		fuel_consumption = 0.01
 		
-		build_cost_ic = 200
+		build_cost_ic = 100
 		resources = {
 			steel = 4
 			

@@ -13,6 +13,63 @@ operations = {
 		}
 	}
 
+	Volume_by_fire = {
+		ai_will_do = { factor = 0 }
+		cost = 100
+		available = {
+			Date > 1941.1.1
+		}
+		visible = {
+			tag = USA
+			Date > 1941.1.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			USA = {
+				add_timed_idea = { idea = USA_Volume_by_fire days = 150 }
+		}
+	}
+}
+	
+	stratgegic_destruction = {
+		ai_will_do = { factor = 0 }
+		cost = 250
+		available = {
+			Date > 1942.1.1
+		}
+		visible = {
+			tag = USA
+			Date > 1942.1.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			USA = {
+				add_timed_idea = { idea = USA_stratgegic_destruction days = 365 }
+		}
+	}
+}	
+	
+		Guadalcanal = {
+		ai_will_do = { factor = 0 }
+		cost = 150
+		available = {
+			Date > 1941.1.1
+		}
+		visible = {
+			tag = USA
+			Date > 1941.1.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			USA = {
+				add_timed_idea = { idea = USA_midway days = 120 }
+		}
+	}
+}	
+	
 	USA_execute_operation_torch = {
 		icon = generic_operation
 		available = {

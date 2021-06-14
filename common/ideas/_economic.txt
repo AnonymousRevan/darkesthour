@@ -12,12 +12,12 @@ ideas = {
 		
 			modifier = {
 				consumer_goods_factor = 0.45
-				production_speed_industrial_complex_factor = -0.40
+				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = -0.60
-				production_speed_dockyard_factor = -0.60
+				production_speed_dockyard_factor = -0.50
 				conversion_cost_civ_to_mil_factor = 0.60
 				conversion_cost_mil_to_civ_factor = 0.60
-				generate_wargoal_tension = 1.00
+				research_speed_factor = 0.10
 				join_faction_tension = 0.20
 				lend_lease_tension = 0.50
 				send_volunteers_tension = 0.20
@@ -81,6 +81,7 @@ ideas = {
 				production_speed_dockyard_factor = -0.3
 				conversion_cost_civ_to_mil_factor= 0.3
 				conversion_cost_mil_to_civ_factor = 0.3
+				research_speed_factor = 0.06
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
 			}
@@ -129,6 +130,7 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.1
 				production_speed_arms_factory_factor = -0.1
 				production_speed_dockyard_factor = -0.1
+				research_speed_factor = 0.03
 				fuel_gain_factor = -0.25
 			}
 			
@@ -193,6 +195,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 				conversion_cost_civ_to_mil_factor= -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
+				research_speed_factor = 0.01
 				production_speed_dockyard_factor = 0.1
 				fuel_gain_factor = -0.1
 			}
@@ -265,6 +268,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor= -0.2
 				conversion_cost_mil_to_civ_factor = -0.2
 				production_speed_dockyard_factor = 0.2
+				research_speed_factor = 0.02
 			}
 			
 			cancel_if_invalid = no
@@ -396,6 +400,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor= -0.3
 				conversion_cost_mil_to_civ_factor = -0.3
 				production_speed_dockyard_factor = 0.3
+				research_speed_factor = 0.04
 			}
 			
 			cancel_if_invalid = no

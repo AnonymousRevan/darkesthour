@@ -21,8 +21,8 @@ equipments = {
 		}
 		
 		#Misc Abilities
-		maximum_speed = 3
-		reliability = 0.5
+		maximum_speed = 4
+		reliability = 0.8
 
 		#Defensive Abilities
 		defense = 10

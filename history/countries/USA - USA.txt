@@ -9,7 +9,7 @@ if = {
 	}
 }
 
-set_research_slots = 6
+set_research_slots = 5
 set_stability = 0.75
 set_war_support = 0
 set_variable = { var = senators_support value = 48 }
@@ -347,7 +347,7 @@ create_corps_commander = {
 	name = "George S. Patton"
 	picture = "Portrait_USA_George_S_Patton.dds"
 	traits = {  trickster armor_officer panzer_leader war_hero trait_reckless }
-	skill = 5
+	skill = 7
 
 	attack_skill = 7 
 	defense_skill = 3
@@ -358,8 +358,8 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Omar Bradley"
 	picture = "Portrait_USA_Omar_Bradley.dds"
-	traits = {  trait_engineer commando brilliant_strategist urban_assault_specialist }
-	skill = 5
+	traits = {  trait_engineer scavenger commando paratroopers brilliant_strategist urban_assault_specialist }
+	skill = 6
 
 	attack_skill = 3
 	defense_skill = 5
@@ -370,7 +370,7 @@ create_corps_commander = {
 create_field_marshal = {
 	name = "Dwight D. Eisenhower"
 	picture = "Portrait_USA_Dwight_D_Eisenhower.dds"
-	traits = { logistics_wizard organizer offensive_doctrine trait_cautious armor_officer politically_connected }
+	traits = { logistics_wizard organizer offensive_doctrine trait_cautious panzer_leader politically_connected }
 	skill = 5
 	id = 602
 	attack_skill = 3
@@ -382,7 +382,7 @@ create_field_marshal = {
 create_corps_commander = {
 	name = "Geoffrey Keyes"
 	picture = "Portrait_USA_Geoffrey_Keyes.dds"
-	traits = { armor_officer career_officer }
+	traits = { panzer_leader career_officer }
 	skill = 2
 
 	attack_skill = 2
@@ -394,7 +394,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Lucian Truscott"
 	picture = "Portrait_USA_Lucian_Truscott.dds"
-	traits = { trait_engineer commando naval_invader }
+	traits = { trait_engineer commando camoflauge_expert naval_invader mountaineer }
 	skill = 5
 
 	attack_skill = 4
@@ -406,7 +406,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Mark Clark"
 	picture = "Portrait_USA_Mark_W_Clark.dds"
-	traits = { infantry_officer trait_reckless }
+	traits = { infantry_leader infantry_expert trait_reckless trickster mountaineer }
 	skill = 4
 
 	attack_skill = 5
@@ -420,9 +420,9 @@ create_field_marshal = {
 	id = 57
 	picture = "Portrait_USA_Douglas_MacArthur.dds"
 	traits = {  offensive_doctrine brilliant_strategist career_officer media_personality politically_connected }
-	skill = 4
+	skill = 6
 
-	attack_skill = 4
+	attack_skill = 7
 	defense_skill = 3
 	planning_skill = 4
 	logistics_skill = 2
@@ -467,7 +467,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Jonathan Wainwright"
 	picture = "Portrait_USA_Jonathan_Wainwright.dds"
-	traits = {  }
+	traits = { jungle_rat }
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -523,7 +523,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Alexander Patch"
 	picture = "Portrait_USA_Alexander_Patch.dds"
-	traits = {  commando infantry_officer naval_invader }
+	traits = {  commando infantry_leader infantry_expert trickster naval_invader engineer fortress_buster jungle_rat }
 	skill = 4
 
 	attack_skill = 3
@@ -614,7 +614,7 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Chester W. Nimitz"
 		picture = "Portrait_USA_Chester_W_Nimitz.dds"
-	traits = { gentlemanly blue_water_expert naval_lineage superior_tactician spotter }
+	traits = { gentlemanly blue_water_expert naval_lineage superior_tactician spotter fly_swatter }
 	skill = 5
 	attack_skill = 3
 	defense_skill = 3

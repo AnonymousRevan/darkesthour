@@ -93,7 +93,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.5
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -285,7 +285,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.5
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -618,7 +618,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.5
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -654,7 +654,7 @@ technologies = {
 
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			equipment_capture_factor = 0.025
 		}
 		
 		
@@ -699,7 +699,7 @@ technologies = {
 
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			equipment_capture_factor = 0.025
 		}
 		path = {
 			leads_to_tech = tech_maintenance_company4
@@ -741,7 +741,7 @@ technologies = {
 
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			equipment_capture_factor = 0.025
 		}
 
 		research_cost = 1.5
@@ -791,7 +791,7 @@ technologies = {
 			motorised_infantry = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.5
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -967,7 +967,7 @@ technologies = {
 			motorised_infantry = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.5
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -1155,7 +1155,7 @@ technologies = {
 			motorised_infantry = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.5
 		start_year = 1936
 		folder = {
 			name = support_folder

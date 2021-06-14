@@ -4,21 +4,16 @@ state={
 	name="STATE_292"
 	manpower = 1440000
 	
-	state_category = rural
+	state_category = wasteland
+	impassable = yes
+
 	resources={
 		oil=3 # was: 3
 	}
 
 	history={
-		owner = PER
-		buildings = {
-			infrastructure = 1
-			arms_factory = 1
-			industrial_complex = 1
-			12702 = {
-				naval_base = 6
-			}
-		}
+		owner = ENG
+		
 		victory_points = {
 			12727 5
 		}

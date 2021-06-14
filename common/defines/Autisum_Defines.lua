@@ -93,7 +93,7 @@ NDefines.NAILAND_COMBAT_BOMBERS_PER_LAND_FORT_LEVEL = 30		-- Amount of bomber pl
 NDefines.NAILAND_COMBAT_BOMBERS_PER_COASTAL_FORT_LEVEL = 40	-- Amount of bomber planes requested per enemy coastal fort level
 NDefines.NAILAND_COMBAT_MIN_EXCORT_WINGS = 2					-- Min amount of airwings requested to excort operations
 
-NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.10
+NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.15
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.25
 NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.4
 NDefines.NMilitary.TRAINING_ATTRITION = 0.00
@@ -111,7 +111,7 @@ NDefines.NMilitary.PLANNING_GAIN = 0.04
 NDefines.NMilitary.REINFORCE_CHANCE = 0.04
 NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0.0
 NDefines.NMilitary.MAX_OUT_OF_SUPPLY_DAYS = 25
-NDefines.NMilitary.STRATEGIC_SPEED_BASE = 9.0
+NDefines.NMilitary.STRATEGIC_SPEED_BASE = 7.0
 NDefines.NMilitary.STRATEGIC_INFRA_SPEED = 9.0
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0
@@ -126,21 +126,21 @@ NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.04			-- Balancing value to 
 NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.0025				-- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.40          -- effect on defense due to enemy air superiorty
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE = 0.30	       -- more AA attack will approach this amount of help (diminishing returns)
-NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 48 			-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 80 			-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.DIVISION_SIZE_FOR_XP = 8                   -- how many battalions should a division have to count as a full divisions when calculating XP stuff
 NDefines.NMilitary.CORPS_COMMANDER_ARMIES_CAP = -1			-- how many armies a corps commander is limited to. 0 = inf, < 0 = blocked
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 100		-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
-NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 5				-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 140		-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 7				-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.NUKE_MIN_DAMAGE_PERCENT = 0.1					-- Minimum damage from nukes as a percentage of current strength/organisation
 NDefines.NMilitary.NUKE_MAX_DAMAGE_PERCENT = 0.6					-- Minimum damage from nukes as a percentage of current strength/organisation
 NDefines.NMilitary.BASE_FORT_PENALTY = -0.10					   -- fort penalty
 
 NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.4					-- Anti Air Gun Damage factor
-NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_CHANCE = 0.01					-- Anti Air Gun hit chance
+NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_CHANCE = 0.03					-- Anti Air Gun hit chance
 NDefines.NAir.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 0.40	-- Balancing value to convert equipment stat anti_air_attack to the damage reduction modifier apply to incoming air attacks against units with AA.
 NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.30	-- Maximum damage reduction factor applied to incoming air attacks against units with AA.
 NDefines.NAir.AIR_WING_MAX_SIZE = 1600
-NDefines.NAir.AIR_DEPLOYMENT_DAYS = 7
+NDefines.NAir.AIR_DEPLOYMENT_DAYS = 1
 NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = -0.08			-- 10x levels = 80% defense from bombing
 NDefines.NAirAIR_MORE_GROUND_CREWS_COST = 25.0					-- CP cost to maintain more ground crews
 NDefines.NAirAIR_MORE_GROUND_CREWS_BOOST = 0.15					-- Efficienct boost for more ground crews
@@ -172,7 +172,7 @@ NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.035			-- basic population gr
 NDefines.NBuildings.MAX_SHARED_SLOTS = 100
 NDefines.NBuildings.ANTI_AIR_SUPERIORITY_MULT = 5.0	-- How much air superiority reduction to the enemy does our AA guns? Normally each building level = -1 reduction. With this multiplier.
 NDefines.NBuildings.MAX_BUILDING_LEVELS = 60			-- Max levels a building can have.
-NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.25 -- multiplactive resource bonus for each level of (non damaged) infrastructure
+NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.18 -- multiplactive resource bonus for each level of (non damaged) infrastructure
 NDefines.NBuildings.SUPPLY_PORT_LEVEL_THROUGHPUT = 5   -- supply throughput per level of naval base
 NDefines.NBuildings.INFRA_TO_SUPPLY = 2.5
 NDefines.NBuildings.INFRA_TO_SUPPLY_COEFF = 1
@@ -183,20 +183,20 @@ NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0.00001
 NDefines.NNavy.MIN_GUN_COOLDOWN = 1.0											-- minimum cooldown for a gun
 NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready after shooting
 		1.0,	-- big guns
-		8.0,	-- torpedos
-		4.0,	-- small guns	
+		7.0,	-- torpedos
+		3.0,	-- small guns	
 		}
 
 NDefines.NNavy.GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profile is lower the gun will have lower accuracy
 		80.0,	-- big guns
 		05.0,	-- torpedos
-		30.0,	-- small guns
+		35.0,	-- small guns
 	}		
 
 NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS  = 4.0	-- this screen ratio to num capital/carriers is needed for full screening beyond screen line
 NDefines.NNavy.CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CARRIERS = 3.0  -- this capital ratio to num carriers is needed for full screening beyond screen line
 
-NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.15  -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier 
+NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.20  -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier 
 NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.10 -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier 
 
 NDefines.NNavy.AGGRESSION_ARMOR_EFFICIENCY_MULTIPLIER = 1.0		-- armor to enemy piercing ratio is multiplied by this value, which will increase the strength of ships while considering them for aggression
@@ -205,7 +205,7 @@ NDefines.NNavy.AGGRESSION_MAX_ARMOR_EFFICIENCY = 1.5              -- armor multi
 	
 NDefines.NNavy.AGGRESSION_LIGHT_GUN_EFFICIENCY_ON_LIGHT_SHIPS = 0.45 -- ratio for scoring for different gun types against light ships
 NDefines.NNavy.AGGRESSION_HEAVY_GUN_EFFICIENCY_ON_LIGHT_SHIPS = 0.35-- ratio for scoring for different gun types against light ships
-NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_LIGHT_SHIPS = 0.20   -- ratio for scoring for different gun types against light ships
+NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_LIGHT_SHIPS = 0.10   -- ratio for scoring for different gun types against light ships
 	
 NDefines.NNavy.AGGRESSION_LIGHT_GUN_EFFICIENCY_ON_HEAVY_SHIPS = 0.75 -- ratio for scoring for different gun types against heavy ships
 NDefines.NNavy.AGGRESSION_HEAVY_GUN_EFFICIENCY_ON_HEAVY_SHIPS = 0.75 -- ratio for scoring for different gun types against heavy ships
@@ -371,8 +371,8 @@ NDefines.NResistance.INITIAL_GARRISON_STRENGTH = 1				-- garrison value for init
 NDefines.NResistance.STATE_COMPLIANCE_DECAY_FOR_LOST_STATES = 0.05 -- daily compliance decay for the states you lost control of
 
 NDefines.NIntel.CIVILIAN_INTEL_NEEDED_TO_SHOW_FOCUS_TREE = 0.10 -- min required intel to focus tree with taken focuses
-NDefines.NIntel.CIVILIAN_INTEL_NEEDED_TO_SHOW_CURRENT_FOCUS = 0.10  -- min required intel to show currently focus
-NDefines.NIntel.CIVILIAN_INTEL_NEEDED_TO_SHOW_CURRENT_FOCUS_PROGRESS = 0.10  -- min required intel to show current focus progress
+NDefines.NIntel.CIVILIAN_INTEL_NEEDED_TO_SHOW_CURRENT_FOCUS = 0.30  -- min required intel to show currently focus
+NDefines.NIntel.CIVILIAN_INTEL_NEEDED_TO_SHOW_CURRENT_FOCUS_PROGRESS = 0.50  -- min required intel to show current focus progress
 
 NDefines.NIntel.COUNTRY_LEVEL_INTEL_MAXIMUMS = {			-- The maximum intel a country can have over another
 		100.0, -- Civilian
@@ -503,7 +503,7 @@ NDefines.NIntel.AIR_COMBAT_AIR_INTEL_FACTOR = 0.2
 
 
 NDefines.NOperatives.AGENCY_CREATION_DAYS = 30						-- Number of days needed to create an intelligence agency
-NDefines.NOperatives.AGENCY_UPGRADE_DAYS = 30					-- Number of days needed to upgrade an intelligence agency
+NDefines.NOperatives.AGENCY_UPGRADE_DAYS = 45					-- Number of days needed to upgrade an intelligence agency
 NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 5					-- Number of factories used to create an intelligence agency
 NDefines.NOperatives.AGENCY_UPGRADE_PER_OPERATIVE_SLOT = 2			-- Number of upgrade needed to unlock an additional operative slot
 NDefines.NOperatives.MAX_OPERATIVE_SLOT_FROM_AGENCY_UPGRADES = 6	-- max operative slots gained from upgrades
@@ -539,5 +539,5 @@ NDefines.NOperatives.CONTROL_TRADE_STACKING_FACTOR = 0.5					-- Multiplied to th
 NDefines.NOperatives.CONTROL_TRADE_MAX_INFLUENCE = 50.0					-- The maximum amount of trade influence that can be gained through the control trade mission
 NDefines.NOperatives.CONTROL_TRADE_INFLUENCE_DAILY_DECAY = 0.1				-- The amount of trade influence lost when no operative are assigned to the mission
 NDefines.NOperatives.CONTROL_TRADE_DAILY_XP_GAIN = 0.137
-NDefines.NOperatives.TECH_STEAL_EQUIPMENT_FACTOR = 1
-NDefines.NOperatives.TECH_STEAL_YEAR_FACTOR = 1
+NDefines.NOperatives.TECH_STEAL_EQUIPMENT_FACTOR = 0.5
+NDefines.NOperatives.TECH_STEAL_YEAR_FACTOR = 0.5

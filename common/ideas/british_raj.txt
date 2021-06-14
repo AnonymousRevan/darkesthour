@@ -52,14 +52,20 @@ ideas = {
 			removal_cost = -1
 			
 			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = 0.2 instant = yes
+				}
 			    heavy_tank_equipment = {
-					build_cost_ic = 0.8 instant = yes
+					build_cost_ic = 0.6 instant = yes
 				}
 				medium_tank_equipment = {
-					build_cost_ic = 0.8 instant = yes
+					build_cost_ic = 0.4 instant = yes
 				}
 				light_tank_equipment = {
-					build_cost_ic = 0.8 instant = yes
+					build_cost_ic = 0.2 instant = yes
 				}
 			}
 		}	

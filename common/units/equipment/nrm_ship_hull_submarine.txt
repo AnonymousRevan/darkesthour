@@ -339,7 +339,7 @@ equipments = {
 
 		fuel_consumption = 0.1
 		
-		build_cost_ic = 1000
+		build_cost_ic = 1200
 		resources = {
 			steel = 4
 		}
@@ -417,7 +417,7 @@ equipments = {
 
 		fuel_consumption = 0.1
 		
-		build_cost_ic = 1200
+		build_cost_ic = 1300
 		resources = {
 			steel = 4
 		}
@@ -495,7 +495,7 @@ equipments = {
 
 		fuel_consumption = 0.1
 		
-		build_cost_ic = 1600
+		build_cost_ic = 1800
 		resources = {
 			steel = 4
 		}
@@ -573,7 +573,7 @@ equipments = {
 
 		fuel_consumption = 0.1
 		
-		build_cost_ic = 1800
+		build_cost_ic = 1900
 		resources = {
 			steel = 4
 			chromium = 1

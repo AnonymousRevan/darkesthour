@@ -1,0 +1,27 @@
+ideas = {
+
+	country = {
+		NZL_Kiwi_Industry = {
+			picture = strategic_resource_automotive_industry
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+			    light_armor = {
+			        instant = yes
+					build_cost_ic = -0.20
+				}
+			    ship_hull_light = {
+			        instant = yes
+					build_cost_ic = -0.25
+				}							
+			}
+		}						

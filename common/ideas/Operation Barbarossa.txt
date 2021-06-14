@@ -15,15 +15,12 @@ ideas = {
 				tag = SOV
 				# counter war support
 				attack_bonus_against = 0.1
-			}
-
-			modifier = {
-			army_morale_factor = 0.05
-			army_armor_speed_factor = 0.025
-			army_armor_attack_factor = 0.05
-			army_armor_defence_factor = 0.05
-			max_planning = 0.05
-				
+				army_morale_factor = -0.05
+			a	rmy_armor_speed_factor = -0.025
+				army_armor_attack_factor = -0.05
+				army_armor_defence_factor = -0.05
+				max_planning = -0.05
+			
 			}
 
 		}

@@ -13,6 +13,7 @@ IEA_Uneducated_population
 IEA_Lack_of_Officers
 partial_economic_mobilisation
 IEA_week_industrial_base
+great_depression
 }
 
 # Starting tech

@@ -109,7 +109,7 @@ equipment_modules = {
 			
 		}
 		add_average_stats = {
-			lg_armor_piercing = 10
+			lg_armor_piercing = 8
 			
 		}
 		multiply_stats = {
@@ -140,7 +140,7 @@ equipment_modules = {
 			
 		}
 		add_average_stats = {
-			lg_armor_piercing = 14
+			lg_armor_piercing = 10
 			
 		}
 		multiply_stats = {

@@ -836,7 +836,7 @@ focus_tree = {
 					is_in_home_area = yes
 				}
 				add_resource = {
-					type = steel
+					type = tungsten
 					amount = 36
 				}
 			}
@@ -847,7 +847,7 @@ focus_tree = {
 				}
 				add_resource = {
 					type = steel
-					amount = 36
+					amount = 54
 				}
 			}
 			random_owned_controlled_state = {

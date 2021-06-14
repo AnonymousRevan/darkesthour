@@ -104,6 +104,9 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		xp_research_type = air
+		xp_research_cost = 150
+		xp_research_bonus = 1.5
 		research_cost = 1.5
 		
 		folder = {
@@ -134,6 +137,9 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		xp_research_type = air
+		xp_research_cost = 150
+		xp_research_bonus = 1.5
 		research_cost = 1.5
 		start_year = 1938
 		enable_equipment_modules = { 
@@ -188,6 +194,9 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		xp_research_type = air
+		xp_research_cost = 150
+		xp_research_bonus = 1.5
 		research_cost = 2
 		start_year = 1939
 		
@@ -237,6 +246,9 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		xp_research_type = air
+		xp_research_cost = 150
+		xp_research_bonus = 1.5
 		research_cost = 2
 		start_year = 1941
 		
@@ -287,6 +299,9 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		xp_research_type = air
+		xp_research_cost = 150
+		xp_research_bonus = 1.5
 		research_cost = 2.5
 		start_year = 1942
   
@@ -338,6 +353,9 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		xp_research_type = air
+		xp_research_cost = 150
+		xp_research_bonus = 1.5
 		research_cost = 2.5
 		start_year = 1944
   
@@ -379,6 +397,9 @@ technologies = {
 		
 		static_anti_air_hit_chance_factor = 0.2
 		
+		xp_research_type = air
+		xp_research_cost = 150
+		xp_research_bonus = 1.5
 		research_cost = 2.5
 		start_year = 1945
   
@@ -424,7 +445,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 1.5
 		
 		folder = {
 			name = electronics_folder
@@ -516,7 +537,7 @@ technologies = {
 		}
 		
 		research_cost = 2.5
-		start_year = 1942
+		start_year = 1941
 		
 		
 		folder = {
@@ -571,7 +592,7 @@ technologies = {
 		}
 		
 		research_cost = 2.5
-		start_year = 1944
+		start_year = 1943
 		
 		folder = {
 			name = electronics_folder
@@ -954,6 +975,7 @@ technologies = {
 		
 		rocket_artillery = {
 			soft_attack = 0.05
+			air_attack = 0.05
 		}
 		rocket_artillery_brigade = {
 			soft_attack = 0.05
@@ -964,6 +986,8 @@ technologies = {
 		motorized_rocket_brigade = {
 			soft_attack = 0.05
 		}
+		
+		static_anti_air_hit_chance_factor = 0.4
 		
 		research_cost = 1.5
 		start_year = 1946

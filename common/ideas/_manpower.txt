@@ -116,7 +116,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.030
+				conscription = 0.027
 				production_speed_buildings_factor = 0.01
 				research_speed_factor = 0.025
 				industrial_capacity_factory = 0.01
@@ -225,7 +225,7 @@ ideas = {
 			level = 4
 			
 			modifier = {
-				conscription = 0.08
+				conscription = 0.045
                 industrial_capacity_factory = -0.025
 				industrial_capacity_dockyard = -0.025
 				production_speed_buildings_factor = -0.025
@@ -349,10 +349,10 @@ ideas = {
 			level = 3
 
 			modifier = {
-				conscription = 0.13
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
-				production_speed_buildings_factor = -0.05
+				conscription = 0.09
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
 				training_time_factor = 0.15
 			}
 			
@@ -460,9 +460,9 @@ ideas = {
 			
 			modifier = {
 				conscription = 0.18
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
-				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				production_speed_buildings_factor = -0.3
 				#XP from reinforcement penalty (small)
 				training_time_factor = 0.20
 			}
@@ -556,9 +556,9 @@ ideas = {
 
 			modifier = {
 				conscription = 0.25
-				industrial_capacity_factory = -0.15
-				industrial_capacity_dockyard = -0.15
-				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.45
+				industrial_capacity_dockyard = -0.45
+				production_speed_buildings_factor = -0.45
 				training_time_factor = 0.30
 			}
 			

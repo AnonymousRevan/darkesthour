@@ -1,0 +1,98 @@
+ideas = {
+	country = {
+			ENG_early_war_raid = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.15						
+			}
+		}	
+		
+			ENG_vengeance_for_london = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.20
+				}							
+			}
+		
+			ENG_Firebombing = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = GER
+				# counter war support
+				industry_air_damage_factor = +0.05	
+				static_anti_air_damage_factor = 0.1	
+			}
+			
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.3	
+			}
+		}	
+		
+			ENG_Tallboy = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = GER
+				# counter war support
+				industry_air_damage_factor = +0.15	
+				static_anti_air_damage_factor = 0.1	
+			}
+			
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.5
+				}							
+			}
+			
+			ENG_grand_slam = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = GER
+				# counter war support
+				industry_air_damage_factor = +0.25	
+				static_anti_air_damage_factor = 0.15
+			}
+			
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.75
+			}
+		}	
+	}

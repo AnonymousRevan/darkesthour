@@ -359,7 +359,6 @@ focus_tree = {
 			}
 		}
 	}
-}
 
 	focus = {
 		id = BUL_Geological_Survey
@@ -1055,4 +1054,3 @@ focus_tree = {
 			}
 		}
 	}
-}

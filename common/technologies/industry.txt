@@ -42,8 +42,8 @@ technologies = {
 	improved_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
-		industrial_capacity_factory = 0.05
-		industrial_capacity_dockyard = 0.05
+		industrial_capacity_factory = 0.025
+		industrial_capacity_dockyard = 0.025
 
 		path = {
 			leads_to_tech = advanced_machine_tools 
@@ -80,8 +80,8 @@ technologies = {
 	advanced_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
-		industrial_capacity_factory = 0.05
-		industrial_capacity_dockyard = 0.05
+		industrial_capacity_factory = 0.025
+		industrial_capacity_dockyard = 0.025
 
 		path = {
 			leads_to_tech = assembly_line_production 
@@ -113,8 +113,8 @@ technologies = {
 	assembly_line_production = {
 	
 		production_factory_max_efficiency_factor = 0.1
-		industrial_capacity_factory = 0.05
-		industrial_capacity_dockyard = 0.05		
+		industrial_capacity_factory = 0.025
+		industrial_capacity_dockyard = 0.025
 		
 		#path = {
 		#	leads_to_tech = improved_machine_tools 
@@ -413,7 +413,7 @@ technologies = {
 	concentrated_industry3 = {
 
 		industrial_capacity_factory = 0.15
-		industrial_capacity_dockyard = 0.125
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		repair_speed_factor = 0.1
 		refit_speed = 0.1
@@ -453,12 +453,12 @@ technologies = {
 	
 	concentrated_industry4 = {
 
-		industrial_capacity_factory = 0.175
+		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.125
 		global_building_slots_factor = 0.20
 		repair_speed_factor = 0.1
 		refit_speed = 0.1
-		industry_air_damage_factor = +0.05
+		industry_air_damage_factor = +0.1
 		
 		path = {
 			leads_to_tech = concentrated_industry5
@@ -494,12 +494,12 @@ technologies = {
 	
 	concentrated_industry5 = {
 
-		industrial_capacity_factory = 0.2
+		industrial_capacity_factory = 0.175
 		industrial_capacity_dockyard = 0.15
 		global_building_slots_factor = 0.20
 		repair_speed_factor = 0.1
 		refit_speed = 0.1
-		industry_air_damage_factor = +0.05
+		industry_air_damage_factor = +0.1
 		
 		research_cost = 4.2
 		start_year = 1943
@@ -539,6 +539,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.02
 		equipment_conversion_speed = 0.20
 		industry_air_damage_factor = -0.1
 		global_building_slots_factor = 0.2
@@ -616,6 +617,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.02
 		industry_air_damage_factor = -0.1
 		global_building_slots_factor = 0.2
 		repair_speed_factor = 0.05
@@ -655,10 +657,11 @@ technologies = {
 	
 	dispersed_industry3 = {
 
-		industrial_capacity_factory = 0.125
+		industrial_capacity_factory = 0.1
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.15
 		production_factory_start_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.02
 		industry_air_damage_factor = -0.1
 		global_building_slots_factor = 0.2
 		repair_speed_factor = 0.05
@@ -702,6 +705,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.125
 		line_change_production_efficiency_factor = 0.15
 		production_factory_start_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.04
 		industry_air_damage_factor = -0.1
 		global_building_slots_factor = 0.2
 		repair_speed_factor = 0.05
@@ -745,6 +749,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.125
 		line_change_production_efficiency_factor = 0.2
 		production_factory_start_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.05
 		industry_air_damage_factor = -0.1
 		global_building_slots_factor = 0.2
 		repair_speed_factor = 0.05

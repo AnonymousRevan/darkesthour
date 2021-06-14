@@ -328,6 +328,101 @@ operations = {
 		}
 	}
 
+	london = {
+		ai_will_do = { factor = 0 }
+		cost = 1
+		available = {
+			Date > 1939.10.1
+		}
+		visible = {
+			tag = GER
+			Date > 1939.10.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			GER = {
+				add_timed_idea = { idea = GER_Loge days = 120 }
+		}
+	}
+}
+		
+	england = {
+		ai_will_do = { factor = 0 }
+		cost = 75
+		available = {
+			Date > 1940.4.1
+		}
+		visible = {
+			tag = GER
+			Date > 1940.4.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			GER = {
+				add_timed_idea = { idea = GER_Seeschlange days = 120 }
+		}
+	}
+}	
+	
+	bring_them_to_their_knees = {
+		ai_will_do = { factor = 0 }
+		cost = 150
+		available = {
+			Date > 1939.10.1
+		}
+		visible = {
+			tag = GER
+			Date > 1939.10.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			GER = {
+				add_timed_idea = { idea = GER_Uboat_scurge days = 180 }
+		}
+	}
+}	
+	
+	pride_of_the_navy = {
+		ai_will_do = { factor = 0 }
+		cost = 300
+		available = {
+			Date > 1940.7.1
+		}
+		visible = {
+			tag = GER
+			Date > 1940.7.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			GER = {
+				add_timed_idea = { idea = GER_Surface_menace days = 180 }
+		}
+	}
+}
+
+	secret_weapons_of_germany = {
+		ai_will_do = { factor = 0 }
+		cost = 500
+		available = {
+			Date > 1943.1.1
+		}
+		visible = {
+			tag = GER
+			Date > 1943.1.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			GER = {
+				add_timed_idea = { idea = GER_Wunderwaffe_krieg days = 180 }
+		}
+	}
+}
+
 	puppet_air_controller_hungary = {
 		ai_will_do = { factor = 0 }
 		cost = 5
@@ -343,25 +438,11 @@ operations = {
 		fire_only_once = yes
 		complete_effect = {
 			GER = { set_autonomy = { target = HUN autonomy_state = autonomy_satellite } }
+		
 		}
 	}
-
-	How_to_Play_Germany_in_Mod = {
-		ai_will_do = { factor = 0 }
-		cost = 0
-		visible = {
-			tag = GER
-		}
-		available = {
-		NOT = { has_government = democratic }
-		}
-		fire_only_once = no
-		complete_effect = {
-			GER = { country_event = { id = bork_gameplay.1 } }
-		}
-	}	
 }
-
+		
 #Category only allowed for GER
 GER_reichskommissariats = {
 	GER_reichskommissariat_norwegen = {

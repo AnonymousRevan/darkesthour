@@ -9,7 +9,7 @@ if = {
 	}
 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_stability = 0.5
 set_war_support = 0.8
 # Starting tech
@@ -27,7 +27,7 @@ set_technology = {
 	interwar_antiair = 1
 	gwtank = 1
 	basic_light_tank = 1  # PLACEHOLDER
-	#basic_heavy_tank = 1  # PLACEHOLDER
+	basic_heavy_tank = 1  # PLACEHOLDER
 	#basic_medium_tank = 1 # PLACEHOLDER
 	early_fighter = 1
 	fighter1 = 1
@@ -305,6 +305,7 @@ add_ideas = {
 	home_of_revolution
 	nkvd
 	limited_conscription
+	low_economic_mobilisation
 }
 
 create_country_leader = {
@@ -350,7 +351,7 @@ create_corps_commander = {
 	name = "Aleksandr Vasilevsky"
 	id = 407
 		picture = "Portrait_Soviet_Aleksandr_Vasilevsky.dds"
-	traits = { armor_officer politically_connected }
+	traits = { panzer_leader trickster politically_connected }
 	skill = 4
 
 	
@@ -363,19 +364,19 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Boris Shaposhnikov"
 		picture = "Portrait_Soviet_Boris_Shaposhnikov.dds"
-	traits = { trait_cautious career_officer }
+	traits = { organizer ranger career_officer infantry_leader infantry_expert }
 	skill = 3
 	
 	attack_skill = 2
-	defense_skill = 3
+	defense_skill = 4
 	planning_skill = 2
-	logistics_skill = 3
+	logistics_skill = 4
 }
 
 create_corps_commander = {
 	name = "Nikolai Vatutin"
 		picture = "Portrait_Soviet_Nikolai_Fyodorovich_Vatutin.dds"
-	traits = { infantry_officer trait_reckless }
+	traits = { infantry_leader infantry_expert trickster guerilla_fighter trait_reckless }
 	skill = 3
 	
 	attack_skill = 1
@@ -416,8 +417,8 @@ create_field_marshal = {
 create_corps_commander = {
 	name = "Ivan Chernyakhovsky"
 		picture = "Portrait_Soviet_Ivan_Chernyakhovsky.dds"
-	traits = { armor_officer }
-	skill = 1 
+	traits = { panzer_leader }
+	skill = 2
 
 	
 	attack_skill = 1
@@ -442,7 +443,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Leonid Govorov"
 		picture = "Portrait_Soviet_Leonid_Govorov.dds"
-	traits = {   }
+	traits = { engineer fortress_buster infantry_leader ranger  }
 	skill = 3
 	
 	attack_skill = 3
@@ -465,12 +466,12 @@ create_field_marshal = {
 create_corps_commander = {
 	name = "Kirill Meretskov"
 		picture = "Portrait_Soviet_Kirill_Meretskov.dds"
-	traits = { trait_reckless infantry_officer }
+	traits = { trait_reckless infantry_leader urban_assault_specialist winter_specialist }
 	skill = 3
 	
 
 	
-	attack_skill = 2
+	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 3
@@ -491,20 +492,20 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Andrey Yeryomenko"
 		picture = "Portrait_Soviet_Andrey_Yeryomenko.dds"
-	traits = { cavalry_officer trait_reckless }
-	skill = 1 
+	traits = { cavalry_officer trait_reckless urban_assault_specialist infantry_leader }
+	skill = 2
 
 	
 	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
 }
 
 create_corps_commander = {
 	name = "Georgiy Zakharov"
 		picture = "Portrait_Soviet_Georgiy_Zakharov.dds"
-	traits = { career_officer }
+	traits = { career_officer infantry_leader infantry_expert }
 	skill = 1 
 
 	
@@ -517,7 +518,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Yakov Cherevichenko"
 		picture = "Portrait_Soviet_Yakov_Cherevichenko.dds"
-	traits = { cavalry_officer }
+	traits = { cavalry_officer cavalry_expert swamp_fox }
 	skill = 3
 	
 	attack_skill = 3
@@ -553,19 +554,19 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Vasily Kuznetsov"
 		picture = "Portrait_Soviet_Vasily_Kuznetsov.dds"
-	traits = { commando infantry_officer }
-	skill = 3
+	traits = { commando infantry_leader infantry_expert urban_assault_specialist trickster }
+	skill = 5
 	
-	attack_skill = 3
+	attack_skill = 5
 	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Andrey Vlasov"
 		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-	traits = { winter_specialist infantry_officer }
+	traits = { winter_specialist infantry_leader infantry_expert }
 	id = 412
 	skill = 3
 	
@@ -578,7 +579,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Ivan Fedyuninsky"
 		picture = "Portrait_Soviet_Ivan_Fedyuninsky.dds"
-	traits = { infantry_officer }
+	traits = { infantry_leader infantry_expert }
 	skill = 1 
 	
 	attack_skill = 1
@@ -614,7 +615,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Markian Popov"
 		picture = "Portrait_Soviet_Matkian_Popov.dds"
-	traits = { winter_specialist infantry_officer brilliant_strategist }
+	traits = { winter_specialist infantry_leader brilliant_strategist }
 	skill = 2
 
 	
@@ -651,7 +652,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Dmitry Lelyushenko"
 		picture = "Portrait_Soviet_Dmitri_Danilovich_Lelyushenko.dds"
-	traits = {armor_officer trait_reckless  }
+	traits = {panzer_leader trait_reckless  }
 	skill = 1 
 	
 	attack_skill = 1

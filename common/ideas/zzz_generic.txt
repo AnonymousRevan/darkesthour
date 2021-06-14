@@ -469,7 +469,7 @@ ideas = {
 			picture = generic_manpower_bonus
 	
 			modifier = {
-				conscription = 0.05
+				conscription = 0.03
 				enemy_partisan_effect = -0.1
 			}
 		}
@@ -564,8 +564,8 @@ ideas = {
 	
 			modifier = {
 				war_support_factor = 0.05
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
 			}
 		}
 	
@@ -607,11 +607,11 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				#generate_wargoal_tension = 1.00
-				join_faction_tension = 1.00
-				#lend_lease_tension = 0.50
-				send_volunteers_tension = 0.20
-				guarantee_tension = 1.0
+				research_speed_factor = 0.04
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_dockyard_factor = 0.15
+				max_fuel_factor = 0.20
+				fuel_gain_factor = 0.3
 				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
 				ai_get_ally_desire_factor = -100
 			}

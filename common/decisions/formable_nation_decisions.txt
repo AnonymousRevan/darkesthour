@@ -1331,6 +1331,7 @@ form_roman_empire_category = {
 				controls_state = 455
 				controls_state = 183
 				controls_state = 656
+				controls_state = 126
 				# Gibraltar
 				controls_state = 118
 			}

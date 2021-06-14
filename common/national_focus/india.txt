@@ -618,6 +618,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		add_ideas = RAJ_Bring_it_on
 		custom_effect_tooltip = RAJ_create_unit_red_eagles_tt
 		army_experience = 100
 			hidden_effect = {
@@ -851,7 +852,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = RAJ_indian_gurkhas			
+			add_ideas = RAJ_indian_gurkhas		
 			custom_effect_tooltip = RAJ_create_unit_gurkas_tt
 			hidden_effect = {	
 				division_template = {
@@ -976,9 +977,10 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = RAJ_lions_of_the_great_war
+			add_ideas = RAJ_Fight_for_our_freedom
 			custom_effect_tooltip = RAJ_create_unit_sikh_tt
-			hidden_effect = {
-
+			hidden_effect = { 
+				
 				division_template = {
 				name = "Sikh Regiment" #sikh regiment, bro
 				division_names_group = RAJ_INF_01
@@ -1265,6 +1267,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			remove_ideas = RAJ_week_industrial_base
 			add_tech_bonus = {
 				name = RAJ_indian_armor
 				bonus = 1.5
@@ -1326,7 +1329,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
+			is_subject = yes
 			num_of_factories > 50
 		}
 
@@ -1991,7 +1994,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
+			is_subject = yes
 			has_war = yes
 			is_in_faction = yes
 			OR = {
@@ -2991,7 +2994,7 @@ focus = {
 		icon = GFX_focus_generic_provoke_border_clashes
 		
 	    available = {
-			JAP = { controls_state = 430 }
+			surrender_progress > 0.05
 		}
 
 		x = 0
@@ -3002,4 +3005,3 @@ focus = {
 			add_timed_idea = { idea = RAJ_a_line_in_the_sand days = 365 }
 		}
 	}	
-}

@@ -2700,7 +2700,7 @@ focus = {
 			}
 			add_tech_bonus = {
 				name = GER_long_range_escorts
-				bonus = 1.5
+				bonus = 1.0
 				uses = 2
 				category = cat_heavy_fighter
 			}
@@ -2749,7 +2749,7 @@ focus = {
 			# Balance research bonus for 2 techs in battlefield_support_tree
 			add_tech_bonus = {
 				name = strat_dest_bonus
-				bonus = 3.0
+				bonus = 1.5
 				uses = 4
 				category = air_doctrine
 			}
@@ -2819,8 +2819,9 @@ focus = {
 			add_tech_bonus = {
 				name = GER_rocketry_focus
 				bonus = 1.0
-				ahead_reduction = 4
-				uses = 4
+				ahead_reduction = 2
+				uses = 2
+				category = jet_technology
 				category = rocketry
 			}
 		}
@@ -2843,7 +2844,7 @@ focus = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = secret_bonus
-				bonus = 5.0
+				bonus = 2.5
 				uses = 3
 				category = rocketry
 			}
@@ -3427,7 +3428,7 @@ focus = {
 				# Balance research bonus to 2 techs in armor, also in event
 				add_tech_bonus = {
 					name = armor_bonus
-					bonus = 2.0
+					bonus = 1.0
 					uses = 2
 					category = armor
 				}
@@ -3437,7 +3438,7 @@ focus = {
 	
 	focus = {
 		id = GER_army_innovation_2
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_r56_goal_ger_panzers
 		prerequisite = { focus = GER_soviet_treaty }
 		x = 0
 		y = 2
@@ -4758,5 +4759,5 @@ focus = {
 				country_event = { id = wtt_germany.64 }
 			}
 		}
-	}
-}	
+	}	
+}		

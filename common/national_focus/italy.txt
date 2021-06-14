@@ -227,7 +227,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-		    271 = {
+		    448 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
@@ -235,7 +235,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		    271 = {
+		    448 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
@@ -292,7 +292,7 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = steel
-				amount = 80
+				amount = 35
 				state = 271
 			}
 		}
@@ -784,9 +784,11 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 75
+
 			add_tech_bonus = {
+				name = aerei_d'attacco
 				bonus = 1.0
-				ahead_reduction = 2			
+				ahead_reduction = 2				
 				uses = 1
 				technology = naval_bomber1
 				technology = naval_bomber2
@@ -1886,7 +1888,7 @@ focus_tree = {
 		id = ITA_Army_8
 		icon = GFX_focus_generic_provoke_border_clashes
 		prerequisite = { focus = ITA_Army_7 focus = ITA_Army_4 }		
-		cost = 10
+		cost = 1
 		x = -2
 		y = 2
 	    relative_position_id = ITA_Army_7		                               
@@ -1899,6 +1901,8 @@ focus_tree = {
 		completion_reward = {
 		custom_effect_tooltip = ITA_Desert_infantry_tech_tt
         set_technology = { ITA_Desert_infantry_tech = 1 } 
+		add_timed_idea = { idea = Battle_for_Africa days = 90 }	
+		
 		}
 	}
 	focus = {

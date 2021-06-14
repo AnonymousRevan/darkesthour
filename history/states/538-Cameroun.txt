@@ -2,12 +2,12 @@
 state={
 	id=538
 	name="STATE_538" # Central Congo
-	manpower = 252351
+	manpower = 125000
 	
 	state_category = metropolis
 
 	history={
-		owner = LIB
+		owner = FRA
 		add_core_of = FRA
 	}
 

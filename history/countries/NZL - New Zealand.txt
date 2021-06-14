@@ -9,6 +9,7 @@ set_war_support = 0.35
 
 	add_ideas = {
         COM_Rubber
+		NZL_Kiwi_Industry
 	}
 
 set_technology = {

@@ -24,15 +24,15 @@ ideas = {
 			equipment_bonus = {
 			    heavy_tank_equipment = {
 			        instant = yes
-					build_cost_ic = 0.50
+					build_cost_ic = 0.45
 				}
 				medium_tank_equipment = {
 				    instant = yes
-					build_cost_ic = 0.50
+					build_cost_ic = 0.30
 				}
 				light_tank_equipment = {
 				    instant = yes
-					build_cost_ic = 0.50
+					build_cost_ic = 0.15
 				}				
 			}
 		}

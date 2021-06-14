@@ -41,6 +41,7 @@ set_technology = {
 	naval_bomber1 = 1
 	early_bomber = 1
 	CAS1 = 1
+	marines = 1
 	electronic_mechanical_engineering = 1
 	basic_machine_tools = 1
 	
@@ -637,7 +638,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Arthur Percival"
 		picture = "Portrait_Britain_Arthur_Percival.dds"
-	traits = {  trait_cautious }
+	traits = {  trait_cautious jungle_rat }
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2

@@ -2271,7 +2271,7 @@ focus_tree = {
 		}
 
 		available = {
-			threat > 0.05
+			threat > 0.10
 		}
 		
 		bypass = {
@@ -3391,4 +3391,3 @@ focus_tree = {
 			add_ideas = AST_commonwealth_aircraft_corporation
 		}
 	}
-}

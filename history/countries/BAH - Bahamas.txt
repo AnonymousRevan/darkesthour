@@ -2,12 +2,37 @@
 
 #oob = ""
 
+set_research_slots = 3
+set_stability = 0.75
+set_war_support = 0.26
+
+	add_ideas = {
+        COM_Rubber
+	}
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	CAS1 = 1
+	
+	trench_warfare = 1
+	fuel_silos = 1
 }
 
-set_convoys = 5
+set_convoys = 50
 
 1939.1.1 = {
 	#generic focuses
@@ -71,17 +96,67 @@ set_popularities = {
 }
 
 
-1939.1.1 = {
+1936.1.1 = {
 	set_politics = {
 		ruling_party = democratic
-		last_election = "1936.1.1"
-		election_frequency = 48
+		last_election = "1938.5.1"
+		election_frequency = 48  
 		elections_allowed = yes
 	}
+
 	set_popularities = {
-		democratic = 75
-		fascism = 1
-		communism = 1
-		neutrality = 23
+		democratic = 100
 	}
+
+	create_country_leader = {
+		name = "Eduardo Santos"
+		desc = "POLITICS_EDUARDO_SANTOS_DESC"
+		picture = "gfx/leaders/South America/Portrait_South_America_Generic_5.dds"
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {
+			#
+		}
+	}
+}
+
+create_corps_commander = {
+	name = "Gustavo Rojas Pinilla"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
+	traits = {  trickster urban_assault_specialist ranger }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Jean Paul Baptiste"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
+	traits = {  old_guard infantry_leader commando }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 5
+	planning_skill = 1
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Fidel Castro"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
+	traits = {  invader commando urban_assault_specialist organizer mountaineer }
+	skill = 7
+	attack_skill = 7
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Albert Cockburn"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+	traits = {  trickster panzer_leader engineer desert_fox }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 3
 }

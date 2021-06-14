@@ -136,15 +136,14 @@ political_actions = {
 	annex_Eygpt = {
 		ai_will_do = { factor = 0 }
 		cost = 1	
+		available = {
+			Date > 1936.1.1
+		}
 		visible = {
 			tag = ENG
 			EYG = { is_ai = yes }
 			country_exists = EGY
 		}
-		available = {
-			Date > 1936.1.1
-
-			}
 		fire_only_once = yes
 		complete_effect = {
 			ENG = {
@@ -713,7 +712,102 @@ operations = {
 		}
 	}
 	
-	invade_ireland = {
+	early_war_raid = {
+		ai_will_do = { factor = 0 }
+		cost = 50
+		available = {
+			Date > 1939.10.1
+		}
+		visible = {
+			tag = ENG
+			Date > 1939.10.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				add_timed_idea = { idea = ENG_early_war_raid days = 90 }
+		}
+	}
+}
+	
+	vengeance_for_london = {
+		ai_will_do = { factor = 0 }
+		cost = 75
+		available = {
+			Date > 1940.4.1
+		}
+		visible = {
+			tag = ENG
+			Date > 1940.4.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				add_timed_idea = { idea = ENG_vengeance_for_london days = 120 }
+		}
+	}
+}	
+	
+		Firebombing = {
+		ai_will_do = { factor = 0 }
+		cost = 150
+		available = {
+			Date > 1941.1.1
+		}
+		visible = {
+			tag = ENG
+			Date > 1941.1.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				add_timed_idea = { idea = ENG_Firebombing days = 180 }
+		}
+	}
+}	
+	
+		Tallboy = {
+		ai_will_do = { factor = 0 }
+		cost = 300
+		available = {
+			Date > 1942.1.1
+		}
+		visible = {
+			tag = ENG
+			Date > 1942.1.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				add_timed_idea = { idea = ENG_Tallboy days = 230 }
+		}
+	}
+}	
+	
+		grand_slam = {
+		ai_will_do = { factor = 0 }
+		cost = 500
+		available = {
+			Date > 1943.1.1
+		}
+		visible = {
+			tag = ENG
+			Date > 1943.1.1
+		}
+		
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				add_timed_idea = { idea = ENG_grand_slam days = 365 }
+		}
+	}
+}	
+	
+invade_ireland = {
 
 		icon = generic_operation
 	
@@ -761,10 +855,10 @@ operations = {
 				add_state_core = 113
 				add_state_core = 134
 				add_state_core = 135
+				
 			}
 		}
-	}
-
+		
 	mers_el_kebir_raid = {
 
 		icon = generic_naval

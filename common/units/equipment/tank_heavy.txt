@@ -21,8 +21,8 @@ equipments = {
 		}
 		
 		#Misc Abilities
-		maximum_speed = 4
-		reliability = 0.6
+		maximum_speed = 5
+		reliability = 0.8
 
 		#Defensive Abilities
 		defense = 6
@@ -39,7 +39,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 14
 		
-		build_cost_ic = 32.75 
+		build_cost_ic = 28.75 
 		resources = {
 			#oil = 1
 			steel = 3
@@ -70,11 +70,11 @@ equipments = {
 		is_convertable = yes
 		
 		#Misc Abilities
-		maximum_speed = 5
+		maximum_speed = 6
 
 		#Defensive Abilities
-		defense = 8
-		breakthrough = 52
+		defense = 12
+		breakthrough = 64
 		armor_value = 110
 
 		#Offensive Abilities
@@ -82,7 +82,7 @@ equipments = {
 		hard_attack = 30
 		ap_attack = 111
 		
-		build_cost_ic = 35.05 
+		build_cost_ic = 34.05 
 		resources = {
 #			oil = 1
 			steel = 3
@@ -101,11 +101,11 @@ equipments = {
 		is_convertable = yes
 
 		#Misc Abilities
-		maximum_speed = 6
+		maximum_speed = 8
 
 		#Defensive Abilities
-		defense = 9
-		breakthrough = 67
+		defense = 14
+		breakthrough = 78
 		armor_value = 130
 
 		#Offensive Abilities
@@ -113,7 +113,7 @@ equipments = {
 		hard_attack = 40
 		ap_attack = 131
 		
-		build_cost_ic = 39.50
+		build_cost_ic = 34.50
 		resources = {
 			#oil = 1
 			steel = 4
@@ -155,7 +155,7 @@ equipments = {
 		armor_value = 45
 
 		#Offensive Abilities
-		soft_attack = 75
+		soft_attack = 55
 		hard_attack = 1
 		ap_attack = 8
 		air_attack = 0
@@ -203,7 +203,7 @@ equipments = {
 		armor_value = 68
 
 		#Offensive Abilities 
-		soft_attack = 85
+		soft_attack = 63
 		hard_attack = 2
 		
 		build_cost_ic = 31.05
@@ -236,7 +236,7 @@ equipments = {
 		armor_value = 90
 
 		#Offensive Abilities
-		soft_attack = 100
+		soft_attack = 71
 		hard_attack = 2.5
 		
 		build_cost_ic = 34.50

@@ -1,0 +1,83 @@
+ideas = {
+	country = {
+			USA_Volume_by_fire = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = GER
+				# counter war support
+				industry_air_damage_factor = +0.1	
+				static_anti_air_damage_factor = -0.1	
+			}
+			targeted_modifier = {
+				tag = ITA
+				# counter war support
+				industry_air_damage_factor = +0.1	
+				static_anti_air_damage_factor = -0.1	
+			}
+			
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.15						
+			}
+		}	
+		
+			USA_stratgegic_destruction = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = GER
+				# counter war support
+				industry_air_damage_factor = +0.2
+				static_anti_air_damage_factor = -0.1	
+			}
+			targeted_modifier = {
+				tag = ITA
+				# counter war support
+				industry_air_damage_factor = +0.2
+				static_anti_air_damage_factor = -0.1	
+			}
+			
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.45						
+			}
+		}	
+		
+			USA_midway = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			targeted_modifier = {
+				tag = JAP
+				# counter war support
+				navy_capital_ship_attack_factor = -0.15
+				navy_max_range_factor = - 0.05
+			}
+			
+			modifier = {
+				navy_max_range_factor = 0.1
+				navy_capital_ship_attack_factor = 0.15
+				naval_speed_factor = 0.10
+				navy_anti_air_attack_factor = 0.15
+				convoy_raiding_efficiency_factor = 0.2
+			}
+		}	
