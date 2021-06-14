@@ -10,8 +10,8 @@ state={
 	}
 
 	history={
-		add_core_of = USA
-		owner = USA
+		add_core_of = GDL
+		owner = FRA
 		victory_points = {
 			153 1
 		}

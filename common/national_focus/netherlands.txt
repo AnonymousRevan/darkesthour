@@ -73,8 +73,6 @@ focus_tree = {
 	focus = {
 		id = HOL_the_western_possessions
 		available = {
-			has_full_control_of_state = 695
-			has_full_control_of_state = 309
 		}
 		prerequisite = { focus = HOL_obtain_foreign_colonial_investments }
 		icon = GFX_goal_generic_construct_infrastructure
@@ -82,6 +80,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = HOL_obtain_foreign_colonial_investments
 		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -106,28 +108,6 @@ focus_tree = {
 	focus = {
 		id = HOL_expand_curacao_oil_refineries
 		available = {
-			has_full_control_of_state = 695
-			OR = {
-				threat > 0.2
-				has_war = yes
-			}
-			OR = {
-				GER = {
-					is_in_faction_with = ROOT
-				}
-				AND = {
-					USA = {
-						NOT = { has_war_with = ROOT }
-					}
-					ENG = {
-						NOT = { has_war_with = ROOT }
-					}
-				}
-			}
-			OR = {
-				has_idea = free_trade
-				has_idea = export_focus
-			}
 		}
 		prerequisite = { focus = HOL_the_western_possessions }
 		icon = GFX_goal_generic_oil_refinery
@@ -135,6 +115,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = HOL_the_western_possessions
 		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -180,27 +164,6 @@ focus_tree = {
 	focus = {
 		id = HOL_open_second_paranam_bauxite_mine
 		available = {
-			has_full_control_of_state = 309
-			OR = {
-				has_war = yes
-				GER = {
-					is_in_faction_with = ROOT
-				}
-				AND = {
-					USA = {
-						has_war = yes
-						NOT = { has_war_with = ROOT }
-					}
-					ENG = {
-						has_war = yes
-						NOT = { has_war_with = ROOT }
-					}
-				}
-			}
-			OR = {
-				has_idea = free_trade
-				has_idea = export_focus
-			}
 		}
 		prerequisite = { focus = HOL_expand_curacao_oil_refineries }
 		icon = GFX_focus_generic_aluminum
@@ -208,6 +171,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = HOL_expand_curacao_oil_refineries
 		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
